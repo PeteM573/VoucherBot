@@ -1,0 +1,65 @@
+[
+  {
+    "id": 101,
+    "address": "830 Amsterdam Avenue, Manhattan, NY",
+    "bbl": "1018800031",
+    "rent": 2450,
+    "bedrooms": 2,
+    "accepts_voucher_type": ["CityFHEPS", "Section 8"],
+    "contact_email": "good.landlord@example.com"
+  },
+  {
+    "id": 102,
+    "address": "123 Hope Street, Brooklyn, NY",
+    "bbl": "3021480026",
+    "rent": 2300,
+    "bedrooms": 2,
+    "accepts_voucher_type": ["CityFHEPS"],
+    "contact_email": "brooklyn.housing@example.com"
+  },
+  {
+    "id": 201,
+    "address": "210 West 94th Street, Manhattan, NY",
+    "bbl": "1012390041",
+    "rent": 2900,
+    "bedrooms": 3,
+    "accepts_voucher_type": ["Section 8"],
+    "contact_email": "prestige.properties@example.com"
+  },
+  {
+    "id": 202,
+    "address": "34-05 30th Ave, Queens, NY",
+    "bbl": "4006490038",
+    "rent": 3100,
+    "bedrooms": 3,
+    "accepts_voucher_type": ["Section 8"],
+    "contact_email": "astoria.realty@example.com"
+  },
+  {
+    "id": 301,
+    "address": "45-15 44th St, Queens, NY",
+    "bbl": "4002290025",
+    "rent": 2100,
+    "bedrooms": 1,
+    "accepts_voucher_type": ["CityFHEPS"],
+    "contact_email": "leasing.office@example.com"
+  },
+  {
+    "id": 401,
+    "address": "500 East 77th Street, Manhattan, NY",
+    "bbl": "1014600001",
+    "rent": 2600,
+    "bedrooms": 1,
+    "accepts_voucher_type": ["Section 8", "CityFHEPS"],
+    "contact_email": "yorkville.mgmt@example.com"
+  },
+  {
+    "id": 901,
+    "address": "1930 Grand Concourse, Bronx, NY",
+    "bbl": "2028200021",
+    "rent": 1800,
+    "bedrooms": 2,
+    "accepts_voucher_type": ["CityFHEPS", "Section 8"],
+    "contact_email": "unresponsive.llc@example.com"
+  }
+] 

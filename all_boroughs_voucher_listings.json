@@ -1,0 +1,62 @@
+{
+    "summary": {
+        "total_listings": 2,
+        "search_timestamp": "2025-06-16 20:13:34",
+        "boroughs_searched": [
+            "brooklyn",
+            "queens"
+        ]
+    },
+    "listings_by_borough": {
+        "brooklyn": [
+            {
+                "url": "https://newyork.craigslist.org/brk/apa/d/brooklyn-rent-stabilized-income/7858680745.html",
+                "borough": "brooklyn",
+                "title": "RENT STABILIZED - INCOME RESTRICTED - RARE OPPORTUNITY in BUSHWICK",
+                "description": "*Please read the entire description*\n\nText for a video tour / how to apply\n\nIf after reading the description and you would like to view/apply to this unit, please TEXT Corey at 631-830-5849 - any calls regarding this unit will not be answered.\n\nINCOME RESTRICTED / RENT STABILIZED UNIT!!\n\n\n1 Bedroom $2478.25\n\n1 person $82,694 - $147,420\n\n\n* Assets:\n* The asset limitation for this project is currently at $210,600. Applicants in possession of assets exceeding this amount are not qualified for this project. (see attached asset inclusions and exclusions)\n* Applicants owning real property within 100 miles of NYC are not eligible for an affordable unit.\n\n* Documents:\n* For us to confirm household/income qualification, I will need the following documentation:\n\n* One month's worth of most recent pay stubs for all family members\n* Proof of any other income, such as child support, veterans’ benefits, etc.\n* 1 Month bank statements\n* Current lease\n* ID’s, Birth Certificate, Social Security Cards\n\nBRAND NEW rent stabilized 2 Bed/ 1 Bath for August 1st move in!!\nPlease TEXT Corey at 631-830-5849 to learn about viewings / how to apply / etc.\n\nLaundry in building, new kitchen appliances (including dishwasher), central heat & AC.\n\nFeatures:\n- 1 Queen size bedrooms\n- 1 Full bathroom\n- Hardwood floors\n- High ceilings\n- Laundry in building\n- Gym\n- Lounge\n- Garage parking\n- Bike room\n- Rooftop access\n- Pet Friendly\n- No Broker Fee\n\nOne year lease!\nINCOME RESTRICTED RENT STABILIZED UNIT",
+                "price": "$2,478",
+                "voucher_keywords_found": [
+                    "INCOME RESTRICTED",
+                    "income restricted"
+                ]
+            }
+        ],
+        "queens": [
+            {
+                "url": "https://newyork.craigslist.org/que/apa/d/astoria-stunning-bed-in-amenities/7858712083.html",
+                "borough": "queens",
+                "title": "Stunning 1 bed in amenities building /gym/laundry doof",
+                "description": "Hpd income requirements $80-140k 1 person.Welcome to Astoria St, where you can aspire to love where you live. This industrial chic luxurious gem features sun drenched Studios, 1 beds, 2 Beds, and Rare 3 Beds. Enjoy the modern conveniences of an amenity bldg, surrounded by Historic Astoria charm. Amenities include an elevator, laundry room, residents lounge and fully furnished roofdeck with unobstructed views of the Manhattan Skyline. Transportation options are the N/Q at Broadway, and R/M at Steinway, an estimated 20 min. to Midtown!",
+                "price": "$2,300",
+                "voucher_keywords_found": [
+                    "HPD",
+                    "hpd"
+                ]
+            }
+        ]
+    },
+    "all_listings": [
+        {
+            "url": "https://newyork.craigslist.org/brk/apa/d/brooklyn-rent-stabilized-income/7858680745.html",
+            "borough": "brooklyn",
+            "title": "RENT STABILIZED - INCOME RESTRICTED - RARE OPPORTUNITY in BUSHWICK",
+            "description": "*Please read the entire description*\n\nText for a video tour / how to apply\n\nIf after reading the description and you would like to view/apply to this unit, please TEXT Corey at 631-830-5849 - any calls regarding this unit will not be answered.\n\nINCOME RESTRICTED / RENT STABILIZED UNIT!!\n\n\n1 Bedroom $2478.25\n\n1 person $82,694 - $147,420\n\n\n* Assets:\n* The asset limitation for this project is currently at $210,600. Applicants in possession of assets exceeding this amount are not qualified for this project. (see attached asset inclusions and exclusions)\n* Applicants owning real property within 100 miles of NYC are not eligible for an affordable unit.\n\n* Documents:\n* For us to confirm household/income qualification, I will need the following documentation:\n\n* One month's worth of most recent pay stubs for all family members\n* Proof of any other income, such as child support, veterans’ benefits, etc.\n* 1 Month bank statements\n* Current lease\n* ID’s, Birth Certificate, Social Security Cards\n\nBRAND NEW rent stabilized 2 Bed/ 1 Bath for August 1st move in!!\nPlease TEXT Corey at 631-830-5849 to learn about viewings / how to apply / etc.\n\nLaundry in building, new kitchen appliances (including dishwasher), central heat & AC.\n\nFeatures:\n- 1 Queen size bedrooms\n- 1 Full bathroom\n- Hardwood floors\n- High ceilings\n- Laundry in building\n- Gym\n- Lounge\n- Garage parking\n- Bike room\n- Rooftop access\n- Pet Friendly\n- No Broker Fee\n\nOne year lease!\nINCOME RESTRICTED RENT STABILIZED UNIT",
+            "price": "$2,478",
+            "voucher_keywords_found": [
+                "INCOME RESTRICTED",
+                "income restricted"
+            ]
+        },
+        {
+            "url": "https://newyork.craigslist.org/que/apa/d/astoria-stunning-bed-in-amenities/7858712083.html",
+            "borough": "queens",
+            "title": "Stunning 1 bed in amenities building /gym/laundry doof",
+            "description": "Hpd income requirements $80-140k 1 person.Welcome to Astoria St, where you can aspire to love where you live. This industrial chic luxurious gem features sun drenched Studios, 1 beds, 2 Beds, and Rare 3 Beds. Enjoy the modern conveniences of an amenity bldg, surrounded by Historic Astoria charm. Amenities include an elevator, laundry room, residents lounge and fully furnished roofdeck with unobstructed views of the Manhattan Skyline. Transportation options are the N/Q at Broadway, and R/M at Steinway, an estimated 20 min. to Midtown!",
+            "price": "$2,300",
+            "voucher_keywords_found": [
+                "HPD",
+                "hpd"
+            ]
+        }
+    ]
+}

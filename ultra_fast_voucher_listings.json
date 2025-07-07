@@ -1,0 +1,776 @@
+{
+  "performance_metrics": {
+    "total_listings": 29,
+    "search_timestamp": "2025-06-16 21:30:27",
+    "boroughs_found": [
+      "brooklyn",
+      "queens",
+      "bronx"
+    ],
+    "extraction_method": "ultra_fast_bulk_extraction"
+  },
+  "listings_by_borough": {
+    "bronx": [
+      {
+        "housing_info": "N/A",
+        "price": "N/A",
+        "title": "BRAND NEW 2 BEDROOM !!!! CITYFHEPS WELCOME",
+        "url": "https://newyork.craigslist.org/brx/apa/d/bronx-brand-new-bedroom-cityfheps/7858538385.html",
+        "description": "\n        \n            QR Code Link to This Post\n            \n        \ngreat size and location \nJust few steps to subway, supermarket, shops , cafe and lots more!!\n*\nNew full kitchen \nNice hardwood floors/ high ceilings \n\nLarge bathroom \n*\nAvailable now, stop by soon \nGood credit/income is required to move in/ gaurantor are Welcome \n\nPlease call or text -929-437-0880\n    ",
+        "borough": "bronx",
+        "voucher_keywords_found": [
+          "CITYFHEPS",
+          "CityFHEPS",
+          "FHEPS",
+          "fheps"
+        ]
+      },
+      {
+        "housing_info": "N/A",
+        "price": "N/A",
+        "title": "Brand new 3 BEDROOM. CITYFHEPS- HASA",
+        "url": "https://newyork.craigslist.org/brx/apa/d/bronx-brand-new-bedroom-cityfheps-hasa/7858537824.html",
+        "description": "\n        \n            QR Code Link to This Post\n            \n        \nThis brand new beautiful studio is freshly painted and ready to move in! \nIt’s located in a great area the features many transportation options and amazing shops! \nIt has all new appliances and tons of windows! \n hasa vouchers are accepted!! \nText or call me for a showing. \n929-437-0880\n    ",
+        "borough": "bronx",
+        "voucher_keywords_found": [
+          "HASA",
+          "hasa",
+          "CITYFHEPS",
+          "CityFHEPS",
+          "FHEPS",
+          "fheps"
+        ]
+      },
+      {
+        "housing_info": "N/A",
+        "price": "N/A",
+        "title": "BEAUTIFUL NEW STUDIO! HASA ACCEPTED!",
+        "url": "https://newyork.craigslist.org/brx/apa/d/bronx-beautiful-new-studio-hasa-accepted/7858537091.html",
+        "description": "\n        \n            QR Code Link to This Post\n            \n        \nThis brand new beautiful studio is freshly painted and ready to move in! \nIt’s located in a great area the features many transportation options and amazing shops! \nIt has all new appliances and tons of windows! \n hasa vouchers are accepted!! \nText or call me for a showing. \n929-437-0880\n    ",
+        "borough": "bronx",
+        "voucher_keywords_found": [
+          "HASA",
+          "hasa",
+          "HASA ACCEPTED",
+          "hasa accepted"
+        ]
+      },
+      {
+        "housing_info": "N/A",
+        "price": "N/A",
+        "title": "Studio apartment for hasa",
+        "url": "https://newyork.craigslist.org/brx/apa/d/bronx-studio-apartment-for-hasa/7858474059.html",
+        "description": "\n        \n            QR Code Link to This Post\n            \n        \nBeautiful spacious brand new studio. \nBeautiful modern kitchen. \nBrand new building. \nModern tiled bathroom. \nHardwood floors throughout apt. \n\nLandlord works with the hasa voucher a lot so pls mention when inquiring. \n\nFor a viewing pls contact me at 347-351-7486 if I don’t pick up pls text me and I’ll get back to you asap.\n    ",
+        "borough": "bronx",
+        "voucher_keywords_found": [
+          "HASA",
+          "hasa"
+        ]
+      },
+      {
+        "housing_info": "N/A",
+        "price": "N/A",
+        "title": "Brand new 3 bedroom for cityfheps",
+        "url": "https://newyork.craigslist.org/brx/apa/d/bronx-brand-new-bedroom-for-cityfheps/7858473995.html",
+        "description": "\n        \n            QR Code Link to This Post\n            \n        \nApartment for Rent -\n2 Bedrooms 1 Bathroom\nTenant responsible for utilities \nContact agent \n646-515-9307\n    ",
+        "borough": "bronx",
+        "voucher_keywords_found": [
+          "CITYFHEPS",
+          "CityFHEPS",
+          "FHEPS",
+          "fheps"
+        ]
+      },
+      {
+        "housing_info": "N/A",
+        "price": "N/A",
+        "title": "SECTION-8 2 BEDROOM/NEWLY RENOVATED",
+        "url": "https://newyork.craigslist.org/brx/apa/d/bronx-section-2-bedroom-newly-renovated/7857996609.html",
+        "description": "\n        \n            QR Code Link to This Post\n            \n        \nyou will need W2- 3 paystubs - Job references letter with supervise contact- credit 650 up\nAPTS ARE READY move in\nPlease text MR .E 646 363 5321\n    ",
+        "borough": "bronx",
+        "voucher_keywords_found": [
+          "SECTION-8",
+          "Section-8"
+        ]
+      },
+      {
+        "housing_info": "N/A",
+        "price": "N/A",
+        "title": "NEW STUDIO AVAILABLE! HASA WELCOME",
+        "url": "https://newyork.craigslist.org/brx/apa/d/bronx-new-studio-available-hasa-welcome/7857847631.html",
+        "description": "\n        \n            QR Code Link to This Post\n            \n        \ngreat size and location \nJust few steps to subway, supermarket, shops , cafe and lots more!!\n*\nNew full kitchen \nNice hardwood floors/ high ceilings \n\nLarge bathroom \n*\nAvailable now, stop by soon\n\nPlease call or text -929-437-0880\n    ",
+        "borough": "bronx",
+        "voucher_keywords_found": [
+          "HASA",
+          "hasa"
+        ]
+      },
+      {
+        "housing_info": "N/A",
+        "price": "N/A",
+        "title": "Brand new studio Apartment. -HASA welcome",
+        "url": "https://newyork.craigslist.org/brx/apa/d/bronx-brand-new-studio-apartment-hasa/7857845302.html",
+        "description": "\n        \n            QR Code Link to This Post\n            \n        \n***Broker's Fee Applies***\n***Picture's are from tenant move out date. Will be updated soon***\n****2 Unit's Available****\n\n**🏡 Spacious 3-Bedroom Apartment – Edson Avenue, Bronx, NY 🗽**\n\nWelcome to your new home in the heart of the Bronx! This beautifully maintained **3-bedroom apartment** on quiet and convenient **Edson Avenue** is move-in ready and packed with modern updates.\n\n✨ **Features Include**:\n\n* ✅ **Updated Appliances** – Sleek, stainless steel for a clean, contemporary feel\n* ✅ **Modern Kitchen** – Stylish cabinetry, ample counter space, and room to entertain\n* ✅ **Renovated Bathroom** – Clean lines, modern finishes, spa-like vibes\n* ✅ **Plenty of Closet Space** – Storage galore throughout the unit\n* ✅ **Spacious Layout** – Perfect for families, roommates, or working from home\n\nLocated near shopping, transportation, parks, and schools — this apartment blends comfort, convenience, and style.\n\n📞 **Call today to schedule a private tour — this gem won’t last long!**\n\nPhil: 718-362-7164\n\nWill: 347-767-1546\n    ",
+        "borough": "bronx",
+        "voucher_keywords_found": [
+          "HASA",
+          "hasa"
+        ]
+      },
+      {
+        "housing_info": "N/A",
+        "price": "N/A",
+        "title": "Huge 3 Bed HPD/NYCHA",
+        "url": "https://newyork.craigslist.org/brx/apa/d/bronx-huge-bed-hpd-nycha/7857840435.html",
+        "description": "\n        \n            QR Code Link to This Post\n            \n        \nw2 and 3 paystubs credit score 650 and job reference letter with supervisor contact number\n1 bedroom $1842 and 2 bedrooms $2040\nplease text Mr. E    646 363 5321\n\n    ",
+        "borough": "bronx",
+        "voucher_keywords_found": [
+          "HPD",
+          "hpd",
+          "NYCHA",
+          "nycha"
+        ]
+      },
+      {
+        "housing_info": "N/A",
+        "price": "N/A",
+        "title": "SECTION-8 3 BEDROOM / NEWLY RENOVATED",
+        "url": "https://newyork.craigslist.org/brx/apa/d/bronx-section-3-bedroom-newly-renovated/7857690172.html",
+        "description": "\n        \n            QR Code Link to This Post\n            \n        \nThis extra large 2 bedroom apartment is gorgeous and ready to moved in ASAP!\n\nFeatures fresh paint, large closets and tons of space! \n\nNear many schools which is great for children!\nVouchers are welcome! \nPriced right! \nCall or text for a showing! 929-437-0880\n    ",
+        "borough": "bronx",
+        "voucher_keywords_found": [
+          "SECTION-8",
+          "Section-8"
+        ]
+      },
+      {
+        "housing_info": "N/A",
+        "price": "N/A",
+        "title": "LARGE 2 BEDROOM! Cityfehps accepted!",
+        "url": "https://newyork.craigslist.org/brx/apa/d/bronx-large-bedroom-cityfehps-accepted/7857665821.html",
+        "description": "\n        \n            QR Code Link to This Post\n            \n        \nCityFHEPS , HASA and all other vouchers accepted!\n\nBRAND NEW, SPACIOUS Studio with a full bathroom!\nLots of natural light, with large windows and a nice view.\nCompleted with Central A/C! Ready to move in!\nClose to the 2 and 5 subway lines.\n\n**TEXT 347-292-8604 TO SCHEDULE A VIEWING **\n    ",
+        "borough": "bronx",
+        "voucher_keywords_found": [
+          "HASA",
+          "hasa",
+          "CITYFHEPS",
+          "CityFHEPS",
+          "FHEPS",
+          "fheps"
+        ]
+      },
+      {
+        "housing_info": "N/A",
+        "price": "N/A",
+        "title": "BRAND NEW, SPACIOUS Studio - CityFHEPS, HASA",
+        "url": "https://newyork.craigslist.org/brx/apa/d/bronx-brand-new-spacious-studio/7857640847.html",
+        "description": "\n        \n            QR Code Link to This Post\n            \n        \nCityFHEPS , HASA and all other vouchers accepted!\n\nBRAND NEW, SPACIOUS Studio with a full bathroom!\nLots of natural light, with large windows and a nice view.\nCompleted with Central A/C! Ready to move in!\nClose to the 2 and 5 subway lines.\n\n**TEXT 347-292-8604 TO SCHEDULE A VIEWING **\n    ",
+        "borough": "bronx",
+        "voucher_keywords_found": [
+          "HASA",
+          "hasa",
+          "CITYFHEPS",
+          "CityFHEPS",
+          "FHEPS",
+          "fheps"
+        ]
+      },
+      {
+        "housing_info": "N/A",
+        "price": "N/A",
+        "title": "1 bedroom apartment for hasa",
+        "url": "https://newyork.craigslist.org/brx/apa/d/bronx-bedroom-apartment-for-hasa/7857637068.html",
+        "description": "\n        \n            QR Code Link to This Post\n            \n        \nRenovated 1bedroom apartments available at Andrew av Bronx ny :\n\n•SEC8 OK.\n•Heat and water included.\nParking space ($fee)\n\nFor more info and full address please call (929) 408-5347\n\nPara más información y dirección completa porfavor llamar 929-408-5347\n\nTenemos apartamento disponible en todo new York\n    ",
+        "borough": "bronx",
+        "voucher_keywords_found": [
+          "HASA",
+          "hasa"
+        ]
+      },
+      {
+        "housing_info": "N/A",
+        "price": "N/A",
+        "title": "Renovated SEC 8 1BED apartments AVAILABLE in a good area of the Bronx",
+        "url": "https://newyork.craigslist.org/brx/apa/d/bronx-renovated-sec-1bed-apartments/7857608642.html",
+        "description": "\n        \n            QR Code Link to This Post\n            \n        \n**NO BROKER'S FEE** NO BROKER INQUIRES PLEASE\n\n\n\nCLEAN, QUIET AND DESIRABLE APARTMENT BUILDING IN NORWOOD SECTION OF THE BRONX NEAR MONTEFIORE HOSPITAL.\n\n\n\nBEAUTIFUL 2-BEDROOM APARTMENT IDEAL FOR ROOMMATES (Only $1,150 per Roommate), MEDICAL RESIDENT, MEDICAL FELLOWS, NURSES AND HOSPITAL STAFF\n\n\n\n\nOVERVIEW:\nNo Broker's Fee (Management Direct)\nExcellent Maintained Pre-War Building with Quiet and Respectful Tenants\nTree-lined Streets\nWalkable to Subway - #4 and #D Train Lines\nWalkable to Metro-North Harlem Line\nWalkable to Shops and Restaurants - 2 Blocks Away  \n30 Minute Train Ride to Grand Central Station in Manhattan\nConvenient to Montefiore Hospital, North Central Bronx Hospital, Jacobi Hospital, St. Barnabas Hospital, Bronx Lebanon Hospital, Bronx Care\nConvenient Housing for Medical Residents, Nurses, Fellows and Hospital Staff\nFree Street Parking\nThird Party Garage Parking Available in Neighborhood\nCats are Ok. Dogs Are NOT Allowed\n\n\nINCOME REQUIREMENTS:\n\n\nMinimum Combined Household Income, 50x Monthly Rent to Qualify ($115,000)\nMust Have Good Credit Rating\nCriminal Background Check Performed\n$20 Application Fee for each Adult\n\n\nREQUIRED MOVE-IN FUNDS:\n\n\nFirst Month's Rent\nOne Month Security Deposit (Equal to Monthly Rent)\n\n\nBUILDING AND UNIT AMENITIES:\n\n\nRenovated 2-Bedroom Apartment\nStainless-Steel Appliances\nIdeal Apartment for Roommates looking to Split Rent AND SAVE MONEY\nVery Affordable. Only $1,150 per Roommate\nStrictly Managed like a Co-op\nHardwood Floors\nTenant Laundry Facility Located on Building Premises\n4K Security Camera System throughout Building\nSecured Building Lobby Door\nBuilding Intercom System\nTenant Bicycle Parking on Premises\nStove\nOven\nRefrigerator\nFreezer\nLive-in Superintendent on Premises \nTenant Portal for Online Rent Payments and Maintenance Requests \nHeat and Water Included in Rent\nElectricity and Cooking Gas are the Tenant's Responsibility (Con Edison)\nApartment Wired for Verizon FIOS and Optimum for Cable TV and Internet\n\n\n\n\n\n\n\n\nMUST ANSWER ALL QUESTIONS BELOW TO PROCEED\n\n\nFull Name:\n\nContact Number:\n\nWork/Profession:\n\nTotal Number of People to Occupy the Apartment:\n\nPotential Move-in Date:\n\nCombined Annual Gross Income:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nConvenient to: Van Cortlandt Park, Woodlawn Heights, Norwood, Bedford Park, Bainbridge, Mosholu Parkway, Pelham Parkway, Riverdale, Baychester, Fieldston, West Bronx, Pelham Bay, Spuyten Duyvil, North Riverdale, Belmont, Little Italy, Hudson Hill, City Island, Marble Hill, Country Club, Morris Park,Throggs Neck, Arthur Ave, Westchester County, Yonkers, Hartsdale, White Plains NY, Scarsdale, Bronxville, Pleasantville, Hastings on Hudson, Yorktown, Mahopac, Putnam County, Peekskill, Ossining, Irvington, New Rochelle, Scott Tower Housing, Metro North Railroad Harlem Line Williamsbridge Station, Woodlawn Station, MTA Subway 4 Train, D Train, 2 Train, 5 Train, MTA Buses Bx28, Bx10, Bx34, Bx25, Bx41, Bx12, Montefiore Medical Center Moses Campus, Montefiore Medical Center Albert Einstein Campus, Montefiore Weiler Hospital, Jack D. Weiler Hospital, Children’s Hospital at Montefiore, Montefiore Medical Center Wakefield Campus, Montefiore Medical Center Westchester Square Campus, Montefiore Medical Center Hutchinson Campus, Montefiore Medical Center New Rochelle Campus, Montefiore Mount Vernon Hospital, Jacobi Medical Center/NYC Health Hospital, BronxCare Hospital Center, North Central Bronx Hospital, St. Barnabas Hospital, Calvary Hospital, Misericordia Hospital, James J. Peters Department of Veterans Affairs Medical Center, VA Hospital, Lincoln Hospital, NewYork-Presbyterian Westchester, Bronx Lebanon Hospital Center Infirmary, NewYork-Presbyterian Allen Hospital, Mount Sinai Hospital, NewYork-Presbyterian / Columbia University Irving Medical Center, Saint Joseph's Medical Center, Bronx Health Center, Bellevue Hospital, Memorial Sloan Kettering Cancer Center, Lenox Hill Hospital, Harlem Hospital Center, New York-Presbyterian Lower Manhattan Hospital, NYU Langone Health, Metropolitan Hospital Center, Mount Sinai Morningside Hospital, Mount Sinai St. Luke's Hospital, NewYork-Presbyterian / Weill Cornell Medical Center, Tisch Hospital, Mount Sinai Beth Israel, Elmhurst Hospital Center, Morgan Stanley Children's Hospital, Gouverneur Hospital, St. John's Riverside Hospital, White Plains Hospital, St. Johns Riverside Hospital ParkCare Pavilion, Northway Medical Center, St. Vincent's Hospital Westchester, NewYork-Presbyterian Hudson Valley Hospital, Northern Westchester Hospital, Andrus Pavilion, Homecare St Mary's Hospital, Bronx River Medical Associates, Beth Abraham Center, Wayne Center for Nursing and Rehabilitation, Essen Health Care, Methodist Home for Nursing and Rehab, Van Cortlandt Park Golf Course, Mosholu Golf Course, The Bronx Zoo, Dog Bone Run, Sachkerah Woods Playground, Allen Shandler Recreation Area, Indian Field, New York Botanical Gardens, Yankee Stadium, Wave Hill Public Garden & Cultural Center, The Van Cortlandt House Museum, Pelham Bay Park, The Bronx Museum of the Arts, Bartow-Pell Mansion Museum, Bug Carousel, Rockefeller Fountain, Clason Point Park, Van Cortlandt Park, The Big C Rock, Congo Gorilla Forest, Children's Zoo, The Hall of Fame for Great Americans, Van Cortlandt Nature Center, Bronx Children's Museum, Van Cortlandt Nature Center, Wild Asia Monorail, Bronx Children's Museum, Woodlawn Cemetery Conservancy, City Island Nautical Museum, Bronx Park, Hawkins Park, Thain Family Forest, Joyce Kilmer Park, The Museum of Bronx History at the Valentine-Varian House, Muskrat Cove, The Hip Hop Museum, Edgar Allan Poe Cottage, Enid A. Haupt Conservatory, Riverdale Park, Samuel Pell House, Cross County Center, Van Cortlandt House Museum, Williamsbridge Oval Park, Governors Field at Alumni Park, Van Cortlandt Jewish Center, Van Cortlandt Library, Fort Independence Playground, Jerome Park Reservoir, Bronx Alehouse, Gaelic Park, Old Croton Aqueduct Weir Chamber, Fordham University Graduate Student Housing, Teachers, Professors, Fellowship, Achieve Beyond, Pharmacy, Dental, Internal Medicine, Travel Nurses, Traveling Nurse, Student Housing, Bronx High School of Science, Pace University, Columbia University, NYU (New York University), World View High School, DeWitt Clinton High School, Manhattan College, Manhattan University, Lehman College CUNY, City College, Medical Resident Housing, Medical Fellowship Housing, Sarah Lawrence College, Ethical Culture Fieldston School, Horace Mann School, University of Mount Saint Vincent, Riverdale Country School\n    ",
+        "borough": "bronx",
+        "voucher_keywords_found": [
+          "sec 8"
+        ]
+      },
+      {
+        "housing_info": "N/A",
+        "price": "N/A",
+        "title": "Hasa Approved. Studio. New New New",
+        "url": "https://newyork.craigslist.org/brx/apa/d/bronx-hasa-approved-studio-new-new-new/7857587605.html",
+        "description": "\n        \n            QR Code Link to This Post\n            \n        \ngreat size and location\nJust few steps to subway, supermarket, shops , cafe and lots more!!\n*\nNew full kitchen\nNice hardwood floors/ high ceilings\n\nLarge bathroom\n*\nAvailable now, stop by soon\n\nPlease call or text -929-437-0880\n    ",
+        "borough": "bronx",
+        "voucher_keywords_found": [
+          "HASA",
+          "hasa"
+        ]
+      },
+      {
+        "housing_info": "N/A",
+        "price": "N/A",
+        "title": "Ground Floor Large  3 Bedroom for Hasa All Utilities Included",
+        "url": "https://newyork.craigslist.org/brx/apa/d/bronx-ground-floor-large-bedroom-for/7857435200.html",
+        "description": "\n        \n            QR Code Link to This Post\n            \n        \nNice Modern 3 Bedroom Apartment\n\n-Nice Secured Building\n- Big Windows\n-Good neighborhood\n-Beautiful Kitchen\n-Bright and sunny\n-Close to the 2 and 5 subway station\n\n-Please Contact Mark for a showing today 718-644-5393\n    ",
+        "borough": "bronx",
+        "voucher_keywords_found": [
+          "HASA",
+          "hasa"
+        ]
+      },
+      {
+        "housing_info": "N/A",
+        "price": "N/A",
+        "title": "Ground Floor 3 Bedroom 2 Baths for Hasa - All Utilities Included",
+        "url": "https://newyork.craigslist.org/brx/apa/d/bronx-ground-floor-bedroom-baths-for/7857434671.html",
+        "description": "\n        \n            QR Code Link to This Post\n            \n        \nStrong financial references needed to rent renovated 2 Bed Room, 2 Bath apartment in clean , quite\nelevator apartment building. Apartment is located at 1695 Grand Concourse. That is on the Grand Concourse\nand the Cross Bronx Expressway. Located only 200 feet away from the b/d train and 3 blocks away from the \n#4 express train. Building has a full- time live in super. Livingroom ( 11 x 20), Bed Room #1 ( 11 x 17),\nBed Room #2 ( 10 x 13), Dining Area ( 7 x 12), Kitchen ( 7 x 7). Bathroom #1 ( 5 x 7), Bathroom #2 ( 5 x 5),\nFoyer ( 7 x17), Hallway ( 3 x 12). Apartment has 9 foot walls and 5 large closets.\nAll apps must bring strong financial references and have great credit.\nAll apps must have a combined income of 80k.\nPlease e-mail owner or call 1-646-246-7314 for viewing.\n    ",
+        "borough": "bronx",
+        "voucher_keywords_found": [
+          "HASA",
+          "hasa"
+        ]
+      },
+      {
+        "housing_info": "N/A",
+        "price": "N/A",
+        "title": "Vouchers Welcome 3-Bedroom Apartment | First-Floor - Private Backyard",
+        "url": "https://newyork.craigslist.org/brx/apa/d/bronx-vouchers-welcome-bedroom/7857386891.html",
+        "description": "\n        \n            QR Code Link to This Post\n            \n        \nFreshly Renovated 3-Bedroom – Prime First-Floor Living + Private Backyard! 🔥\n\nLooking for style, space, and comfort? \nThis gorgeous, first-floor 3-bedroom apartment has it all\n\nSleek modern kitchen cabinets\nFresh, contemporary finishes throughout - Spacious layout with tons of natural light\nFully renovated from top to bottom\n\nEnjoy direct access to a private backyard—perfect for relaxing, entertaining, or creating your own garden escape!\n\nVouchers Welcome – Apply TODAY!\nApartments like this don’t last long\n\n Schedule Your Showing – TEXT:\nLorena: 516-615-3079 or 516-615-6880\n\n Hablamos Español\n    ",
+        "borough": "bronx",
+        "voucher_keywords_found": [
+          "VOUCHERS WELCOME",
+          "vouchers welcome"
+        ]
+      },
+      {
+        "housing_info": "N/A",
+        "price": "N/A",
+        "title": "2 Full Bathrooms !1 block to WOODLAWN METRO-NORTH",
+        "url": "https://newyork.craigslist.org/brx/apa/d/bronx-full-bathrooms-block-to-woodlawn/7857395942.html",
+        "description": "\n        \n            QR Code Link to This Post\n            \n        \napartments available in ALL BRONX AREAS in private houses and apartment buildings.\noff the book jobs welcome\nBAD /FAIR CREDIT WILL BE CONSIDERED\n\nALL SECTION-8 TENANTS WELCOME (NEW RENTALS/TRANSFERS/PORTABILITY)\n\nplease get in touch with Jerry budhoo with all inquires\ntel 718 300 1175 \nfax 718 829-2201\nM-F / 9AM-5PM\n    ",
+        "borough": "bronx",
+        "voucher_keywords_found": [
+          "SECTION-8",
+          "Section-8",
+          "ALL SECTION-8",
+          "OFF THE BOOK JOBS WELCOME",
+          "NEW RENTALS/TRANSFERS/PORTABILITY"
+        ]
+      },
+      {
+        "housing_info": "N/A",
+        "price": "N/A",
+        "title": "1695 Grand Concourse. near b/d #4 train. NO BROKERS FEE",
+        "url": "https://newyork.craigslist.org/brx/apa/d/bronx-1695-grand-concourse-near-d-train/7857398794.html",
+        "description": "\n        \n            QR Code Link to This Post\n            \n        \napartments available in ALL BRONX AREAS in private houses and apartment buildings.\noff the book jobs welcome\nBAD /FAIR CREDIT WILL BE CONSIDERED\n\nALL SECTION-8 TENANTS WELCOME (NEW RENTALS/TRANSFERS/PORTABILITY)\n\nplease get in touch with Jerry budhoo with all inquires\ntel 718 300 1175 \nfax 718 829-2201\nM-F / 9AM-5PM\n    ",
+        "borough": "bronx",
+        "voucher_keywords_found": [
+          "SECTION-8",
+          "Section-8",
+          "ALL SECTION-8",
+          "OFF THE BOOK JOBS WELCOME",
+          "NEW RENTALS/TRANSFERS/PORTABILITY"
+        ]
+      },
+      {
+        "housing_info": "N/A",
+        "price": "N/A",
+        "title": "SECTION-8 1 BEDROOM / NEWLY RENOVATED",
+        "url": "https://newyork.craigslist.org/brx/apa/d/bronx-section-1-bedroom-newly-renovated/7857378170.html",
+        "description": "\n        \n            QR Code Link to This Post\n            \n        \n2 br, 1 bath available for rent in basement of a private house. Apartment has its own entrance and access to a private backyard. 5 min walk to Pelham Bay Park 6 train station. 30 min train ride to NYC. Metro north station is currently being built as well. Easy access to Hutchison River Pkwy and I-95. Contact 9293604213 to set up an appointment for viewing.\n    ",
+        "borough": "bronx",
+        "voucher_keywords_found": [
+          "SECTION-8",
+          "Section-8"
+        ]
+      },
+      {
+        "housing_info": "N/A",
+        "price": "N/A",
+        "title": "Studio apartment for hasa",
+        "url": "https://newyork.craigslist.org/brx/apa/d/bronx-studio-apartment-for-hasa/7856868660.html",
+        "description": "\n        \n            QR Code Link to This Post\n            \n        \nBeautiful spacious brand new studio. \nBeautiful modern kitchen. \nBrand new building. \nModern tiled bathroom. \nHardwood floors throughout apt. \n\nLandlord works with the hasa voucher a lot so pls mention when inquiring. \n\nFor a viewing pls contact me at 347-351-7486 if I don’t pick up pls text me and I’ll get back to you asap.\n    ",
+        "borough": "bronx",
+        "voucher_keywords_found": [
+          "HASA",
+          "hasa"
+        ]
+      },
+      {
+        "housing_info": "N/A",
+        "price": "N/A",
+        "title": "NEW 2 BEDROOM— CityFHEPS Welcome",
+        "url": "https://newyork.craigslist.org/brx/apa/d/bronx-new-bedroom-cityfheps-welcome/7856802006.html",
+        "description": "\n        \n            QR Code Link to This Post\n            \n        \ngreat size and location\nJust few steps to subway, supermarket, shops , cafe and lots more!!\n*\nNew full kitchen\nNice hardwood floors/ high ceilings\n\nLarge bathroom\n*\nAvailable now, stop by soon\nGood credit/income is required to move in/ gaurantor are Welcome\n\nPlease call or text -929-437-0880\n    ",
+        "borough": "bronx",
+        "voucher_keywords_found": [
+          "CITYFHEPS",
+          "CityFHEPS",
+          "FHEPS",
+          "fheps"
+        ]
+      },
+      {
+        "housing_info": "N/A",
+        "price": "N/A",
+        "title": "BRAND NEW STUDIO! HASA WELCOME!!",
+        "url": "https://newyork.craigslist.org/brx/apa/d/bronx-brand-new-studio-hasa-welcome/7856797450.html",
+        "description": "\n        \n            QR Code Link to This Post\n            \n        \nBRICK TUDOR-STYLE HOUSE: 4 Bedrooms; 3 Baths; 一 living room ; dining room; master bedroom suite (includes dressing room, master bathroom & 10-by-13-ft. terrace); storage attic; Few minutes walk to No. 1 subway, Van Cortlandt Park. Parking and utilities extra\n    ",
+        "borough": "bronx",
+        "voucher_keywords_found": [
+          "HASA",
+          "hasa"
+        ]
+      }
+    ],
+    "brooklyn": [
+      {
+        "housing_info": "N/A",
+        "price": "N/A",
+        "title": "Spacious 2 bedroom corner unit w/ Private balcony in heart of Bushwick",
+        "url": "https://newyork.craigslist.org/brk/apa/d/brooklyn-spacious-bedroom-corner-unit/7858683454.html",
+        "description": "\n        \n            QR Code Link to This Post\n            \n        \n*Please read the entire description*\n\nText for a video tour / how to apply \n\nIf after reading the description and you would like to view/apply to this unit, please TEXT Corey at 631-830-5849 - any calls regarding this unit will not be answered. \n\nINCOME RESTRICTED / RENT STABILIZED UNIT!!\n\n\n1 Bedroom $2478.25 \n\n           1  person $82,694 - $147,420\n\n\n  *   Assets:\n                *   The asset limitation for this project is currently at $210,600. Applicants in possession of assets exceeding this amount are not qualified for this project. (see attached asset inclusions and exclusions)\n                *   Applicants owning real property within 100 miles of NYC are not eligible for an affordable unit.\n\n  *   Documents:\n                 *   For us to confirm household/income qualification, I will need the following documentation:\n\n                                  *   One month's worth of most recent pay stubs for all family members\n                                  *   Proof of any other income, such as child support, veterans’ benefits, etc.\n                                  *   1 Month bank statements\n                                  *   Current lease\n                                  *   ID’s, Birth Certificate, Social Security Cards\n\nBRAND NEW rent stabilized 2 Bed/ 1 Bath for August 1st move in!!\nPlease TEXT Corey at 631-830-5849 to learn about viewings / how to apply / etc. \n\nLaundry in building, new kitchen appliances (including dishwasher), central heat & AC.\n\nFeatures:\n- 1 Queen size bedrooms\n- 1 Full bathroom\n- Hardwood floors\n- High ceilings\n- Laundry in building\n- Gym\n- Lounge\n- Garage parking\n- Bike room\n- Rooftop access\n- Pet Friendly\n- No Broker Fee\n\nOne year lease!\nINCOME RESTRICTED RENT STABILIZED UNIT\n\n    ",
+        "borough": "brooklyn",
+        "voucher_keywords_found": [
+          "INCOME RESTRICTED",
+          "income restricted"
+        ]
+      },
+      {
+        "housing_info": "N/A",
+        "price": "N/A",
+        "title": "RENT STABILIZED - INCOME RESTRICTED - RARE OPPORTUNITY in BUSHWICK",
+        "url": "https://newyork.craigslist.org/brk/apa/d/brooklyn-rent-stabilized-income/7858680745.html",
+        "description": "\n        \n            QR Code Link to This Post\n            \n        \nIn Unit Washer Dryer! Modern 1 bedroom apartment with windows in the living room and in unit washer dryer! Located on Myrtle Ave and Washington Park in Prime Fort Greene, right next to the Fort Greene Park, near tons of local restaurants, cafes, and major subway lines such as the 2, 3, 4 and 5 lines as well as A, C, G, B, D, N, Q, R, W lines all near by!\n\nIn unit washer, modern kitchen with stainless steel appliances including microwave and dishwasher, bedroom with great windows and closet, modern bathroom with tub and shower, split units for air conditioning and heat, hardwood flooring, , Video intercom system, Guarantors Accepted, Pets Allowed * Upon approval, showing by appointment only.\n    ",
+        "borough": "brooklyn",
+        "voucher_keywords_found": [
+          "INCOME RESTRICTED",
+          "income restricted"
+        ]
+      },
+      {
+        "housing_info": "N/A",
+        "price": "N/A",
+        "title": "🌹City FHEPS - 🌼🌼 Comfortable, Affordable, Perfect Space 🌻🌻",
+        "url": "https://newyork.craigslist.org/brk/apa/d/brooklyn-city-fheps-comfortable/7858634852.html",
+        "description": "\n        \n            QR Code Link to This Post\n            \n        \nThis is one of those rare finds that feature beauty, size and affordability!\n\nSome of the great features of this apartment include:\n\nHigh Ceilings\n\nFreshly painted\n\nNice Kitchen & Bath\n\nSpacious closets\n\nWater included\n\nPet friendly (one pet only)\n\nThis is a can't miss!\n\nNear shopping, cafes, Groceries, parks, post offices, entertainment, bars, fine dining, laundromat , schools/library and much more!\n\nSerious inquiries please.\n    ",
+        "borough": "brooklyn",
+        "voucher_keywords_found": [
+          "FHEPS",
+          "fheps"
+        ]
+      }
+    ],
+    "queens": [
+      {
+        "housing_info": "N/A",
+        "price": "N/A",
+        "title": "Studio at Davis St - No Fee",
+        "url": "https://newyork.craigslist.org/que/apa/d/astoria-studio-at-davis-st-no-fee/7858543660.html",
+        "description": "\n        \n            QR Code Link to This Post\n            \n        \nIncredible affordable unit in a luxury building in the heart of Long Island City - No Fee - Rent stabilized \n\nReach out for a tour today \n\nPlease email me with the subject *Studio at Dutch House* to schedule a tour \n\nDoorman 24/7 \nGym \nFurnished roof deck \nW/D in unit \nAnd all other dream amenities of a luxury building \n\nUnit available for anyone with eligible income per HPD \n\nMin income $85k max $148k for single household \nMin income $85k max $167k for Houhsold of 2 \nIncome can be higher for a bigger household\nAsset limited to $201k\n    ",
+        "borough": "queens",
+        "voucher_keywords_found": [
+          "HPD",
+          "hpd"
+        ]
+      },
+      {
+        "housing_info": "N/A",
+        "price": "N/A",
+        "title": "Brand New 1 Bedroom- CITYFHEPS WELCOME",
+        "url": "https://newyork.craigslist.org/que/apa/d/jamaica-brand-new-bedroom-cityfheps/7858537745.html",
+        "description": "\n        \n            QR Code Link to This Post\n            \n        \n\nThis Apartment Is Located In the Desirable Neighborhood Of Bedford Stuyvesant🌳 Surrounded By Convenience ⚡️\n\n \n\nApartment features: \n⚡️Hardwood Floors \n⚡️TONS of Natural Light \n⚡️Stainless Steel Appliances \n⚡️Tall Ceilings \n⚡️LED Recessed Lighting \n⚡️Ample Closet Space \n⚡️& MORE! 🤭\n\nNeighborhood Perks: \n📍Bedford Stuyvesant\n📍Amazing Restaurants \n📍Steps from Bus\n📍Citi Bikes \n📍Coffee Shops\n\n\n\nReach out to Lookman Via Text 3477509424\n    ",
+        "borough": "queens",
+        "voucher_keywords_found": [
+          "CITYFHEPS",
+          "CityFHEPS",
+          "FHEPS",
+          "fheps"
+        ]
+      }
+    ]
+  },
+  "all_listings": [
+    {
+      "housing_info": "N/A",
+      "price": "N/A",
+      "title": "BRAND NEW 2 BEDROOM !!!! CITYFHEPS WELCOME",
+      "url": "https://newyork.craigslist.org/brx/apa/d/bronx-brand-new-bedroom-cityfheps/7858538385.html",
+      "description": "\n        \n            QR Code Link to This Post\n            \n        \ngreat size and location \nJust few steps to subway, supermarket, shops , cafe and lots more!!\n*\nNew full kitchen \nNice hardwood floors/ high ceilings \n\nLarge bathroom \n*\nAvailable now, stop by soon \nGood credit/income is required to move in/ gaurantor are Welcome \n\nPlease call or text -929-437-0880\n    ",
+      "borough": "bronx",
+      "voucher_keywords_found": [
+        "CITYFHEPS",
+        "CityFHEPS",
+        "FHEPS",
+        "fheps"
+      ]
+    },
+    {
+      "housing_info": "N/A",
+      "price": "N/A",
+      "title": "Brand new 3 BEDROOM. CITYFHEPS- HASA",
+      "url": "https://newyork.craigslist.org/brx/apa/d/bronx-brand-new-bedroom-cityfheps-hasa/7858537824.html",
+      "description": "\n        \n            QR Code Link to This Post\n            \n        \nThis brand new beautiful studio is freshly painted and ready to move in! \nIt’s located in a great area the features many transportation options and amazing shops! \nIt has all new appliances and tons of windows! \n hasa vouchers are accepted!! \nText or call me for a showing. \n929-437-0880\n    ",
+      "borough": "bronx",
+      "voucher_keywords_found": [
+        "HASA",
+        "hasa",
+        "CITYFHEPS",
+        "CityFHEPS",
+        "FHEPS",
+        "fheps"
+      ]
+    },
+    {
+      "housing_info": "N/A",
+      "price": "N/A",
+      "title": "BEAUTIFUL NEW STUDIO! HASA ACCEPTED!",
+      "url": "https://newyork.craigslist.org/brx/apa/d/bronx-beautiful-new-studio-hasa-accepted/7858537091.html",
+      "description": "\n        \n            QR Code Link to This Post\n            \n        \nThis brand new beautiful studio is freshly painted and ready to move in! \nIt’s located in a great area the features many transportation options and amazing shops! \nIt has all new appliances and tons of windows! \n hasa vouchers are accepted!! \nText or call me for a showing. \n929-437-0880\n    ",
+      "borough": "bronx",
+      "voucher_keywords_found": [
+        "HASA",
+        "hasa",
+        "HASA ACCEPTED",
+        "hasa accepted"
+      ]
+    },
+    {
+      "housing_info": "N/A",
+      "price": "N/A",
+      "title": "Studio apartment for hasa",
+      "url": "https://newyork.craigslist.org/brx/apa/d/bronx-studio-apartment-for-hasa/7858474059.html",
+      "description": "\n        \n            QR Code Link to This Post\n            \n        \nBeautiful spacious brand new studio. \nBeautiful modern kitchen. \nBrand new building. \nModern tiled bathroom. \nHardwood floors throughout apt. \n\nLandlord works with the hasa voucher a lot so pls mention when inquiring. \n\nFor a viewing pls contact me at 347-351-7486 if I don’t pick up pls text me and I’ll get back to you asap.\n    ",
+      "borough": "bronx",
+      "voucher_keywords_found": [
+        "HASA",
+        "hasa"
+      ]
+    },
+    {
+      "housing_info": "N/A",
+      "price": "N/A",
+      "title": "Brand new 3 bedroom for cityfheps",
+      "url": "https://newyork.craigslist.org/brx/apa/d/bronx-brand-new-bedroom-for-cityfheps/7858473995.html",
+      "description": "\n        \n            QR Code Link to This Post\n            \n        \nApartment for Rent -\n2 Bedrooms 1 Bathroom\nTenant responsible for utilities \nContact agent \n646-515-9307\n    ",
+      "borough": "bronx",
+      "voucher_keywords_found": [
+        "CITYFHEPS",
+        "CityFHEPS",
+        "FHEPS",
+        "fheps"
+      ]
+    },
+    {
+      "housing_info": "N/A",
+      "price": "N/A",
+      "title": "SECTION-8 2 BEDROOM/NEWLY RENOVATED",
+      "url": "https://newyork.craigslist.org/brx/apa/d/bronx-section-2-bedroom-newly-renovated/7857996609.html",
+      "description": "\n        \n            QR Code Link to This Post\n            \n        \nyou will need W2- 3 paystubs - Job references letter with supervise contact- credit 650 up\nAPTS ARE READY move in\nPlease text MR .E 646 363 5321\n    ",
+      "borough": "bronx",
+      "voucher_keywords_found": [
+        "SECTION-8",
+        "Section-8"
+      ]
+    },
+    {
+      "housing_info": "N/A",
+      "price": "N/A",
+      "title": "NEW STUDIO AVAILABLE! HASA WELCOME",
+      "url": "https://newyork.craigslist.org/brx/apa/d/bronx-new-studio-available-hasa-welcome/7857847631.html",
+      "description": "\n        \n            QR Code Link to This Post\n            \n        \ngreat size and location \nJust few steps to subway, supermarket, shops , cafe and lots more!!\n*\nNew full kitchen \nNice hardwood floors/ high ceilings \n\nLarge bathroom \n*\nAvailable now, stop by soon\n\nPlease call or text -929-437-0880\n    ",
+      "borough": "bronx",
+      "voucher_keywords_found": [
+        "HASA",
+        "hasa"
+      ]
+    },
+    {
+      "housing_info": "N/A",
+      "price": "N/A",
+      "title": "Brand new studio Apartment. -HASA welcome",
+      "url": "https://newyork.craigslist.org/brx/apa/d/bronx-brand-new-studio-apartment-hasa/7857845302.html",
+      "description": "\n        \n            QR Code Link to This Post\n            \n        \n***Broker's Fee Applies***\n***Picture's are from tenant move out date. Will be updated soon***\n****2 Unit's Available****\n\n**🏡 Spacious 3-Bedroom Apartment – Edson Avenue, Bronx, NY 🗽**\n\nWelcome to your new home in the heart of the Bronx! This beautifully maintained **3-bedroom apartment** on quiet and convenient **Edson Avenue** is move-in ready and packed with modern updates.\n\n✨ **Features Include**:\n\n* ✅ **Updated Appliances** – Sleek, stainless steel for a clean, contemporary feel\n* ✅ **Modern Kitchen** – Stylish cabinetry, ample counter space, and room to entertain\n* ✅ **Renovated Bathroom** – Clean lines, modern finishes, spa-like vibes\n* ✅ **Plenty of Closet Space** – Storage galore throughout the unit\n* ✅ **Spacious Layout** – Perfect for families, roommates, or working from home\n\nLocated near shopping, transportation, parks, and schools — this apartment blends comfort, convenience, and style.\n\n📞 **Call today to schedule a private tour — this gem won’t last long!**\n\nPhil: 718-362-7164\n\nWill: 347-767-1546\n    ",
+      "borough": "bronx",
+      "voucher_keywords_found": [
+        "HASA",
+        "hasa"
+      ]
+    },
+    {
+      "housing_info": "N/A",
+      "price": "N/A",
+      "title": "Huge 3 Bed HPD/NYCHA",
+      "url": "https://newyork.craigslist.org/brx/apa/d/bronx-huge-bed-hpd-nycha/7857840435.html",
+      "description": "\n        \n            QR Code Link to This Post\n            \n        \nw2 and 3 paystubs credit score 650 and job reference letter with supervisor contact number\n1 bedroom $1842 and 2 bedrooms $2040\nplease text Mr. E    646 363 5321\n\n    ",
+      "borough": "bronx",
+      "voucher_keywords_found": [
+        "HPD",
+        "hpd",
+        "NYCHA",
+        "nycha"
+      ]
+    },
+    {
+      "housing_info": "N/A",
+      "price": "N/A",
+      "title": "SECTION-8 3 BEDROOM / NEWLY RENOVATED",
+      "url": "https://newyork.craigslist.org/brx/apa/d/bronx-section-3-bedroom-newly-renovated/7857690172.html",
+      "description": "\n        \n            QR Code Link to This Post\n            \n        \nThis extra large 2 bedroom apartment is gorgeous and ready to moved in ASAP!\n\nFeatures fresh paint, large closets and tons of space! \n\nNear many schools which is great for children!\nVouchers are welcome! \nPriced right! \nCall or text for a showing! 929-437-0880\n    ",
+      "borough": "bronx",
+      "voucher_keywords_found": [
+        "SECTION-8",
+        "Section-8"
+      ]
+    },
+    {
+      "housing_info": "N/A",
+      "price": "N/A",
+      "title": "LARGE 2 BEDROOM! Cityfehps accepted!",
+      "url": "https://newyork.craigslist.org/brx/apa/d/bronx-large-bedroom-cityfehps-accepted/7857665821.html",
+      "description": "\n        \n            QR Code Link to This Post\n            \n        \nCityFHEPS , HASA and all other vouchers accepted!\n\nBRAND NEW, SPACIOUS Studio with a full bathroom!\nLots of natural light, with large windows and a nice view.\nCompleted with Central A/C! Ready to move in!\nClose to the 2 and 5 subway lines.\n\n**TEXT 347-292-8604 TO SCHEDULE A VIEWING **\n    ",
+      "borough": "bronx",
+      "voucher_keywords_found": [
+        "HASA",
+        "hasa",
+        "CITYFHEPS",
+        "CityFHEPS",
+        "FHEPS",
+        "fheps"
+      ]
+    },
+    {
+      "housing_info": "N/A",
+      "price": "N/A",
+      "title": "BRAND NEW, SPACIOUS Studio - CityFHEPS, HASA",
+      "url": "https://newyork.craigslist.org/brx/apa/d/bronx-brand-new-spacious-studio/7857640847.html",
+      "description": "\n        \n            QR Code Link to This Post\n            \n        \nCityFHEPS , HASA and all other vouchers accepted!\n\nBRAND NEW, SPACIOUS Studio with a full bathroom!\nLots of natural light, with large windows and a nice view.\nCompleted with Central A/C! Ready to move in!\nClose to the 2 and 5 subway lines.\n\n**TEXT 347-292-8604 TO SCHEDULE A VIEWING **\n    ",
+      "borough": "bronx",
+      "voucher_keywords_found": [
+        "HASA",
+        "hasa",
+        "CITYFHEPS",
+        "CityFHEPS",
+        "FHEPS",
+        "fheps"
+      ]
+    },
+    {
+      "housing_info": "N/A",
+      "price": "N/A",
+      "title": "1 bedroom apartment for hasa",
+      "url": "https://newyork.craigslist.org/brx/apa/d/bronx-bedroom-apartment-for-hasa/7857637068.html",
+      "description": "\n        \n            QR Code Link to This Post\n            \n        \nRenovated 1bedroom apartments available at Andrew av Bronx ny :\n\n•SEC8 OK.\n•Heat and water included.\nParking space ($fee)\n\nFor more info and full address please call (929) 408-5347\n\nPara más información y dirección completa porfavor llamar 929-408-5347\n\nTenemos apartamento disponible en todo new York\n    ",
+      "borough": "bronx",
+      "voucher_keywords_found": [
+        "HASA",
+        "hasa"
+      ]
+    },
+    {
+      "housing_info": "N/A",
+      "price": "N/A",
+      "title": "Renovated SEC 8 1BED apartments AVAILABLE in a good area of the Bronx",
+      "url": "https://newyork.craigslist.org/brx/apa/d/bronx-renovated-sec-1bed-apartments/7857608642.html",
+      "description": "\n        \n            QR Code Link to This Post\n            \n        \n**NO BROKER'S FEE** NO BROKER INQUIRES PLEASE\n\n\n\nCLEAN, QUIET AND DESIRABLE APARTMENT BUILDING IN NORWOOD SECTION OF THE BRONX NEAR MONTEFIORE HOSPITAL.\n\n\n\nBEAUTIFUL 2-BEDROOM APARTMENT IDEAL FOR ROOMMATES (Only $1,150 per Roommate), MEDICAL RESIDENT, MEDICAL FELLOWS, NURSES AND HOSPITAL STAFF\n\n\n\n\nOVERVIEW:\nNo Broker's Fee (Management Direct)\nExcellent Maintained Pre-War Building with Quiet and Respectful Tenants\nTree-lined Streets\nWalkable to Subway - #4 and #D Train Lines\nWalkable to Metro-North Harlem Line\nWalkable to Shops and Restaurants - 2 Blocks Away  \n30 Minute Train Ride to Grand Central Station in Manhattan\nConvenient to Montefiore Hospital, North Central Bronx Hospital, Jacobi Hospital, St. Barnabas Hospital, Bronx Lebanon Hospital, Bronx Care\nConvenient Housing for Medical Residents, Nurses, Fellows and Hospital Staff\nFree Street Parking\nThird Party Garage Parking Available in Neighborhood\nCats are Ok. Dogs Are NOT Allowed\n\n\nINCOME REQUIREMENTS:\n\n\nMinimum Combined Household Income, 50x Monthly Rent to Qualify ($115,000)\nMust Have Good Credit Rating\nCriminal Background Check Performed\n$20 Application Fee for each Adult\n\n\nREQUIRED MOVE-IN FUNDS:\n\n\nFirst Month's Rent\nOne Month Security Deposit (Equal to Monthly Rent)\n\n\nBUILDING AND UNIT AMENITIES:\n\n\nRenovated 2-Bedroom Apartment\nStainless-Steel Appliances\nIdeal Apartment for Roommates looking to Split Rent AND SAVE MONEY\nVery Affordable. Only $1,150 per Roommate\nStrictly Managed like a Co-op\nHardwood Floors\nTenant Laundry Facility Located on Building Premises\n4K Security Camera System throughout Building\nSecured Building Lobby Door\nBuilding Intercom System\nTenant Bicycle Parking on Premises\nStove\nOven\nRefrigerator\nFreezer\nLive-in Superintendent on Premises \nTenant Portal for Online Rent Payments and Maintenance Requests \nHeat and Water Included in Rent\nElectricity and Cooking Gas are the Tenant's Responsibility (Con Edison)\nApartment Wired for Verizon FIOS and Optimum for Cable TV and Internet\n\n\n\n\n\n\n\n\nMUST ANSWER ALL QUESTIONS BELOW TO PROCEED\n\n\nFull Name:\n\nContact Number:\n\nWork/Profession:\n\nTotal Number of People to Occupy the Apartment:\n\nPotential Move-in Date:\n\nCombined Annual Gross Income:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nConvenient to: Van Cortlandt Park, Woodlawn Heights, Norwood, Bedford Park, Bainbridge, Mosholu Parkway, Pelham Parkway, Riverdale, Baychester, Fieldston, West Bronx, Pelham Bay, Spuyten Duyvil, North Riverdale, Belmont, Little Italy, Hudson Hill, City Island, Marble Hill, Country Club, Morris Park,Throggs Neck, Arthur Ave, Westchester County, Yonkers, Hartsdale, White Plains NY, Scarsdale, Bronxville, Pleasantville, Hastings on Hudson, Yorktown, Mahopac, Putnam County, Peekskill, Ossining, Irvington, New Rochelle, Scott Tower Housing, Metro North Railroad Harlem Line Williamsbridge Station, Woodlawn Station, MTA Subway 4 Train, D Train, 2 Train, 5 Train, MTA Buses Bx28, Bx10, Bx34, Bx25, Bx41, Bx12, Montefiore Medical Center Moses Campus, Montefiore Medical Center Albert Einstein Campus, Montefiore Weiler Hospital, Jack D. Weiler Hospital, Children’s Hospital at Montefiore, Montefiore Medical Center Wakefield Campus, Montefiore Medical Center Westchester Square Campus, Montefiore Medical Center Hutchinson Campus, Montefiore Medical Center New Rochelle Campus, Montefiore Mount Vernon Hospital, Jacobi Medical Center/NYC Health Hospital, BronxCare Hospital Center, North Central Bronx Hospital, St. Barnabas Hospital, Calvary Hospital, Misericordia Hospital, James J. Peters Department of Veterans Affairs Medical Center, VA Hospital, Lincoln Hospital, NewYork-Presbyterian Westchester, Bronx Lebanon Hospital Center Infirmary, NewYork-Presbyterian Allen Hospital, Mount Sinai Hospital, NewYork-Presbyterian / Columbia University Irving Medical Center, Saint Joseph's Medical Center, Bronx Health Center, Bellevue Hospital, Memorial Sloan Kettering Cancer Center, Lenox Hill Hospital, Harlem Hospital Center, New York-Presbyterian Lower Manhattan Hospital, NYU Langone Health, Metropolitan Hospital Center, Mount Sinai Morningside Hospital, Mount Sinai St. Luke's Hospital, NewYork-Presbyterian / Weill Cornell Medical Center, Tisch Hospital, Mount Sinai Beth Israel, Elmhurst Hospital Center, Morgan Stanley Children's Hospital, Gouverneur Hospital, St. John's Riverside Hospital, White Plains Hospital, St. Johns Riverside Hospital ParkCare Pavilion, Northway Medical Center, St. Vincent's Hospital Westchester, NewYork-Presbyterian Hudson Valley Hospital, Northern Westchester Hospital, Andrus Pavilion, Homecare St Mary's Hospital, Bronx River Medical Associates, Beth Abraham Center, Wayne Center for Nursing and Rehabilitation, Essen Health Care, Methodist Home for Nursing and Rehab, Van Cortlandt Park Golf Course, Mosholu Golf Course, The Bronx Zoo, Dog Bone Run, Sachkerah Woods Playground, Allen Shandler Recreation Area, Indian Field, New York Botanical Gardens, Yankee Stadium, Wave Hill Public Garden & Cultural Center, The Van Cortlandt House Museum, Pelham Bay Park, The Bronx Museum of the Arts, Bartow-Pell Mansion Museum, Bug Carousel, Rockefeller Fountain, Clason Point Park, Van Cortlandt Park, The Big C Rock, Congo Gorilla Forest, Children's Zoo, The Hall of Fame for Great Americans, Van Cortlandt Nature Center, Bronx Children's Museum, Van Cortlandt Nature Center, Wild Asia Monorail, Bronx Children's Museum, Woodlawn Cemetery Conservancy, City Island Nautical Museum, Bronx Park, Hawkins Park, Thain Family Forest, Joyce Kilmer Park, The Museum of Bronx History at the Valentine-Varian House, Muskrat Cove, The Hip Hop Museum, Edgar Allan Poe Cottage, Enid A. Haupt Conservatory, Riverdale Park, Samuel Pell House, Cross County Center, Van Cortlandt House Museum, Williamsbridge Oval Park, Governors Field at Alumni Park, Van Cortlandt Jewish Center, Van Cortlandt Library, Fort Independence Playground, Jerome Park Reservoir, Bronx Alehouse, Gaelic Park, Old Croton Aqueduct Weir Chamber, Fordham University Graduate Student Housing, Teachers, Professors, Fellowship, Achieve Beyond, Pharmacy, Dental, Internal Medicine, Travel Nurses, Traveling Nurse, Student Housing, Bronx High School of Science, Pace University, Columbia University, NYU (New York University), World View High School, DeWitt Clinton High School, Manhattan College, Manhattan University, Lehman College CUNY, City College, Medical Resident Housing, Medical Fellowship Housing, Sarah Lawrence College, Ethical Culture Fieldston School, Horace Mann School, University of Mount Saint Vincent, Riverdale Country School\n    ",
+      "borough": "bronx",
+      "voucher_keywords_found": [
+        "sec 8"
+      ]
+    },
+    {
+      "housing_info": "N/A",
+      "price": "N/A",
+      "title": "Hasa Approved. Studio. New New New",
+      "url": "https://newyork.craigslist.org/brx/apa/d/bronx-hasa-approved-studio-new-new-new/7857587605.html",
+      "description": "\n        \n            QR Code Link to This Post\n            \n        \ngreat size and location\nJust few steps to subway, supermarket, shops , cafe and lots more!!\n*\nNew full kitchen\nNice hardwood floors/ high ceilings\n\nLarge bathroom\n*\nAvailable now, stop by soon\n\nPlease call or text -929-437-0880\n    ",
+      "borough": "bronx",
+      "voucher_keywords_found": [
+        "HASA",
+        "hasa"
+      ]
+    },
+    {
+      "housing_info": "N/A",
+      "price": "N/A",
+      "title": "Ground Floor Large  3 Bedroom for Hasa All Utilities Included",
+      "url": "https://newyork.craigslist.org/brx/apa/d/bronx-ground-floor-large-bedroom-for/7857435200.html",
+      "description": "\n        \n            QR Code Link to This Post\n            \n        \nNice Modern 3 Bedroom Apartment\n\n-Nice Secured Building\n- Big Windows\n-Good neighborhood\n-Beautiful Kitchen\n-Bright and sunny\n-Close to the 2 and 5 subway station\n\n-Please Contact Mark for a showing today 718-644-5393\n    ",
+      "borough": "bronx",
+      "voucher_keywords_found": [
+        "HASA",
+        "hasa"
+      ]
+    },
+    {
+      "housing_info": "N/A",
+      "price": "N/A",
+      "title": "Ground Floor 3 Bedroom 2 Baths for Hasa - All Utilities Included",
+      "url": "https://newyork.craigslist.org/brx/apa/d/bronx-ground-floor-bedroom-baths-for/7857434671.html",
+      "description": "\n        \n            QR Code Link to This Post\n            \n        \nStrong financial references needed to rent renovated 2 Bed Room, 2 Bath apartment in clean , quite\nelevator apartment building. Apartment is located at 1695 Grand Concourse. That is on the Grand Concourse\nand the Cross Bronx Expressway. Located only 200 feet away from the b/d train and 3 blocks away from the \n#4 express train. Building has a full- time live in super. Livingroom ( 11 x 20), Bed Room #1 ( 11 x 17),\nBed Room #2 ( 10 x 13), Dining Area ( 7 x 12), Kitchen ( 7 x 7). Bathroom #1 ( 5 x 7), Bathroom #2 ( 5 x 5),\nFoyer ( 7 x17), Hallway ( 3 x 12). Apartment has 9 foot walls and 5 large closets.\nAll apps must bring strong financial references and have great credit.\nAll apps must have a combined income of 80k.\nPlease e-mail owner or call 1-646-246-7314 for viewing.\n    ",
+      "borough": "bronx",
+      "voucher_keywords_found": [
+        "HASA",
+        "hasa"
+      ]
+    },
+    {
+      "housing_info": "N/A",
+      "price": "N/A",
+      "title": "Vouchers Welcome 3-Bedroom Apartment | First-Floor - Private Backyard",
+      "url": "https://newyork.craigslist.org/brx/apa/d/bronx-vouchers-welcome-bedroom/7857386891.html",
+      "description": "\n        \n            QR Code Link to This Post\n            \n        \nFreshly Renovated 3-Bedroom – Prime First-Floor Living + Private Backyard! 🔥\n\nLooking for style, space, and comfort? \nThis gorgeous, first-floor 3-bedroom apartment has it all\n\nSleek modern kitchen cabinets\nFresh, contemporary finishes throughout - Spacious layout with tons of natural light\nFully renovated from top to bottom\n\nEnjoy direct access to a private backyard—perfect for relaxing, entertaining, or creating your own garden escape!\n\nVouchers Welcome – Apply TODAY!\nApartments like this don’t last long\n\n Schedule Your Showing – TEXT:\nLorena: 516-615-3079 or 516-615-6880\n\n Hablamos Español\n    ",
+      "borough": "bronx",
+      "voucher_keywords_found": [
+        "VOUCHERS WELCOME",
+        "vouchers welcome"
+      ]
+    },
+    {
+      "housing_info": "N/A",
+      "price": "N/A",
+      "title": "2 Full Bathrooms !1 block to WOODLAWN METRO-NORTH",
+      "url": "https://newyork.craigslist.org/brx/apa/d/bronx-full-bathrooms-block-to-woodlawn/7857395942.html",
+      "description": "\n        \n            QR Code Link to This Post\n            \n        \napartments available in ALL BRONX AREAS in private houses and apartment buildings.\noff the book jobs welcome\nBAD /FAIR CREDIT WILL BE CONSIDERED\n\nALL SECTION-8 TENANTS WELCOME (NEW RENTALS/TRANSFERS/PORTABILITY)\n\nplease get in touch with Jerry budhoo with all inquires\ntel 718 300 1175 \nfax 718 829-2201\nM-F / 9AM-5PM\n    ",
+      "borough": "bronx",
+      "voucher_keywords_found": [
+        "SECTION-8",
+        "Section-8",
+        "ALL SECTION-8",
+        "OFF THE BOOK JOBS WELCOME",
+        "NEW RENTALS/TRANSFERS/PORTABILITY"
+      ]
+    },
+    {
+      "housing_info": "N/A",
+      "price": "N/A",
+      "title": "1695 Grand Concourse. near b/d #4 train. NO BROKERS FEE",
+      "url": "https://newyork.craigslist.org/brx/apa/d/bronx-1695-grand-concourse-near-d-train/7857398794.html",
+      "description": "\n        \n            QR Code Link to This Post\n            \n        \napartments available in ALL BRONX AREAS in private houses and apartment buildings.\noff the book jobs welcome\nBAD /FAIR CREDIT WILL BE CONSIDERED\n\nALL SECTION-8 TENANTS WELCOME (NEW RENTALS/TRANSFERS/PORTABILITY)\n\nplease get in touch with Jerry budhoo with all inquires\ntel 718 300 1175 \nfax 718 829-2201\nM-F / 9AM-5PM\n    ",
+      "borough": "bronx",
+      "voucher_keywords_found": [
+        "SECTION-8",
+        "Section-8",
+        "ALL SECTION-8",
+        "OFF THE BOOK JOBS WELCOME",
+        "NEW RENTALS/TRANSFERS/PORTABILITY"
+      ]
+    },
+    {
+      "housing_info": "N/A",
+      "price": "N/A",
+      "title": "SECTION-8 1 BEDROOM / NEWLY RENOVATED",
+      "url": "https://newyork.craigslist.org/brx/apa/d/bronx-section-1-bedroom-newly-renovated/7857378170.html",
+      "description": "\n        \n            QR Code Link to This Post\n            \n        \n2 br, 1 bath available for rent in basement of a private house. Apartment has its own entrance and access to a private backyard. 5 min walk to Pelham Bay Park 6 train station. 30 min train ride to NYC. Metro north station is currently being built as well. Easy access to Hutchison River Pkwy and I-95. Contact 9293604213 to set up an appointment for viewing.\n    ",
+      "borough": "bronx",
+      "voucher_keywords_found": [
+        "SECTION-8",
+        "Section-8"
+      ]
+    },
+    {
+      "housing_info": "N/A",
+      "price": "N/A",
+      "title": "Studio apartment for hasa",
+      "url": "https://newyork.craigslist.org/brx/apa/d/bronx-studio-apartment-for-hasa/7856868660.html",
+      "description": "\n        \n            QR Code Link to This Post\n            \n        \nBeautiful spacious brand new studio. \nBeautiful modern kitchen. \nBrand new building. \nModern tiled bathroom. \nHardwood floors throughout apt. \n\nLandlord works with the hasa voucher a lot so pls mention when inquiring. \n\nFor a viewing pls contact me at 347-351-7486 if I don’t pick up pls text me and I’ll get back to you asap.\n    ",
+      "borough": "bronx",
+      "voucher_keywords_found": [
+        "HASA",
+        "hasa"
+      ]
+    },
+    {
+      "housing_info": "N/A",
+      "price": "N/A",
+      "title": "NEW 2 BEDROOM— CityFHEPS Welcome",
+      "url": "https://newyork.craigslist.org/brx/apa/d/bronx-new-bedroom-cityfheps-welcome/7856802006.html",
+      "description": "\n        \n            QR Code Link to This Post\n            \n        \ngreat size and location\nJust few steps to subway, supermarket, shops , cafe and lots more!!\n*\nNew full kitchen\nNice hardwood floors/ high ceilings\n\nLarge bathroom\n*\nAvailable now, stop by soon\nGood credit/income is required to move in/ gaurantor are Welcome\n\nPlease call or text -929-437-0880\n    ",
+      "borough": "bronx",
+      "voucher_keywords_found": [
+        "CITYFHEPS",
+        "CityFHEPS",
+        "FHEPS",
+        "fheps"
+      ]
+    },
+    {
+      "housing_info": "N/A",
+      "price": "N/A",
+      "title": "BRAND NEW STUDIO! HASA WELCOME!!",
+      "url": "https://newyork.craigslist.org/brx/apa/d/bronx-brand-new-studio-hasa-welcome/7856797450.html",
+      "description": "\n        \n            QR Code Link to This Post\n            \n        \nBRICK TUDOR-STYLE HOUSE: 4 Bedrooms; 3 Baths; 一 living room ; dining room; master bedroom suite (includes dressing room, master bathroom & 10-by-13-ft. terrace); storage attic; Few minutes walk to No. 1 subway, Van Cortlandt Park. Parking and utilities extra\n    ",
+      "borough": "bronx",
+      "voucher_keywords_found": [
+        "HASA",
+        "hasa"
+      ]
+    },
+    {
+      "housing_info": "N/A",
+      "price": "N/A",
+      "title": "Spacious 2 bedroom corner unit w/ Private balcony in heart of Bushwick",
+      "url": "https://newyork.craigslist.org/brk/apa/d/brooklyn-spacious-bedroom-corner-unit/7858683454.html",
+      "description": "\n        \n            QR Code Link to This Post\n            \n        \n*Please read the entire description*\n\nText for a video tour / how to apply \n\nIf after reading the description and you would like to view/apply to this unit, please TEXT Corey at 631-830-5849 - any calls regarding this unit will not be answered. \n\nINCOME RESTRICTED / RENT STABILIZED UNIT!!\n\n\n1 Bedroom $2478.25 \n\n           1  person $82,694 - $147,420\n\n\n  *   Assets:\n                *   The asset limitation for this project is currently at $210,600. Applicants in possession of assets exceeding this amount are not qualified for this project. (see attached asset inclusions and exclusions)\n                *   Applicants owning real property within 100 miles of NYC are not eligible for an affordable unit.\n\n  *   Documents:\n                 *   For us to confirm household/income qualification, I will need the following documentation:\n\n                                  *   One month's worth of most recent pay stubs for all family members\n                                  *   Proof of any other income, such as child support, veterans’ benefits, etc.\n                                  *   1 Month bank statements\n                                  *   Current lease\n                                  *   ID’s, Birth Certificate, Social Security Cards\n\nBRAND NEW rent stabilized 2 Bed/ 1 Bath for August 1st move in!!\nPlease TEXT Corey at 631-830-5849 to learn about viewings / how to apply / etc. \n\nLaundry in building, new kitchen appliances (including dishwasher), central heat & AC.\n\nFeatures:\n- 1 Queen size bedrooms\n- 1 Full bathroom\n- Hardwood floors\n- High ceilings\n- Laundry in building\n- Gym\n- Lounge\n- Garage parking\n- Bike room\n- Rooftop access\n- Pet Friendly\n- No Broker Fee\n\nOne year lease!\nINCOME RESTRICTED RENT STABILIZED UNIT\n\n    ",
+      "borough": "brooklyn",
+      "voucher_keywords_found": [
+        "INCOME RESTRICTED",
+        "income restricted"
+      ]
+    },
+    {
+      "housing_info": "N/A",
+      "price": "N/A",
+      "title": "RENT STABILIZED - INCOME RESTRICTED - RARE OPPORTUNITY in BUSHWICK",
+      "url": "https://newyork.craigslist.org/brk/apa/d/brooklyn-rent-stabilized-income/7858680745.html",
+      "description": "\n        \n            QR Code Link to This Post\n            \n        \nIn Unit Washer Dryer! Modern 1 bedroom apartment with windows in the living room and in unit washer dryer! Located on Myrtle Ave and Washington Park in Prime Fort Greene, right next to the Fort Greene Park, near tons of local restaurants, cafes, and major subway lines such as the 2, 3, 4 and 5 lines as well as A, C, G, B, D, N, Q, R, W lines all near by!\n\nIn unit washer, modern kitchen with stainless steel appliances including microwave and dishwasher, bedroom with great windows and closet, modern bathroom with tub and shower, split units for air conditioning and heat, hardwood flooring, , Video intercom system, Guarantors Accepted, Pets Allowed * Upon approval, showing by appointment only.\n    ",
+      "borough": "brooklyn",
+      "voucher_keywords_found": [
+        "INCOME RESTRICTED",
+        "income restricted"
+      ]
+    },
+    {
+      "housing_info": "N/A",
+      "price": "N/A",
+      "title": "🌹City FHEPS - 🌼🌼 Comfortable, Affordable, Perfect Space 🌻🌻",
+      "url": "https://newyork.craigslist.org/brk/apa/d/brooklyn-city-fheps-comfortable/7858634852.html",
+      "description": "\n        \n            QR Code Link to This Post\n            \n        \nThis is one of those rare finds that feature beauty, size and affordability!\n\nSome of the great features of this apartment include:\n\nHigh Ceilings\n\nFreshly painted\n\nNice Kitchen & Bath\n\nSpacious closets\n\nWater included\n\nPet friendly (one pet only)\n\nThis is a can't miss!\n\nNear shopping, cafes, Groceries, parks, post offices, entertainment, bars, fine dining, laundromat , schools/library and much more!\n\nSerious inquiries please.\n    ",
+      "borough": "brooklyn",
+      "voucher_keywords_found": [
+        "FHEPS",
+        "fheps"
+      ]
+    },
+    {
+      "housing_info": "N/A",
+      "price": "N/A",
+      "title": "Studio at Davis St - No Fee",
+      "url": "https://newyork.craigslist.org/que/apa/d/astoria-studio-at-davis-st-no-fee/7858543660.html",
+      "description": "\n        \n            QR Code Link to This Post\n            \n        \nIncredible affordable unit in a luxury building in the heart of Long Island City - No Fee - Rent stabilized \n\nReach out for a tour today \n\nPlease email me with the subject *Studio at Dutch House* to schedule a tour \n\nDoorman 24/7 \nGym \nFurnished roof deck \nW/D in unit \nAnd all other dream amenities of a luxury building \n\nUnit available for anyone with eligible income per HPD \n\nMin income $85k max $148k for single household \nMin income $85k max $167k for Houhsold of 2 \nIncome can be higher for a bigger household\nAsset limited to $201k\n    ",
+      "borough": "queens",
+      "voucher_keywords_found": [
+        "HPD",
+        "hpd"
+      ]
+    },
+    {
+      "housing_info": "N/A",
+      "price": "N/A",
+      "title": "Brand New 1 Bedroom- CITYFHEPS WELCOME",
+      "url": "https://newyork.craigslist.org/que/apa/d/jamaica-brand-new-bedroom-cityfheps/7858537745.html",
+      "description": "\n        \n            QR Code Link to This Post\n            \n        \n\nThis Apartment Is Located In the Desirable Neighborhood Of Bedford Stuyvesant🌳 Surrounded By Convenience ⚡️\n\n \n\nApartment features: \n⚡️Hardwood Floors \n⚡️TONS of Natural Light \n⚡️Stainless Steel Appliances \n⚡️Tall Ceilings \n⚡️LED Recessed Lighting \n⚡️Ample Closet Space \n⚡️& MORE! 🤭\n\nNeighborhood Perks: \n📍Bedford Stuyvesant\n📍Amazing Restaurants \n📍Steps from Bus\n📍Citi Bikes \n📍Coffee Shops\n\n\n\nReach out to Lookman Via Text 3477509424\n    ",
+      "borough": "queens",
+      "voucher_keywords_found": [
+        "CITYFHEPS",
+        "CityFHEPS",
+        "FHEPS",
+        "fheps"
+      ]
+    }
+  ]
+}

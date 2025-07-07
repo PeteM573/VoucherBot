@@ -1,0 +1,220 @@
+{
+  "extraction_metrics": {
+    "total_listings": 4,
+    "addresses_extracted": 4,
+    "addresses_validated": 4,
+    "address_success_rate": "100.0%",
+    "address_validation_rate": "100.0%",
+    "search_timestamp": "2025-06-23 20:55:54",
+    "extraction_method": "enhanced_address_extraction_v2",
+    "borough_breakdown": {
+      "bronx": {
+        "total_listings": 4,
+        "addresses_found": 4,
+        "address_rate": "100.0%"
+      }
+    }
+  },
+  "listings_by_borough": {
+    "bronx": [
+      {
+        "housing_info": "N/A",
+        "location_hint": null,
+        "price": "$2,500",
+        "title": "NEW STUDIO AVAILABLE! HASA WELCOME",
+        "url": "https://newyork.craigslist.org/brx/apa/d/bronx-new-studio-available-hasa-welcome/7860336182.html",
+        "description": "QR Code Link to This Post\n            \n        \nThis brand new studio features a full kitchen!\nBrand new bathroom! \nNew floors! \nIt’s located in a great neighborhood in the Bronx on cugee Ave! \nText me for a showing! \n929-437-0880",
+        "borough": "bronx",
+        "address": "Nelson Ave near East 181st, Bronx, NY",
+        "voucher_keywords_found": [
+          "hasa welcome",
+          "hasa welcome"
+        ],
+        "validation_details": {
+          "confidence_score": 1.0,
+          "has_negative_patterns": false,
+          "negative_patterns_found": [],
+          "has_positive_patterns": true,
+          "found_keywords": [
+            "hasa welcome"
+          ],
+          "validation_reason": "Strong voucher indicators found: hasa welcome, hasa welcome"
+        }
+      },
+      {
+        "housing_info": "N/A",
+        "location_hint": null,
+        "price": "$1,850",
+        "title": "STUDIO FOR RENT RIVERDALE NEAR SHOPS AND STORES",
+        "url": "https://newyork.craigslist.org/brx/apa/d/bronx-studio-for-rent-riverdale-near/7860457025.html",
+        "description": "QR Code Link to This Post\n            \n        \nCityFHEPS and all other vouchers accepted!\n\nBRAND NEW, Modern Studio with a full bathroom!\nLots of natural light and large windows\nCompleted with Central A/C! Ready to move in!\nA short walk to the B & D subway lines\n\n**TEXT 347-292-8604 TO SCHEDULE A VIEWING **",
+        "borough": "bronx",
+        "address": "E 178th St near Crotona Ave, Bronx, NY",
+        "voucher_keywords_found": [
+          "cityfheps and all other vouchers accepted",
+          "all other vouchers accepted",
+          "all other vouchers accepted"
+        ],
+        "validation_details": {
+          "confidence_score": 1.0,
+          "has_negative_patterns": false,
+          "negative_patterns_found": [],
+          "has_positive_patterns": true,
+          "found_keywords": [
+            "all other vouchers accepted",
+            "cityfheps and all other vouchers accepted"
+          ],
+          "validation_reason": "Strong voucher indicators found: cityfheps and all other vouchers accepted, all other vouchers accepted"
+        }
+      },
+      {
+        "housing_info": "N/A",
+        "location_hint": null,
+        "price": "$2,500",
+        "title": "Hasa Approved. Studio. New New New",
+        "url": "https://newyork.craigslist.org/brx/apa/d/bronx-hasa-approved-studio-new-new-new/7860335627.html",
+        "description": "QR Code Link to This Post\n            \n        \ngreat size and location\nJust few steps to subway, supermarket, shops , cafe and lots more!!\n*\nNew full kitchen\nNice hardwood floors/ high ceilings\n\nLarge bathroom\n*\nAvailable now, stop by soon\n\nPlease call or text -929-437-0880",
+        "borough": "bronx",
+        "address": "East 184 near East 166th St, Bronx, NY",
+        "voucher_keywords_found": [
+          "hasa approved. studio",
+          "hasa approved"
+        ],
+        "validation_details": {
+          "confidence_score": 1.0,
+          "has_negative_patterns": false,
+          "negative_patterns_found": [],
+          "has_positive_patterns": true,
+          "found_keywords": [
+            "hasa approved. studio",
+            "hasa approved"
+          ],
+          "validation_reason": "Strong voucher indicators found: hasa approved. studio, hasa approved"
+        }
+      },
+      {
+        "housing_info": "N/A",
+        "location_hint": null,
+        "price": "$3,000",
+        "title": "BRAND NEW 2 BEDROOM !!!! CITYFHEPS WELCOME",
+        "url": "https://newyork.craigslist.org/brx/apa/d/bronx-brand-new-bedroom-cityfheps/7860335114.html",
+        "description": "QR Code Link to This Post\n            \n        \nLarge Studio in Mosholu Area - Wood Floors - NICEST ELEVATOR BUILDING in Area \nGreat Layout  - Separate Kitchen - Large Closets - Laundry Facility in Building\nNear Subways and Transportation",
+        "borough": "bronx",
+        "address": "206th Street near Grand Concourse, Bronx, NY",
+        "voucher_keywords_found": [
+          "cityfheps welcome"
+        ],
+        "validation_details": {
+          "confidence_score": 0.6000000000000001,
+          "has_negative_patterns": false,
+          "negative_patterns_found": [],
+          "has_positive_patterns": true,
+          "found_keywords": [
+            "cityfheps welcome"
+          ],
+          "validation_reason": "Strong voucher indicators found: cityfheps welcome"
+        }
+      }
+    ]
+  },
+  "all_listings": [
+    {
+      "housing_info": "N/A",
+      "location_hint": null,
+      "price": "$2,500",
+      "title": "NEW STUDIO AVAILABLE! HASA WELCOME",
+      "url": "https://newyork.craigslist.org/brx/apa/d/bronx-new-studio-available-hasa-welcome/7860336182.html",
+      "description": "QR Code Link to This Post\n            \n        \nThis brand new studio features a full kitchen!\nBrand new bathroom! \nNew floors! \nIt’s located in a great neighborhood in the Bronx on cugee Ave! \nText me for a showing! \n929-437-0880",
+      "borough": "bronx",
+      "address": "Nelson Ave near East 181st, Bronx, NY",
+      "voucher_keywords_found": [
+        "hasa welcome",
+        "hasa welcome"
+      ],
+      "validation_details": {
+        "confidence_score": 1.0,
+        "has_negative_patterns": false,
+        "negative_patterns_found": [],
+        "has_positive_patterns": true,
+        "found_keywords": [
+          "hasa welcome"
+        ],
+        "validation_reason": "Strong voucher indicators found: hasa welcome, hasa welcome"
+      }
+    },
+    {
+      "housing_info": "N/A",
+      "location_hint": null,
+      "price": "$1,850",
+      "title": "STUDIO FOR RENT RIVERDALE NEAR SHOPS AND STORES",
+      "url": "https://newyork.craigslist.org/brx/apa/d/bronx-studio-for-rent-riverdale-near/7860457025.html",
+      "description": "QR Code Link to This Post\n            \n        \nCityFHEPS and all other vouchers accepted!\n\nBRAND NEW, Modern Studio with a full bathroom!\nLots of natural light and large windows\nCompleted with Central A/C! Ready to move in!\nA short walk to the B & D subway lines\n\n**TEXT 347-292-8604 TO SCHEDULE A VIEWING **",
+      "borough": "bronx",
+      "address": "E 178th St near Crotona Ave, Bronx, NY",
+      "voucher_keywords_found": [
+        "cityfheps and all other vouchers accepted",
+        "all other vouchers accepted",
+        "all other vouchers accepted"
+      ],
+      "validation_details": {
+        "confidence_score": 1.0,
+        "has_negative_patterns": false,
+        "negative_patterns_found": [],
+        "has_positive_patterns": true,
+        "found_keywords": [
+          "all other vouchers accepted",
+          "cityfheps and all other vouchers accepted"
+        ],
+        "validation_reason": "Strong voucher indicators found: cityfheps and all other vouchers accepted, all other vouchers accepted"
+      }
+    },
+    {
+      "housing_info": "N/A",
+      "location_hint": null,
+      "price": "$2,500",
+      "title": "Hasa Approved. Studio. New New New",
+      "url": "https://newyork.craigslist.org/brx/apa/d/bronx-hasa-approved-studio-new-new-new/7860335627.html",
+      "description": "QR Code Link to This Post\n            \n        \ngreat size and location\nJust few steps to subway, supermarket, shops , cafe and lots more!!\n*\nNew full kitchen\nNice hardwood floors/ high ceilings\n\nLarge bathroom\n*\nAvailable now, stop by soon\n\nPlease call or text -929-437-0880",
+      "borough": "bronx",
+      "address": "East 184 near East 166th St, Bronx, NY",
+      "voucher_keywords_found": [
+        "hasa approved. studio",
+        "hasa approved"
+      ],
+      "validation_details": {
+        "confidence_score": 1.0,
+        "has_negative_patterns": false,
+        "negative_patterns_found": [],
+        "has_positive_patterns": true,
+        "found_keywords": [
+          "hasa approved. studio",
+          "hasa approved"
+        ],
+        "validation_reason": "Strong voucher indicators found: hasa approved. studio, hasa approved"
+      }
+    },
+    {
+      "housing_info": "N/A",
+      "location_hint": null,
+      "price": "$3,000",
+      "title": "BRAND NEW 2 BEDROOM !!!! CITYFHEPS WELCOME",
+      "url": "https://newyork.craigslist.org/brx/apa/d/bronx-brand-new-bedroom-cityfheps/7860335114.html",
+      "description": "QR Code Link to This Post\n            \n        \nLarge Studio in Mosholu Area - Wood Floors - NICEST ELEVATOR BUILDING in Area \nGreat Layout  - Separate Kitchen - Large Closets - Laundry Facility in Building\nNear Subways and Transportation",
+      "borough": "bronx",
+      "address": "206th Street near Grand Concourse, Bronx, NY",
+      "voucher_keywords_found": [
+        "cityfheps welcome"
+      ],
+      "validation_details": {
+        "confidence_score": 0.6000000000000001,
+        "has_negative_patterns": false,
+        "negative_patterns_found": [],
+        "has_positive_patterns": true,
+        "found_keywords": [
+          "cityfheps welcome"
+        ],
+        "validation_reason": "Strong voucher indicators found: cityfheps welcome"
+      }
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+[
+  {
+    "title": "2 BR Apartment - Section 8 Welcome",
+    "address": "123 Grand Avenue, Bronx, NY",
+    "rent": 1800,
+    "bedrooms": 2,
+    "description": "Nice apartment near transportation",
+    "coordinates": {
+      "lat": 40.8662227,
+      "lon": -73.9006796
+    },
+    "nearby_schools": [
+      {
+        "school_name": "Luisa Pineiro Fuentes School of Science and Discov",
+        "grades": "0K-SE",
+        "school_type": "Elementary",
+        "distance_miles": 0.21,
+        "walking_time_minutes": 4,
+        "address": "124 EAMES PLACE",
+        "coordinates": {
+          "latitude": 40.869142,
+          "longitude": -73.901821
+        }
+      },
+      {
+        "school_name": "P.S. 086 Kingsbridge Heights",
+        "grades": "PK-SE",
+        "school_type": "Elementary",
+        "distance_miles": 0.27,
+        "walking_time_minutes": 5,
+        "address": "2756 RESERVOIR AVENUE",
+        "coordinates": {
+          "latitude": 40.869061,
+          "longitude": -73.897066
+        }
+      },
+      {
+        "school_name": "Kingsbridge International High School",
+        "grades": "09-12",
+        "school_type": "High school",
+        "distance_miles": 0.27,
+        "walking_time_minutes": 5,
+        "address": "2780 RESERVOIR AVENUE",
+        "coordinates": {
+          "latitude": 40.869061,
+          "longitude": -73.897066
+        }
+      }
+    ],
+    "school_score": 100
+  },
+  {
+    "title": "1 BR in Brooklyn Heights - Vouchers OK",
+    "address": "456 Hicks Street, Brooklyn, NY",
+    "rent": 1600,
+    "bedrooms": 1,
+    "description": "Charming apartment in historic neighborhood",
+    "coordinates": {
+      "lat": 40.6738032,
+      "lon": -74.006168
+    },
+    "nearby_schools": [
+      {
+        "school_name": "PAVE Academy Charter School",
+        "grades": "0K-08",
+        "school_type": "K-8",
+        "distance_miles": 0.21,
+        "walking_time_minutes": 4,
+        "address": "732 HENRY STREET",
+        "coordinates": {
+          "latitude": 40.675936,
+          "longitude": -74.003372
+        }
+      },
+      {
+        "school_name": "Red Hook Neighborhood School",
+        "grades": "PK-SE",
+        "school_type": "Elementary",
+        "distance_miles": 0.29,
+        "walking_time_minutes": 6,
+        "address": "27 HUNTINGTON STREET",
+        "coordinates": {
+          "latitude": 40.677914,
+          "longitude": -74.005151
+        }
+      },
+      {
+        "school_name": "Summit Academy Charter School",
+        "grades": "06-12",
+        "school_type": "Secondary School",
+        "distance_miles": 0.29,
+        "walking_time_minutes": 6,
+        "address": "27 HUNTINGTON STREET",
+        "coordinates": {
+          "latitude": 40.677914,
+          "longitude": -74.005151
+        }
+      }
+    ],
+    "school_score": 100
+  },
+  {
+    "title": "3 BR Family Apartment - CityFHEPS Accepted",
+    "address": "789 Northern Blvd, Flushing, NY",
+    "rent": 2200,
+    "bedrooms": 3,
+    "description": "Spacious family apartment with good schools nearby",
+    "coordinates": {
+      "lat": 40.7640601,
+      "lon": -73.8090397
+    },
+    "nearby_schools": [
+      {
+        "school_name": "P.S. 022 Thomas Jefferson",
+        "grades": "PK-SE",
+        "school_type": "Elementary",
+        "distance_miles": 0.2,
+        "walking_time_minutes": 4,
+        "address": "153-33 SANFORD AVENUE",
+        "coordinates": {
+          "latitude": 40.761744,
+          "longitude": -73.811373
+        }
+      },
+      {
+        "school_name": "Elm Community Charter School",
+        "grades": "0K-02",
+        "school_type": "Elementary",
+        "distance_miles": 0.41,
+        "walking_time_minutes": 8,
+        "address": "149-34 35 AVENUE",
+        "coordinates": {
+          "latitude": 40.766487,
+          "longitude": -73.816232
+        }
+      },
+      {
+        "school_name": "J.H.S. 189 Daniel Carter Beard",
+        "grades": "06-SE",
+        "school_type": "Junior High-Intermediate-Middle",
+        "distance_miles": 0.57,
+        "walking_time_minutes": 11,
+        "address": "144-80 BARCLAY AVENUE",
+        "coordinates": {
+          "latitude": 40.759963,
+          "longitude": -73.818399
+        }
+      }
+    ],
+    "school_score": 100
+  }
+]

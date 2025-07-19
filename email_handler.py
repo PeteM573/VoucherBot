@@ -10,12 +10,15 @@ class EmailTemplateHandler:
     def __init__(self):
         self.email_patterns = [
             r"(?i)(email|write|compose|contact|message|reach out).{0,20}(landlord|owner|property manager)",
-            r"(?i)(send|write|compose).{0,10}(email|message)",
+            r"(?i)(send|write|compose)\s+(an?\s+)?(email|message)\s+(to|for|about)",
+            r"(?i)(send|write|compose)\s+(an?\s+)?(email|message)",  # More flexible - no requirement for to/for/about
             r"(?i)contact.{0,20}listing",
             r"(?i)(email|message).{0,20}listing\s*#?\d+",
             r"(?i)(compose|write).{0,20}(email|message).{0,20}(listing|property|apartment)",
             r"(?i)write to.{0,20}(landlord|owner)",
-            r"(?i)(write|compose|email).{0,20}(this|the).{0,10}(listing|property|apartment)"
+            r"(?i)(write|compose|email).{0,20}(this|the).{0,10}(listing|property|apartment)",
+            r"(?i)(write|compose|draft|create)\s+(an?\s+)?(email|message)",  # Additional flexible patterns
+            r"(?i)(email|message)\s+(me|for me|to me)"  # Direct email requests
         ]
         
         self.listing_reference_patterns = [
@@ -23,8 +26,14 @@ class EmailTemplateHandler:
             r"property\s*#?(\d+)",
             r"apartment\s*#?(\d+)",
             r"the\s*(first|second|third|fourth|fifth|1st|2nd|3rd|4th|5th)\s*(listing|property|apartment)",
-            r"this\s*(listing|property|apartment)",
-            r"the\s*(listing|property|apartment)"
+            r"this\s*(listing|property|apartment|one)",
+            r"the\s*(listing|property|apartment)",
+            r"that\s*(listing|property|apartment|one)",
+            r"this\s*one",
+            r"that\s*one",
+            r"the\s*one",
+            r"current\s*(listing|property|apartment)",
+            r"above\s*(listing|property|apartment)"
         ]
         
         self.name_patterns = [
@@ -42,7 +51,7 @@ class EmailTemplateHandler:
             "voucher": r"(?i)voucher"
         }
 
-    def detect_email_request(self, message: str) -> bool:
+    def detect_email_request(self, message: str, state: Dict = None) -> bool:
         """Enhanced email request detection using multiple patterns"""
         message_lower = message.lower()
         
@@ -56,13 +65,57 @@ class EmailTemplateHandler:
             re.search(pattern, message_lower) for pattern in self.listing_reference_patterns
         )
         
+        # If we have listings available, be more flexible with email detection
+        if state and state.get("listings"):
+            # Allow general email requests to landlord/owner when listings are available
+            general_email_patterns = [
+                r"(?i)(compose|write|draft|create)\s+(email|message)",
+                r"(?i)(email|message|contact)\s+(landlord|owner|property manager)",
+                r"(?i)(inquiry|contact)\s+(about|for)\s+(apartment|property|listing)",
+                r"(?i)(email|contact)\s+the\s+(property owner|landlord)",
+                r"(?i)(write|send)\s+(inquiry|email)",
+                r"(?i)(create|generate)\s+(email template)",
+                r"(?i)(write|compose|draft)\s+(me\s+)?(an?\s+)?(email|message)",  # "write me an email"
+                r"(?i)(email|message)\s+(me|for me|to me)",  # "email me"
+                r"(?i)(write|compose)\s+(an?\s+)?(email|message)\s+(my name is|i'm|i am)",  # "write an email my name is"
+                r"(?i)(write|compose)\s+(an?\s+)?(email|message)\s+(for|to)\s+(me|bob|john|jane)"  # "write an email for bob"
+            ]
+            
+            has_general_email_intent = any(
+                re.search(pattern, message) for pattern in general_email_patterns
+            )
+            
+            return has_email_intent or has_general_email_intent
+        
         return has_email_intent and has_listing_ref
 
-    def extract_listing_number(self, message: str) -> Optional[int]:
+    def extract_listing_number(self, message: str, state: Dict = None) -> Optional[int]:
         """Extract listing number from message with multiple pattern support"""
         message_lower = message.lower()
         
-        # Try direct number patterns first
+        # Check for contextual references first if we have state
+        if state:
+            contextual_patterns = [
+                r"this\s*(listing|property|apartment|one)",
+                r"that\s*(listing|property|apartment|one)",
+                r"this\s*one",
+                r"that\s*one",
+                r"the\s*one",
+                r"current\s*(listing|property|apartment)",
+                r"above\s*(listing|property|apartment)"
+            ]
+            
+            if any(re.search(pattern, message_lower) for pattern in contextual_patterns):
+                # Use current listing if available
+                current_listing_index = state.get("current_listing_index")
+                if current_listing_index is not None:
+                    return current_listing_index + 1  # Convert to 1-based
+                # If no current listing, default to listing 1
+                listings = state.get("listings", [])
+                if listings:
+                    return 1
+        
+        # Try direct number patterns
         for pattern in [r"listing\s*#?(\d+)", r"property\s*#?(\d+)", r"apartment\s*#?(\d+)"]:
             match = re.search(pattern, message_lower)
             if match:
@@ -179,15 +232,178 @@ Best regards,
 
 
 def enhanced_classify_message(message: str, state: Dict) -> str:
-    """Enhanced message classification with what-if scenario detection using V2 router"""
+    """Enhanced message classification with comprehensive voucher question handling"""
     email_handler = EmailTemplateHandler()
     
-    if email_handler.detect_email_request(message):
+    # Check for email requests only if we have listings
+    if state.get("listings") and email_handler.detect_email_request(message, state):
         return "email_request"
     
-    message_lower = message.lower()
+    message_lower = message.lower().strip()  # Add strip() to handle whitespace
     
-    # Check for shortlist commands FIRST (high priority)
+    # Search trigger patterns (highest priority for explicit search requests)
+    search_patterns = [
+        # English patterns
+        "find me", "search for", "show me listings", "look for",
+        "i need a", "i need an", "i'm looking for", "im looking for",
+        "find a", "find an", "search apartments", "looking for",
+        
+        # Spanish patterns
+        "busco", "estoy buscando", "quiero", "necesito",
+        "buscar", "encontrar", "mostrar", "ver",
+        "tengo un vale", "tienes un vale", "con mi voucher",
+        "busco vivienda", "busco apartamento", "busco departamento",
+        "estoy buscando vivienda", "estoy buscando apartamento",
+        "quiero vivienda", "quiero apartamento", "necesito vivienda",
+        "necesito apartamento", "buscar vivienda", "buscar apartamento"
+    ]
+    
+    # Location patterns that should NOT trigger search
+    general_location_patterns = [
+        "can i use this in", "does it work in", "accepted in",
+        "landlords in", "take vouchers in", "can i use my voucher in",
+        "does my voucher work in", "is my voucher accepted in",
+        "do they accept vouchers in", "are there landlords that accept",
+        "do they accept section 8 in", "accept section 8 in",
+        "take section 8 in", "is section 8 accepted in"
+    ]
+    
+    # Check if it's a general location question (not a search)
+    if any(pattern in message_lower for pattern in general_location_patterns):
+        return "general_conversation"
+    
+    # Check if it's an explicit search request
+    if any(pattern in message_lower for pattern in search_patterns):
+        # Make sure it's not just asking about voucher acceptance
+        if not any(pattern in message_lower for pattern in ["how do i", "where can i", "what do i"]):
+            return "new_search"
+            
+    # Check if it might be a location-based search
+    has_location = any(borough in message_lower for borough in [
+        "bronx", "brooklyn", "manhattan", "queens", "staten island",
+        "el bronx", "en bronx", "en brooklyn", "en manhattan", "en queens", "en staten island"
+    ])
+    has_housing_terms = any(term in message_lower for term in [
+        "bedroom", "apt", "apartment", "housing", "place", "listings", "listing",
+        "vivienda", "apartamento", "departamento", "casa", "habitación", "habitacion"
+    ])
+    has_voucher_terms = any(term in message_lower for term in [
+        "section 8", "section-8", "voucher", "cityfheps", "hasa", "dss", "fheps",
+        "sección 8", "seccion 8", "vale", "vales", "voucher", "vouchers"
+    ])
+    
+    # Check for listing questions first if we have listings
+    if state.get("listings"):
+        # First check for bare numbers (just a number by itself)
+        if message_lower.replace(" ", "").isdigit():
+            number = int(message_lower)
+            if 1 <= number <= 10:  # Only accept reasonable listing numbers
+                return "listing_question"
+        
+        # Then check for numbers with context, but exclude "section 8" patterns
+        numbers = re.findall(r'\b\d+\b', message_lower)
+        has_number = bool(numbers and 1 <= int(numbers[0]) <= 10)
+        
+        # Special case: ignore numbers in "section 8" context for listing questions
+        if "section 8" in message_lower or "section-8" in message_lower:
+            has_number = False
+        
+        # Also check for listing-specific words
+        listing_question_patterns = [
+            "show listing", "tell me about listing", "what about listing",
+            "can i see listing", "show me listing", "details for listing",
+            "more info about listing", "information about listing",
+            "tell me more about listing", "what's listing", "whats listing",
+            "listing #", "listing number", "listing no", "listing details",
+            "can i see #", "show me #", "what about #", "tell me about #",
+            "show #", "see #", "view #", "look at #",
+            # Add ordinal patterns
+            "first listing", "second listing", "third listing", "last listing",
+            "1st listing", "2nd listing", "3rd listing",
+            "the first", "the second", "the third", "the last",
+            "see the first", "see the second", "see the third", "see the last",
+            "show the first", "show the second", "show the third", "show the last",
+            "view the first", "view the second", "view the third", "view the last"
+        ]
+        
+        # Only match if:
+        # 1. Has a number AND some listing context, OR
+        # 2. Matches a listing pattern
+        # 3. Not asking a general question about listings
+        if (has_number and any(word in message_lower for word in ["listing", "show", "see", "view", "about", "#"])) or \
+           any(pattern in message_lower for pattern in listing_question_patterns):
+            # Make sure it's not a general question about listings (but allow "tell me about listing #X")
+            if not any(pattern in message_lower for pattern in [
+                "how do", "what is", "what are", "where can", "where do",
+                "when can", "why do", "explain", "tell me about the process"
+            ]):
+                return "listing_question"
+    
+    # Now check for location-based search
+    # Only trigger if:
+    # 1. Has location AND (housing terms OR voucher terms)
+    # 2. Not asking about acceptance/availability
+    if has_location and (has_housing_terms or has_voucher_terms):
+        # Make sure it's not just asking about acceptance
+        if not any(word in message_lower for word in ["accept", "take", "allowed", "available"]):
+            return "new_search"
+    
+    # Voucher information and help patterns
+    voucher_info_patterns = [
+        # How-to Questions
+        "how do i", "how can i", "what do i do", "what's the process",
+        "what happens if", "how to use", "how does", "what should i",
+        
+        # Information/Understanding Questions
+        "what's the difference", "what does", "can i", "does my voucher",
+        "am i eligible", "do i have to", "is it possible",
+        
+        # Status/Timeline Questions
+        "when do i", "how long does", "why haven't i", "what's the status",
+        "when will", "how much time", "deadline", "extension",
+        
+        # Documentation/Process Questions
+        "what documents", "what paperwork", "forms", "application",
+        "inspection", "requirements", "recertification",
+        
+        # Rights/Rules Questions
+        "can a landlord", "is it legal", "discrimination", "rights",
+        "allowed to", "required to",
+        
+        # Program Understanding
+        "difference between", "vs", "versus", "compared to",
+        "what is cityfheps", "what is section 8", "what is hasa",
+        
+        # Specific Voucher Questions
+        "maximum rent", "rent limit", "utilities", "bedrooms",
+        "expire", "transfer", "move with", "portability"
+    ]
+    
+    # Check if it's a voucher question
+    if any(pattern in message_lower for pattern in voucher_info_patterns):
+        return "general_conversation"
+    
+    # Documentation/help patterns
+    documentation_patterns = [
+        "where can i find", "how do i find", "where do i find",
+        "how can i find", "where is", "how do i",
+        "how can i", "can you explain", "what does",
+        "explain", "help me understand",
+        "documentation", "guide", "tutorial", "instructions",
+        "where should i look", "where would i find"
+    ]
+    
+    # Check for documentation patterns
+    if any(pattern in message_lower for pattern in documentation_patterns):
+        return "general_conversation"
+    
+    # Check for general "tell me about" (voucher/program info)
+    if "tell me about" in message_lower:
+        # If it's about voucher programs/general info, it's general conversation
+        if any(word in message_lower for word in ["voucher", "section 8", "cityfheps", "hasa", "program", "process"]):
+            return "general_conversation"
+    
+    # Check for shortlist commands
     shortlist_patterns = [
         "save listing", "add to shortlist", "shortlist", "save to shortlist",
         "remove from shortlist", "delete from shortlist", "unsave",
@@ -199,186 +415,6 @@ def enhanced_classify_message(message: str, state: Dict) -> str:
     if any(pattern in message_lower for pattern in shortlist_patterns):
         return "shortlist_command"
     
-    # Check for new search requests FIRST (before listing questions to avoid conflicts)
-    new_search_patterns = [
-        "find me", "search for", "look for", "i want", 
-        "show me apartments", "find apartments", "search apartments",
-        "new search", "different search", "another search"
-    ]
-    
-    # More specific "I need" patterns that are housing-related
-    housing_need_patterns = [
-        "i need an apartment", "i need a place", "i need housing",
-        "i need to find", "i need apartments"
-    ]
-    
-    # Location change patterns - KEY FIX for your issue
-    location_change_patterns = [
-        "how about in", "what about in", "try in", "look in", 
-        "search in", "find in", "check in", "instead in",
-        # Also handle variations without "in"
-        "how about", "what about", "try", "instead"
-    ]
-    
-    # "Can I see" patterns for housing searches
-    can_i_see_patterns = [
-        "can i see", "could i see", "show me", "let me see"
-    ]
-    
-    # Also check for explicit borough mentions or housing program mentions
-    borough_mentions = ["bronx", "brooklyn", "manhattan", "queens", "staten island"]
-    program_mentions = ["section 8", "cityfheps", "hasa", "voucher", "housing", "apartment", "housing"]
-    
-    # Enhanced new search detection - BUT EXCLUDE listing requests
-    listing_request_phrases = [
-        "listing 1", "listing 2", "listing 3", "listing 4", "listing 5", 
-        "listing 6", "listing 7", "listing 8", "listing 9", "listing 10",
-        "see listing", "show listing", "want to see listing"
-    ]
-    
-    # Don't treat as new search if it's clearly a listing request
-    is_listing_request = any(phrase in message_lower for phrase in listing_request_phrases)
-    
-    is_new_search = (
-        not is_listing_request and (
-            any(pattern in message_lower for pattern in new_search_patterns) or
-            any(pattern in message_lower for pattern in housing_need_patterns) or
-            (any(program in message_lower for program in program_mentions) and 
-             any(borough in message_lower for borough in borough_mentions)) or
-            ("apartment" in message_lower and any(word in message_lower for word in ["find", "search", "want"])) or
-            # Key fix: "show me" + program/housing terms = new search
-            ("show me" in message_lower and any(program in message_lower for program in program_mentions)) or
-            ("show me" in message_lower and "apartment" in message_lower) or
-            # CRITICAL FIX: Location change requests like "how about in Brooklyn?" (without requiring housing keywords)
-            (any(pattern in message_lower for pattern in location_change_patterns) and 
-             any(borough in message_lower for borough in borough_mentions)) or
-            # Also catch "Can I see section 8 housing in [borough]?"
-            (any(pattern in message_lower for pattern in can_i_see_patterns) and 
-             any(program in message_lower for program in program_mentions) and
-             any(borough in message_lower for borough in borough_mentions)) or
-            # Also catch "Can I see housing in [borough]?" without "section 8"
-            (any(pattern in message_lower for pattern in can_i_see_patterns) and 
-             "housing" in message_lower and
-             any(borough in message_lower for borough in borough_mentions))
-        )
-    )
-    
-    if is_new_search:
-        return "new_search"
-    
-    # SECOND: Check for listing questions (after new search to avoid conflicts)
-    has_listings = len(state.get("listings", [])) > 0
-    listing_question_patterns = [
-        "link to", "url for", "give me", "can i have", 
-        "first listing", "second listing", "third listing", "fourth listing", "fifth listing", "last listing",
-        "1st listing", "2nd listing", "3rd listing", "4th listing", "5th listing",
-        "listing #", "listing number", "details for", "more info",
-        "tell me about", "let me see listing", "can i see listing", "show me listing",
-        "see listing", "listing 1", "listing 2", "listing 3", "listing 4", "listing 5",
-        "listing 6", "listing 7", "listing 8", "listing 9", "listing 10",
-        "5th listing", "6th listing", "7th listing", "8th listing", "9th listing", "10th listing",
-        "i want to see listing", "want to see listing", "see the", "view listing"
-        # Removed "what about" to avoid conflicts with "what about in Brooklyn?"
-    ]
-    
-    # If they're asking about listings but we have no listings, it's general conversation
-    if not has_listings and any(pattern in message_lower for pattern in listing_question_patterns):
-        return "general_conversation"
-    
-    if has_listings and any(pattern in message_lower for pattern in listing_question_patterns):
-        return "listing_question"
-    
-    # THIRD: Try LLM Fallback Router for accurate intent classification
-    llm_intent = None
-    llm_confidence = 0.0
-    try:
-        from llm_fallback_router import LLMFallbackRouter
-        import json
-        
-        # Create a simple mock LLM client for testing
-        class SimpleLLMClient:
-            def generate(self, prompt):
-                # Simple rule-based classification for demo
-                message_lower = message.lower()
-                
-                # Check for specific listing requests first (highest priority if listings exist)
-                if state.get("listings") and any(phrase in message_lower for phrase in ["listing 1", "listing 2", "listing 3", "listing 4", "listing 5", "listing 6", "listing 7", "listing 8", "listing 9", "listing 10", "see listing", "show listing", "let me see listing", "want to see listing", "i want to see listing"]):
-                    return '{"intent": "LISTING_QUESTION", "confidence": 0.95, "parameters": {}, "reasoning": "User wants to see specific listing details"}'
-                # Check for location change patterns first (most specific)
-                elif any(phrase in message_lower for phrase in ["how about in", "what about in", "try in", "instead in"]):
-                    return '{"intent": "SEARCH_LISTINGS", "confidence": 0.90, "parameters": {}, "reasoning": "User wants to change search location"}'
-                # Check for "can i see" + housing terms
-                elif "can i see" in message_lower and any(word in message_lower for word in ["section 8", "housing", "apartment"]):
-                    return '{"intent": "SEARCH_LISTINGS", "confidence": 0.85, "parameters": {}, "reasoning": "User wants to see housing listings"}'
-                # Check for help/how-to patterns (more specific)
-                elif any(phrase in message_lower for phrase in ["how do i", "how to", "how can i", "help me", "assist", "support"]):
-                    return '{"intent": "HELP_REQUEST", "confidence": 0.80, "parameters": {}, "reasoning": "User needs assistance"}'
-                # General search patterns
-                elif any(word in message_lower for word in ["find", "search", "look", "apartment", "housing"]) and "how" not in message_lower:
-                    return '{"intent": "SEARCH_LISTINGS", "confidence": 0.85, "parameters": {}, "reasoning": "User wants to find housing"}'
-                else:
-                    return '{"intent": "UNKNOWN", "confidence": 0.60, "parameters": {}, "reasoning": "Unclear intent"}'
-        
-        # Create fallback router with mock client
-        llm_fallback = LLMFallbackRouter(SimpleLLMClient(), debug=True)
-        
-        # Get the raw LLM response first to extract confidence
-        raw_llm_response = llm_fallback.llm_client.generate(llm_fallback.format_prompt(message, state))
-        
-        # Extract confidence from raw response
-        try:
-            raw_data = json.loads(raw_llm_response)
-            llm_confidence = raw_data.get("confidence", 0.0)
-        except:
-            llm_confidence = 0.0
-        
-        # Route the message to get intent and other data
-        result = llm_fallback.route(message, state)
-        
-        # Get intent from result
-        llm_intent = result.get("intent", "UNKNOWN")
-            
-    except Exception as e:
-        print(f"⚠️ LLM Fallback Router failed: {e}")
-    
-    # Map LLM intents to our app's message types
-    intent_mapping = {
-        "SEARCH_LISTINGS": "new_search",
-        "CHECK_VIOLATIONS": "violation_check", 
-        "ASK_VOUCHER_SUPPORT": "voucher_info",
-        "REFINE_SEARCH": "what_if_scenario",
-        "FOLLOW_UP": "general_conversation",
-        "HELP_REQUEST": "general_conversation",
-        "LISTING_QUESTION": "listing_question",
-        "UNKNOWN": "general_conversation"
-    }
-    
-    # Only use LLM result if we got one and confidence is reasonable
-    if llm_intent and llm_confidence >= 0.6:
-        mapped_intent = intent_mapping.get(llm_intent, "general_conversation")
-        print(f"🧠 LLM Fallback Router: {message[:50]}... → {llm_intent} ({llm_confidence:.2f}) → {mapped_intent}")
-        return mapped_intent
-    else:
-        print(f"🚫 LLM Router bypassed: intent={llm_intent}, confidence={llm_confidence}")
-    
-    # FOURTH: Use V2 router only if LLM router didn't provide confident result
-    try:
-        from enhanced_semantic_router_v2 import EnhancedSemanticRouterV2, Intent
-        router = EnhancedSemanticRouterV2()
-        intent = router.classify_intent(message, state)
-        
-        print(f"🔧 V2 Router result: {intent}")
-        if intent == Intent.WHAT_IF:
-            return "what_if_scenario"
-    except ImportError:
-        # Fallback to what_if_handler if V2 not available
-        try:
-            from what_if_handler import detect_what_if_message
-            if detect_what_if_message(message, state):
-                return "what_if_scenario"
-        except ImportError:
-            pass  # what_if_handler not available
-    
     return "general_conversation"
 
 
@@ -388,7 +424,7 @@ def enhanced_handle_email_request(message: str, history: List, state: Dict) -> T
     
     try:
         # Extract listing number
-        listing_num = email_handler.extract_listing_number(message)
+        listing_num = email_handler.extract_listing_number(message, state)
         if listing_num is None:
             history.append({
                 "role": "assistant",

@@ -1,0 +1,27 @@
+{
+  "timestamp": "2025-07-13T12:25:51.856108",
+  "duration": 1.6452317237854004,
+  "results": {
+    "Regex Aggressiveness Tests": {
+      "tests_run": 9,
+      "failures": 0,
+      "errors": 0,
+      "success_rate": 1.0,
+      "output": ".........\n----------------------------------------------------------------------\nRan 9 tests in 0.011s\n\nOK\n"
+    },
+    "LLM Fallback System Tests": {
+      "tests_run": 10,
+      "failures": 18,
+      "errors": 0,
+      "success_rate": -0.8,
+      "output": "FF\nStdout:\n\n\ud83e\udde0 Testing Basic LLM Fallback Functionality\n============================================================\nMessage: 'I need to find a 2-bedroom apartment in Brooklyn under $2500'\n  Intent: SEARCH_LISTINGS\n  Parameters: {'borough': 'Brooklyn', 'bedrooms': None, 'max_rent': 2500, 'voucher_type': None}\n  Reasoning: User is requesting to search for apartment listings with specific criteria\nMessage: 'What if I try Queens instead?'\n  Intent: REFINE_SEARCH\n  Parameters: {'borough': 'Queens', 'bedrooms': None, 'max_rent': None, 'voucher_type': None}\n  Reasoning: User wants to modify their existing search parameters\n  \u2705 Test passed\n\nMessage: 'Can you help me understand Section 8?'\n  Intent: HELP_REQUEST\n  Parameters: {'borough': None, 'bedrooms': None, 'max_rent': None, 'voucher_type': None}\n  Reasoning: User is requesting help or information\nMessage: 'I need help with this system'\n  Intent: HELP_REQUEST\n  Parameters: {'borough': None, 'bedrooms': None, 'max_rent': None, 'voucher_type'"
+    },
+    "Chatbot Dynamism Tests": {
+      "tests_run": 7,
+      "failures": 8,
+      "errors": 0,
+      "success_rate": -0.14285714285714285,
+      "output": "FF\nStdout:\n\n\ud83c\udfad Testing Adaptive Response to User Style\n============================================================\n\nStyle: Formal Professional\nExpected: Should handle formal language appropriately\n----------------------------------------\n  Message: 'I would like to request assistance in locating suitable housing accommodations.'\n  Intent: Intent.SHOW_HELP\n  Params: {}\n\n  Message: 'Could you please provide information regarding Section 8 housing options?'\n  Intent: Intent.WHAT_IF\n  Params: {'voucher_type': 'section_8'}\n\n  Message: 'I require a comprehensive list of available properties.'\n  Intent: Intent.UNCLASSIFIED\n  Params: {}\n\n  Success rate: 66.7%\n  \u2705 Adapted to communication style\n\nStyle: Casual Conversational\nExpected: Should understand casual language\n----------------------------------------\n  Message: 'hey, need help finding a place'\n  Intent: Intent.SHOW_HELP\n  Params: {}\n\n  Message: 'what's good in brooklyn?'\n  Intent: Intent.UNCLASSIFIED\n  Params: {'borough': 'brooklyn'}\n\n  "
+    }
+  }
+}

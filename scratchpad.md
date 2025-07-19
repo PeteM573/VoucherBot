@@ -1209,234 +1209,42 @@ The VoucherBot system is now production-ready with all major bugs resolved. User
 
 ---
 
-### Bug 10: NearSchoolTool Implementation - COMPLETED ✅
+### Bug 13: Handoff Detection Test Failures - RESOLVED ✅
 
 #### Description
-User requested creation of a NearSchoolTool similar to the existing nearest subway tool, but for finding nearby NYC public schools. Requirements included:
-- Use NYC Open Data API endpoint (https://data.cityofnewyork.us/resource/wg9x-4ke6.json)
-- Include walking distance calculations
-- Implement caching performance like the subway tool
-- Always show the 3 nearest schools to users
-- Add filtering for specific school types (elementary, middle/junior, high school)
+- Three tests were failing in `test_handoff_scenarios.py`:
+  1. Indirect discrimination cases not detected
+  2. Direct assistance requests not detected
+  3. Complex/multi-part requests misclassified (user_request vs discrimination_case)
 
-#### Implementation Phase 1: Basic NearSchoolTool
+#### Root Cause Analysis
+1. **Indirect Discrimination**: Regex patterns were too specific and missed common phrasings (e.g., "unit is no longer available when I mention my voucher").
+2. **Direct Assistance**: User request patterns were too restrictive, missing variations like "How do I get in touch with a housing specialist?"
+3. **Complex Requests**: The order of checks in `detect_handoff` caused rights/assistance requests to be misclassified as discrimination, and vice versa for complaint-related requests.
 
-**Core Features Implemented**:
-- ✅ NYC Open Data Schools API integration with proper query parameters
-- ✅ Geodesic distance calculations with haversine fallback
-- ✅ Intelligent two-level caching (API data cache: 12 hours, results cache: 24 hours)
-- ✅ Walking time estimates (3 mph average speed)
-- ✅ Thread-safe operations with background cache cleanup
-- ✅ Returns top 3 nearest schools with comprehensive information
+#### Investigation Process
+- Ran tests and analyzed assertion errors and expected vs actual handoff reasons.
+- Reviewed and compared regex patterns and keyword lists in `HandoffDetector`.
+- Checked the order of logic in the `detect_handoff` method.
 
-**Key Technical Details**:
-```python
-# API Integration
-url = "https://data.cityofnewyork.us/resource/wg9x-4ke6.json"
-params = {
-    "status_descriptions": "Open",  # Filter for open schools only
-    "$limit": 2000,
-    "$order": "school_name"
-}
+#### Successful Fixes ✅
+- **Indirect Discrimination**: Made regex patterns more flexible to catch more variations and indirect phrasings.
+- **Direct Assistance**: Expanded user request patterns to include more optional words and phrasings.
+- **Complex Requests**: Reordered logic in `detect_handoff`:
+  - Added explicit complaint/rights checks before general discrimination/user request checks.
+  - Added flexible regex for complaint-related phrases (e.g., "help me file a complaint about discrimination").
+  - Ensured rights/understanding requests are handled as user requests, not discrimination.
 
-# Distance Calculation
-try:
-    distance_km = geodesic((lat, lon), (school_lat, school_lon)).kilometers
-except Exception:
-    distance_km = self._haversine_distance(lat, lon, school_lat, school_lon)
+#### Testing Results
+- ✅ All 7 tests in `test_handoff_scenarios.py` now pass
+- ✅ HandoffDetector now robustly detects:
+  - Direct/indirect discrimination
+  - Direct/complex assistance requests
+  - Rights/understanding requests
+  - Complaint-related requests
+- ✅ No false positives for normal apartment search queries
 
-# Walking Time Estimation  
-walking_time_minutes = distance_km / 4.828  # 3 mph average walking speed
-```
-
-**Data Quality Features**:
-- ✅ Validates NYC coordinate bounds (40.4-40.9 lat, -74.3 to -73.7 lon)
-- ✅ Cleans up grade formatting (e.g., "PK-05" instead of comma-separated)
-- ✅ Includes school type, address, coordinates, and walking times
-- ✅ Filters for open schools only using `status_descriptions='Open'`
-
-#### Testing Phase 1: Basic Functionality
-
-**Created `test_near_school_tool.py`** with comprehensive tests:
-- ✅ Basic functionality across all 5 NYC boroughs
-- ✅ Cache performance testing (showed 1.7x speed improvement)
-- ✅ Error handling for invalid inputs and coordinates outside NYC
-- ✅ Walking time calculation verification
-- ✅ Performance benchmarks (average 0.03s per query after caching)
-
-**Test Results**:
-```
-✅ 1896 active schools loaded from API
-✅ All 5 test locations returned 3 schools each
-✅ Cache hit ratio of 37.5% during testing
-✅ Proper walking time calculations verified
-✅ Performance: 0.03s average response time with caching
-```
-
-#### Integration Phase 1: System Integration
-
-**Files Updated**:
-- ✅ `tools.py` - Imported the new school tool
-- ✅ Created `test_school_integration.py` - Workflow integration with geocoding
-- ✅ Demonstrated enriching housing listings with school data
-- ✅ Calculated school quality scores based on proximity and variety
-
-#### Enhancement Phase 2: Advanced Filtering
-
-**New Filtering System**:
-```python
-def forward(self, lat: float, lon: float, school_type: str = 'all') -> str:
-    # school_type options: 'elementary', 'middle', 'high', 'all'
-    
-def _filter_schools_by_type(self, schools: List[Dict], school_type: str) -> List[Dict]:
-    if school_type == 'all':
-        return schools
-    
-    type_keywords = {
-        'elementary': ['elementary', 'primary', 'pk', 'kindergarten', 'early childhood'],
-        'middle': ['middle', 'intermediate', 'junior', 'ms ', 'is '],  
-        'high': ['high', 'secondary', 'hs ', 'academy', 'preparatory']
-    }
-```
-
-**Enhanced User Experience**:
-- ✅ Added `school_type` parameter with options: 'elementary', 'middle', 'high', 'all'
-- ✅ Type-specific caching for performance
-- ✅ User-friendly summaries and recommendations
-- ✅ Helpful messages when no schools of a type are found
-- ✅ Backwards compatibility (defaults to 'all')
-
-#### Integration Phase 2: Enhanced Enrichment
-
-**Updated `enrichment_tool.py`**:
-- ✅ Added school information alongside building violations and subway data
-- ✅ Implemented school scoring (0-100 based on distance and variety)
-- ✅ Updated overall scoring: 50% safety, 30% transit, 20% school access
-- ✅ Enhanced metadata to include school data sources
-
-**Scoring Algorithm**:
-```python
-def _calculate_school_score(school_distances: List[float]) -> int:
-    if not school_distances:
-        return 0
-    
-    avg_distance = sum(school_distances) / len(school_distances)
-    variety_bonus = min(10, len(school_distances) * 3)  # Up to 10 points for variety
-    
-    if avg_distance <= 0.3:      # Within 0.3 miles
-        base_score = 100
-    elif avg_distance <= 0.5:    # Within 0.5 miles  
-        base_score = 80
-    elif avg_distance <= 1.0:    # Within 1 mile
-        base_score = 60
-    else:
-        base_score = max(20, 80 - int((avg_distance - 1.0) * 20))
-    
-    return min(100, base_score + variety_bonus)
-```
-
-#### Testing Phase 2: Enhanced Features
-
-**Created `test_enhanced_school_tool.py`**:
-- ✅ School type filtering across all categories
-- ✅ User-friendly scenario-based responses
-- ✅ Comprehensive family search examples
-- ✅ Performance testing showing minimal filtering overhead
-
-**Test Results**:
-```
-✅ Elementary schools: 3 schools found with proper filtering
-✅ Middle schools: 3 schools found with keyword matching
-✅ High schools: 3 schools found with academy detection
-✅ Cache performance maintained with type-specific caching
-✅ User-friendly responses with walking distance recommendations
-```
-
-#### Testing Phase 3: Enhanced Enrichment
-
-**Created `test_enhanced_enrichment.py`**:
-- ✅ Integration of school data with existing safety and transit scoring
-- ✅ Family vs professional scenario analysis
-- ✅ Comprehensive scoring across all three dimensions
-
-**Enrichment Results**:
-```
-✅ Average scores: Safety 100/100, Transit 73.3/100, Schools 100/100, Overall 92/100
-✅ School information seamlessly integrated with violation and subway data
-✅ Family-friendly neighborhood scoring accurately reflects proximity to schools
-```
-
-#### Usage Examples
-
-**Created `school_tool_usage_examples.py`** with real-world scenarios:
-- ✅ Family with young child looking for elementary schools
-- ✅ Family with teenager needing high schools
-- ✅ Family with multiple children of different ages
-- ✅ Real estate agent providing comprehensive neighborhood analysis
-- ✅ Quick search examples
-
-**Example Response**:
-```
-Here are the 3 nearest elementary schools to your location:
-
-📍 **PS 280 John F Kennedy** (0.2 miles, 4-minute walk)
-   📧 Elementary School | Grades: PK-05
-   📍 230 Snyder Ave, Brooklyn NY 11226
-
-📍 **PS 315 Jeremiah E Jenks** (0.3 miles, 6-minute walk)  
-   📧 Elementary School | Grades: PK-05
-   📍 315 Glenwood Rd, Brooklyn NY 11226
-
-📍 **Yeshiva Derech Hatorah** (0.4 miles, 8-minute walk)
-   📧 Elementary School | Grades: K-08
-   📍 1571 39th St, Brooklyn NY 11218
-
-💡 **Recommendation**: All three schools are within comfortable walking distance. 
-PS 280 John F Kennedy is the closest at just a 4-minute walk!
-```
-
-#### Technical Achievements
-
-1. **API Integration**: Successfully integrated NYC Open Data Schools API with 1896 active schools
-2. **Performance Optimization**: Intelligent caching system with background cleanup
-   - 12-hour API data cache for school listings
-   - 24-hour results cache for distance calculations
-   - 1.7x speed improvement with caching enabled
-3. **User Experience**: Clear, actionable information with walking times and recommendations
-4. **System Integration**: Seamlessly integrated with existing violation and subway tools
-5. **Filtering Capabilities**: Robust school type filtering with user-friendly responses
-6. **Error Handling**: Comprehensive validation and helpful error messages
-
-#### Framework Compatibility
-
-**Proper smolagents Integration**:
-```python
-def __init__(self):
-    super().__init__()  # Proper base class initialization
-    # ... tool setup ...
-    self.is_initialized = True  # Required framework attribute
-```
-
-#### Final State
-
-**The enhanced NearSchoolTool provides**:
-- ✅ Always shows 3 nearest schools with complete information
-- ✅ Filters by elementary, middle, high, or all school types
-- ✅ Calculates walking distances and times
-- ✅ Provides transportation recommendations
-- ✅ Integrates with housing listing enrichment system
-- ✅ Maintains excellent performance through intelligent caching
-- ✅ Offers user-friendly responses suitable for families and real estate applications
-
-**Performance Metrics**:
-- 📊 **Schools Loaded**: 1896 active NYC public schools
-- ⚡ **Cache Performance**: 1.7x speed improvement, 37.5% hit ratio
-- 🎯 **Response Time**: 0.03s average with caching
-- 🏫 **Coverage**: All 5 NYC boroughs supported
-- 🎓 **School Types**: Elementary, middle, high school filtering
-- 🚶 **Walking Times**: Accurate estimates at 3 mph average speed
-
-The tool successfully addresses all user requirements for comprehensive school information with walking distance calculations and high-performance caching, while adding valuable filtering capabilities for specific school types. It integrates seamlessly with the existing NYC Voucher Navigator ecosystem.
+---
 
 # Debugging Notes
 
@@ -1522,3 +1330,422 @@ button.svelte-vzs2gq.padded {
 2. Using `display: none` can break functionality - better to use `transparent` for backgrounds
 3. Proper sizing and flexbox alignment ensures consistent appearance
 4. Important to maintain both visual elements and functionality when fixing UI issues
+
+---
+
+## 🎯 LISTING REQUEST & EMAIL CONTEXT FIXES (January 2025) - COMPLETED ✅
+
+### Bug 13: Enhanced Listing Number Request Handling - RESOLVED ✅
+
+#### Description
+- App could understand "#1" but failed with variations like "can i see #1?", "listing 1?", "tell me about listing number 2"
+- Number word detection (zero, one, two) was inconsistent
+- Navigation commands (next, previous, back) didn't work
+- Relative positions (last, penultimate) weren't supported
+- Mixed formats and edge cases caused failures
+
+#### Root Cause Analysis
+1. **Limited Regex Patterns**: Only basic "#1" and "listing 1" patterns covered
+2. **No Word Number Support**: "listing one" or "show me listing two" failed
+3. **Missing Navigation**: "next listing" or "previous" commands not implemented
+4. **Edge Case Gaps**: Decimal numbers, negative numbers, and relative positions ignored
+5. **Context Insensitive**: No current listing state tracking for navigation
+
+#### Investigation Process
+1. **User Testing**: Identified specific failing patterns through manual testing
+2. **Pattern Analysis**: Catalogued all possible ways users might request listings
+3. **Test Suite Creation**: Built comprehensive test cases covering all scenarios
+4. **Iterative Debug**: Multiple rounds of pattern refinement and testing
+
+#### Failed Attempts ❌
+1. **Simple Regex Addition**: Added more patterns but still missed edge cases
+2. **Word Number Mapping**: Initial implementation had bugs with navigation logic
+3. **Complex Pattern Matching**: Over-complicated regex patterns caused false positives
+
+#### Successful Fix ✅
+**Updated `handle_listing_question()` in `app.py`**:
+
+```python
+# Comprehensive number word mapping
+number_words = {
+    'zero': 0, 'one': 1, 'two': 2, 'three': 3, 'four': 4, 'five': 5,
+    'six': 6, 'seven': 7, 'eight': 8, 'nine': 9, 'ten': 10,
+    'eleven': 11, 'twelve': 12, 'thirteen': 13, 'fourteen': 14, 'fifteen': 15,
+    'sixteen': 16, 'seventeen': 17, 'eighteen': 18, 'nineteen': 19, 'twenty': 20
+}
+
+# Navigation patterns with current state tracking
+if "current_listing_index" in state and state["current_listing_index"] is not None:
+    current_idx = state["current_listing_index"]
+    if any(word in message_lower for word in ["next", "forward"]):
+        listing_index = min(current_idx + 1, len(listings) - 1)
+    elif any(word in message_lower for word in ["previous", "prev", "back"]):
+        listing_index = max(current_idx - 1, 0)
+
+# Relative position patterns
+relative_patterns = {
+    r"(?:the\s+)?last(?:\s+listing)?": lambda: len(listings) - 1,
+    r"(?:the\s+)?(?:second\s+to\s+last|next\s+to\s+last|penultimate|last\s+but\s+one)(?:\s+listing)?": lambda: len(listings) - 2 if len(listings) > 1 else 0,
+    r"(?:the\s+)?(first|1st)(?:\s+listing)?": lambda: 0,
+    r"(?:the\s+)?(second|2nd)(?:\s+listing)?": lambda: 1,
+    r"(?:the\s+)?(third|3rd)(?:\s+listing)?": lambda: 2,
+}
+
+# Advanced pattern matching with context
+listing_patterns = {
+    r"(?:can\s+(?:i|you)\s+)?(?:see|show|tell\s+(?:me\s+)?about|what\s+about|view)\s+listing\s*#?\s*(-?\d+)": lambda x: int(x) - 1,
+    r"(?:what\s+is|what's|whats|how\s+about|details\s+for)\s+listing\s*#?\s*(-?\d+)": lambda x: int(x) - 1,
+    r"(?:hey|please|could you|i'd like to|let me)\s+(?:see|show)\s+listing\s*#?\s*(-?\d+)": lambda x: int(x) - 1,
+    r"(?:apartment|property|unit)\s*#?\s*(-?\d+)": lambda x: int(x) - 1,
+}
+
+# Word number detection with context boundaries
+for word, number in number_words.items():
+    word_patterns = [
+        f"number {word}",
+        f"no. {word}",
+        f"#{word}",
+        f"listing {word}",
+        f" {word} ",  # Space-bounded word
+        f"^{word} ",  # Start of string
+        f" {word}$"   # End of string
+    ]
+    if any(pattern in f" {message_lower} " for pattern in word_patterns):
+        if number > 0:  # Only accept positive numbers
+            listing_index = number - 1
+        break
+```
+
+#### Testing Results
+- ✅ **Basic Patterns**: "#1", "listing 1", "show me listing 2" all work
+- ✅ **Word Numbers**: "listing one", "can i see listing two" work  
+- ✅ **Navigation**: "next", "previous", "back" with state tracking
+- ✅ **Relative Positions**: "last listing", "penultimate", "first" work
+- ✅ **Edge Cases**: Decimal numbers, negative numbers handled gracefully
+- ✅ **Context Awareness**: Navigation uses current listing index
+
+---
+
+### Bug 14: Email Detection & Classification Issues - RESOLVED ✅
+
+#### Description
+- Email requests like "Can you write an email for listing 1? my name is bob ross" routed to general conversation
+- App found listings successfully, listing viewing worked, but email generation failed
+- Email classification happened before checking if listings existed in state
+- Classification logic was faulty and not prioritizing email intent properly
+
+#### Root Cause Analysis
+1. **Premature Classification**: Email detection ran before validating listings exist
+2. **State Dependency Missing**: Email handler didn't check for available listings
+3. **Priority Issues**: General conversation took precedence over email classification
+4. **Error Prone Logic**: Empty state caused email classification to fail silently
+
+#### Investigation Process
+1. **Manual Testing**: User found email requests going to general chat
+2. **Log Analysis**: Found search and listing view worked but email failed
+3. **Classification Debug**: Email classification succeeded but execution failed
+4. **State Inspection**: Discovered listings weren't being checked before email processing
+
+#### Failed Attempts ❌
+1. **Pattern Enhancement**: Added more email detection patterns but root issue persisted
+2. **Priority Reordering**: Changed classification order but state validation was still missing
+
+#### Successful Fix ✅
+**Updated `enhanced_classify_message()` in `email_handler.py`**:
+
+```python
+# OLD - Premature email classification
+if email_handler.detect_email_request(message):
+    return "email_request"
+
+# NEW - State-aware email classification  
+if state.get("listings") and email_handler.detect_email_request(message):
+    return "email_request"
+```
+
+**Added debug logging in `app.py`**:
+```python
+if message_type == "email_request":
+    print(f"📧 CALLING enhanced_handle_email_request")
+    enhanced_result = enhanced_handle_email_request(message, history, new_state)
+    return (enhanced_result[0], enhanced_result[1], 
+           gr.update(value="Email template generated"), new_state)
+```
+
+#### Testing Results
+- ✅ **Email Detection**: "Can you write an email for listing 1?" now classified correctly
+- ✅ **State Validation**: Only processes email requests when listings exist
+- ✅ **Routing Logic**: Proper routing to email handler instead of general conversation
+- ✅ **Error Handling**: Graceful fallback when no listings available
+
+---
+
+### Bug 15: Contextual Email Reference Detection - RESOLVED ✅
+
+#### Description
+- After fixing basic email detection, "can you write an email for this one?" wasn't recognized
+- Contextual references like "this listing", "that one", "current listing" failed
+- Email detection patterns required explicit listing numbers like "listing #1"
+- Users naturally refer to current listing with pronouns and demonstratives
+
+#### Root Cause Analysis
+1. **Explicit Number Requirement**: Email patterns only matched "listing #1", "first listing"
+2. **Missing Contextual Patterns**: No support for "this one", "that one", "current"
+3. **State Disconnection**: Email extraction didn't use current listing context
+4. **Ambiguous Reference Handling**: No fallback for unclear contextual references
+
+#### Investigation Process
+1. **User Testing**: "can you write an email for this one?" failed after listing view
+2. **Pattern Analysis**: Email detection required explicit listing references
+3. **Context Requirements**: Need to handle natural language contextual references
+4. **State Integration**: Required passing current listing context to email handler
+
+#### Successful Fix ✅
+**Enhanced listing reference patterns in `EmailTemplateHandler`**:
+
+```python
+# Added contextual reference patterns
+contextual_patterns = [
+    r'\bthis\s+one\b',
+    r'\bthat\s+one\b', 
+    r'\bthe\s+one\b',
+    r'\bthis\s+listing\b',
+    r'\bthat\s+listing\b',
+    r'\bthis\s+property\b',
+    r'\bthat\s+property\b',
+    r'\bcurrent\s+listing\b',
+    r'\babove\s+listing\b',
+    r'\bthe\s+listing\b',
+    r'\bthe\s+property\b',
+    r'\bthe\s+apartment\b'
+]
+
+def extract_listing_number(self, message: str, state: dict = None) -> int:
+    """Extract listing number with contextual reference support."""
+    
+    # Check for contextual references first
+    if any(re.search(pattern, message.lower()) for pattern in self.contextual_patterns):
+        # Use current listing index if available
+        if state and state.get("current_listing_index") is not None:
+            return state["current_listing_index"] + 1  # Convert to 1-based
+        else:
+            # Fallback to listing #1 if no current listing
+            return 1
+    
+    # [Existing explicit number extraction logic...]
+```
+
+**Updated email handler call to pass state**:
+```python
+# OLD
+listing_num = email_handler.extract_listing_number(message)
+
+# NEW  
+listing_num = email_handler.extract_listing_number(message, state)
+```
+
+**Added comprehensive debug logging**:
+```python
+print(f"📧 DEBUG: Email request detected")
+print(f"📧 DEBUG: Current listing index: {state.get('current_listing_index')}")
+print(f"📧 DEBUG: Extracted listing number: {listing_num}")
+```
+
+#### Testing Results
+- ✅ **Contextual References**: "this one", "that listing", "current property" all work
+- ✅ **State Integration**: Uses `current_listing_index` when available
+- ✅ **Fallback Logic**: Defaults to listing #1 for ambiguous references
+- ✅ **Natural Language**: Supports how users actually speak about listings
+
+---
+
+### Bug 16: Subway & School Proximity Context Questions - RESOLVED ✅
+
+#### Description
+- After viewing a listing, "What's the nearest subway?" and "What's the nearest school?" went to general conversation
+- System correctly detected these as context-dependent questions but didn't route to proximity tools
+- App had working subway and school tools but no integration with listing context
+- Users couldn't get proximity information for viewed listings
+
+#### Root Cause Analysis
+1. **Missing Context Routing**: Context detection worked but no specialized handler existed
+2. **No Coordinate Integration**: Listings from Craigslist had addresses but no lat/lng coordinates
+3. **Tool Disconnection**: Proximity tools existed but weren't called from listing context
+4. **Geocoding Gap**: No bridge between addresses and coordinate-based proximity tools
+
+#### Investigation Process
+1. **Pattern Recognition**: System logged "🔍 CALLING handle_listing_context_question" but no results
+2. **Data Structure Analysis**: Found listings had addresses but no coordinates  
+3. **Tool Inventory**: Discovered existing geocoding, subway, and school tools
+4. **Integration Design**: Needed to chain geocoding → coordinates → proximity tools
+
+#### Successful Fix ✅
+**Created `handle_listing_context_question()` function in `app.py`**:
+
+```python
+def handle_listing_context_question(message: str, history: list, state: Dict):
+    """Handle context-dependent questions about the current listing (subway, school proximity)."""
+    
+    def get_coordinates_for_listing(listing):
+        """Get coordinates for a listing, using geocoding if necessary."""
+        # First try direct coordinates
+        if listing.get("latitude") and listing.get("longitude"):
+            return (float(listing["latitude"]), float(listing["longitude"]))
+        
+        # Fallback to geocoding the address
+        address = listing.get("address")
+        if not address or address == "N/A":
+            return None
+        
+        try:
+            from geocoding_tool import GeocodingTool
+            geocoder = GeocodingTool()
+            geocode_result_json = geocoder.forward(address)
+            geocode_result = json.loads(geocode_result_json)
+            
+            if geocode_result.get("status") == "success":
+                data = geocode_result.get("data", {})
+                lat = data.get("latitude")
+                lon = data.get("longitude")
+                if lat and lon:
+                    return (float(lat), float(lon))
+            
+            return None
+        except Exception as e:
+            print(f"❌ Geocoding error: {e}")
+            return None
+
+    # Subway question handling
+    if any(re.search(pattern, message_lower) for pattern in subway_patterns):
+        coordinates = get_coordinates_for_listing(current_listing)
+        
+        if coordinates:
+            from nearest_subway_tool import nearest_subway_tool
+            subway_result_json = nearest_subway_tool.forward(coordinates[0], coordinates[1])
+            subway_result = json.loads(subway_result_json)
+            
+            if subway_result.get("status") == "success":
+                data = subway_result.get("data", {})
+                station_name = data.get("station_name", "Unknown")
+                lines = data.get("lines", "N/A")
+                distance = data.get("distance_miles", 0)
+                is_accessible = data.get("is_accessible", False)
+                
+                # Format comprehensive response with walking time, accessibility
+                response_text = f"""
+🚇 **Nearest Subway Information for Listing #{listing_num}:**
+
+**Station:** {station_name}
+**Lines:** {lines}
+**Distance:** {distance:.2f} miles (about {round(distance * 20)} minute walk)
+**Accessibility:** {"♿ Wheelchair accessible" if is_accessible else "⚠️ Not wheelchair accessible"}
+                """
+
+    # School question handling (similar pattern)
+    elif any(re.search(pattern, message_lower) for pattern in school_patterns):
+        coordinates = get_coordinates_for_listing(current_listing)
+        
+        if coordinates:
+            from near_school_tool import near_school_tool
+            school_result_json = near_school_tool.forward(coordinates[0], coordinates[1])
+            # [Process school results with grades, types, distances...]
+```
+
+**Updated routing logic in `handle_chat_message()`**:
+```python
+# Check for context-dependent questions about current listing first
+if detect_context_dependent_question(message) and new_state.get("current_listing"):
+    print(f"🔍 CALLING handle_listing_context_question")
+    context_result = handle_listing_context_question(message, history, new_state)
+    if context_result:
+        return context_result
+
+# Fall back to normal message classification
+message_type = enhanced_classify_message(message, new_state)
+```
+
+#### Testing Results
+- ✅ **Context Recognition**: "What's the nearest subway?" properly detected and routed
+- ✅ **Geocoding Integration**: Addresses like "East 195th Street, Bronx, NY 10458" converted to coordinates
+- ✅ **Real-time Data**: Live NYC Open Data APIs for subway stations and schools
+- ✅ **Comprehensive Info**: Distance, walking time, accessibility, school grades/types
+- ✅ **Natural Flow**: Users can search → view listing → ask proximity questions seamlessly
+
+#### Final Integration Success
+Complete end-to-end flow working:
+1. **Search**: "I have a section 8 voucher looking for housing in the bronx" ✅
+2. **View**: "can i see listing 1?" ✅  
+3. **Subway**: "what's the nearest subway?" → Real subway station with lines, distance, accessibility ✅
+4. **Schools**: "what's the nearest school?" → Real schools with grades, types, walking times ✅
+5. **Email**: "can you write an email for this one? my name is bob ross" → Professional email template ✅
+
+All proximity tools now integrate seamlessly with listing context through intelligent geocoding! 🎉
+
+---
+
+## 🔧 Context Detection Fix - January 2025
+
+### Issue Fixed
+Users asking context-dependent questions like "Can I see the nearest subway?" after viewing a listing were being routed to general conversation instead of the proximity tools.
+
+### Root Cause
+The `detect_context_dependent_question()` function was using `re.match()` which only matches at the beginning of strings, missing patterns like "Can I see the nearest subway?" that don't start with the keywords.
+
+### Solution Applied
+1. **Enhanced Pattern Matching**: Changed from `re.match()` to `re.search()` to find patterns anywhere in the message
+2. **Added Broader Patterns**: Added patterns for common phrasings:
+   - `can\s+i\s+see\s+.*?(nearest|closest|subway|train|school)`
+   - `show\s+me\s+.*?(nearest|closest|subway|train|school)`
+   - `tell\s+me\s+.*?(nearest|closest|subway|train|school)`
+   - `what.*?(nearest|closest)\s+(subway|train|school)`
+   - `where.*?(nearest|closest)\s+(subway|train|school)`
+
+### Test Results
+✅ "Can I see the nearest subway?" → Now properly detected as context-dependent
+✅ "Show me the nearest school" → Context-dependent 
+✅ "Tell me the closest subway" → Context-dependent
+✅ "Where is the nearest school?" → Context-dependent
+
+### Flow Now Working
+1. User searches: "I have a section 8 voucher looking for housing in the bronx" 
+2. User views: "can i see listing 1?" → Sets current_listing in state
+3. User asks: "Can I see the nearest subway?" → Routes to handle_listing_context_question
+4. System geocodes listing address → Gets coordinates → Calls subway tool → Returns real subway data
+
+The complete listing context → proximity tools pipeline is now working seamlessly! 🚇🏫
+
+---
+
+## 🔧 Message Classification Fix - January 2025
+
+### Additional Issue Fixed
+Users asking "Can i see the first listing?" were being routed to general conversation instead of the listing handler, while "Can I see listing 1?" worked correctly.
+
+### Root Cause
+The `enhanced_classify_message()` function was missing patterns for ordinal words ("first", "second", etc.) when they weren't followed by numbers.
+
+### Solution Applied
+1. **Added Ordinal Patterns**: Extended listing question patterns to include:
+   - `"first listing"`, `"second listing"`, `"third listing"`
+   - `"the first"`, `"the second"`, `"the third"`
+   - `"see the first"`, `"show the second"`, etc.
+   - `"1st listing"`, `"2nd listing"`, `"3rd listing"`
+
+2. **Fixed Edge Cases**: 
+   - Prevented "section 8" from being detected as listing number 8
+   - Refined "tell me about" handling to distinguish between listing vs. general info requests
+
+### Test Results
+✅ "Can i see the first listing?" → Now routes to `listing_question`
+✅ "Can I see listing 1?" → Still works correctly  
+✅ "Can I see the 2nd listing?" → Now routes to `listing_question`
+✅ "tell me about the first listing" → Routes to `listing_question`
+✅ "tell me about section 8" → Routes to `general_conversation` (correct)
+
+### Complete User Flow Now Working
+1. Search: "I have a section 8 voucher looking for housing in the bronx" ✅
+2. View: "Can i see the first listing?" → Routes to listing handler ✅  
+3. View: "Can I see listing 1?" → Routes to listing handler ✅
+4. Context: "Can I see the nearest subway?" → Routes to proximity tools ✅
+
+All variations of listing requests now work seamlessly! 🎯

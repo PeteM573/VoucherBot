@@ -94,7 +94,7 @@ i18n_dict = {
         "shortlist_cleared": "Shortlist cleared",
         "intro_greeting": """👋 **Hi there! I'm Navi, your personal NYC Housing Navigator!**
 
-I'm here to help you find safe, affordable, and voucher-friendly housing in New York City. I understand that finding the right home can feel overwhelming, but you don't have to do this alone - I'm here to guide you every step of the way! 😊
+I'm here to help you find safe, affordable, and voucher-friendly housing in New York City. I understand that finding the right home can feel overwhelming, but you don't have to do this alone—I'm here to guide you every step of the way, and answer any questions you have about housing vouchers or the process! 😊
 
 **To get started, just tell me:**
 • What type of voucher do you have? (Section 8, CityFHEPS, HASA, etc.)
@@ -158,23 +158,13 @@ I'm here to help you find safe, affordable, and voucher-friendly housing in New 
         "shortlist_cleared": "Lista favorita limpiada",
         "intro_greeting": """👋 **¡Hola! Soy Navi, tu Navegadora Personal de Vivienda de NYC!**
 
-Estoy aquí para ayudarte a encontrar vivienda segura, asequible y que acepta vouchers en la Ciudad de Nueva York. Entiendo que encontrar el hogar perfecto puede sentirse abrumador, pero no tienes que hacerlo solo - ¡estoy aquí para guiarte en cada paso del camino! 😊
-
-**Así es como puedo ayudarte:**
-• 🏠 **Encontrar apartamentos que aceptan vouchers** que acepten tu tipo específico de voucher
-• 🏢 **Verificar la seguridad del edificio** y proporcionar reportes de violaciones para tu tranquilidad
-• 🚇 **Mostrar estaciones de metro cercanas** y accesibilidad de transporte
-• 🏫 **Encontrar escuelas cercanas** para familias con niños
-• 📧 **Redactar emails profesionales** a propietarios y administradores de propiedades
-• 💡 **Responder preguntas** sobre programas de vouchers, vecindarios y derechos de vivienda
+Estoy aquí para ayudarte a encontrar vivienda segura, asequible y que acepta vouchers en la Ciudad de Nueva York. Entiendo que encontrar el hogar perfecto puede sentirse abrumador, pero no tienes que hacerlo solo—¡estoy aquí para guiarte en cada paso del camino y responder cualquier pregunta que tengas sobre vouchers de vivienda o el proceso! 😊
 
 **Para comenzar, solo dime:**
 • ¿Qué tipo de voucher tienes? (Section 8, CityFHEPS, HASA, etc.)
 • ¿Cuántas habitaciones necesitas? 🛏️
 • ¿Cuál es tu presupuesto máximo de renta? 💰
-• ¿Tienes un distrito preferido? 🗽
-
-Soy paciente, amable y estoy aquí para apoyarte en este viaje. ¡Encontremos un lugar maravilloso al que puedas llamar hogar! ✨🏡"""
+• ¿Tienes un distrito preferido? 🗽"""
     },
     "zh": {
         "app_title": "🏠 纽约市住房券导航器",
@@ -232,23 +222,13 @@ Soy paciente, amable y estoy aquí para apoyarte en este viaje. ¡Encontremos un
         "shortlist_cleared": "收藏清单已清空",
         "intro_greeting": """👋 **您好！我是Navi，您的个人纽约市住房导航员！**
 
-我在这里帮助您在纽约市找到安全、经济实惠且接受住房券的住房。我理解找到合适的家可能让人感到不知所措，但您不必独自面对这一切 - 我会在每一步中指导您！😊
-
-**我可以为您提供以下帮助：**
-• 🏠 **寻找接受住房券的公寓** - 找到接受您特定类型住房券的房源
-• 🏢 **检查建筑安全** - 提供违规报告和安全评估，让您安心
-• 🚇 **显示附近的地铁站** - 提供交通便利性和可达性信息
-• 🏫 **寻找附近的学校** - 为有孩子的家庭提供学校信息
-• 📧 **起草专业邮件** - 帮您给房东和物业管理员写邮件
-• 💡 **回答问题** - 关于住房券项目、社区特点和住房权利的各种问题
+我在这里帮助您在纽约市找到安全、经济实惠且接受住房券的住房。我理解找到合适的家可能让人感到不知所措，但您不必独自面对这一切—我会在每一步中指导您，并回答您关于住房券或申请流程的任何问题！😊
 
 **开始使用时，请告诉我：**
-• 您有什么类型的住房券？(Section 8联邦住房券、CityFHEPS城市住房援助、HASA艾滋病服务券等)
+• 您有什么类型的住房券？(Section 8、CityFHEPS、HASA等)
 • 您需要多少间卧室？🛏️
 • 您的最高租金预算是多少？💰
-• 您有首选的行政区吗？(布朗克斯、布鲁克林、曼哈顿、皇后区、史坦顿岛) 🗽
-
-我很有耐心、善良，会在整个找房过程中支持您。让我们一起为您找到一个可以称之为家的美好地方！我了解纽约市的住房市场和各种住房券项目，会帮您找到既安全又符合预算的理想住所。✨🏡"""
+• 您有首选的行政区吗？🗽"""
     },
     "bn": {
         "app_title": "🏠 NYC ভাউচার হাউজিং নেভিগেটর",
@@ -306,23 +286,13 @@ Soy paciente, amable y estoy aquí para apoyarte en este viaje. ¡Encontremos un
         "shortlist_cleared": "পছন্দের তালিকা পরিষ্কার করা হয়েছে",
         "intro_greeting": """👋 **নমস্কার! আমি নবি, আপনার ব্যক্তিগত NYC হাউজিং নেভিগেটর!**
 
-আমি এখানে আছি নিউইয়র্ক সিটিতে আপনাকে নিরাপদ, সাশ্রয়ী এবং ভাউচার-বান্ধব আবাসন খুঁজে পেতে সাহায্য করার জন্য। আমি বুঝি যে সঠিক বাড়ি খোঁজা অভিভূতকর মনে হতে পারে, কিন্তু আপনাকে একা এটি করতে হবে না - আমি প্রতিটি পদক্ষেপে আপনাকে গাইড করার জন্য এখানে আছি! 😊
-
-**আমি যেভাবে আপনাকে সাহায্য করতে পারি:**
-• 🏠 **ভাউচার-বান্ধব অ্যাপার্টমেন্ট খুঁজুন** যা আপনার নির্দিষ্ট ভাউচার ধরন গ্রহণ করে
-• 🏢 **বিল্ডিং নিরাপত্তা পরীক্ষা করুন** এবং মানসিক শান্তির জন্য লঙ্ঘনের রিপোর্ট প্রদান করুন
-• 🚇 **নিকটবর্তী সাবওয়ে স্টেশন দেখান** এবং ট্রানজিট অ্যাক্সেসিবলিটি
-• 🏫 **নিকটবর্তী স্কুল খুঁজুন** শিশুদের সাথে পরিবারের জন্য
-• 📧 **পেশাদার ইমেইল খসড়া করুন** বাড়িওয়ালা এবং সম্পত্তি ব্যবস্থাপকদের কাছে
-• 💡 **প্রশ্নের উত্তর দিন** ভাউচার প্রোগ্রাম, পাড়া এবং আবাসন অধিকার সম্পর্কে
+আমি এখানে আছি নিউইয়র্ক সিটিতে আপনাকে নিরাপদ, সাশ্রয়ী এবং ভাউচার-বান্ধব আবাসন খুঁজে পেতে সাহায্য করার জন্য। আমি বুঝি যে সঠিক বাড়ি খোঁজা অভিভূতকর মনে হতে পারে, কিন্তু আপনাকে একা এটি করতে হবে না—আমি প্রতিটি পদক্ষেপে আপনাকে গাইড করার জন্য এখানে আছি, এবং হাউজিং ভাউচার বা প্রক্রিয়া সম্পর্কে আপনার যেকোনো প্রশ্নের উত্তর দিতে পারি! 😊
 
 **শুরু করতে, শুধু আমাকে বলুন:**
 • আপনার কি ধরনের ভাউচার আছে? (Section 8, CityFHEPS, HASA, ইত্যাদি)
 • আপনার কতটি বেডরুম প্রয়োজন? 🛏️
 • আপনার সর্বোচ্চ ভাড়ার বাজেট কত? 💰
-• আপনার কি কোন পছন্দের বরো আছে? 🗽
-
-আমি ধৈর্যশীল, দয়ালু, এবং এই যাত্রায় আপনাকে সমর্থন করার জন্য এখানে আছি। আসুন আপনার জন্য একটি চমৎকার জায়গা খুঁজে পাই যাকে আপনি বাড়ি বলতে পারেন! ✨🏡"""
+• আপনার কি কোন পছন্দের বরো আছে? 🗽"""
     }
 }
 
@@ -417,20 +387,26 @@ def detect_context_dependent_question(message: str) -> bool:
         r'^any\s+other',                   # "any other..."
         r'^is\s+it\s+(near|close|far)',    # "is it near", "is it close", "is it far"
         # Add patterns for subway and school proximity questions
-        r'nearest\s+(subway|train|school)', # "nearest subway", "nearest school", "nearest train"
-        r'closest\s+(subway|train|school)', # "closest subway", "closest school", "closest train"
-        r'what\'?s\s+the\s+(nearest|closest)\s+(subway|train|school)', # "what's the nearest/closest subway"
-        r'where\s+is\s+the\s+(nearest|closest)\s+(subway|train|school)', # "where is the nearest/closest subway"
-        r'how\s+far\s+is\s+the\s+(subway|train|school)', # "how far is the subway"
-        r'(subway|train|school)\s+(distance|proximity)', # "subway distance", "school proximity"
-        r'^(subway|train|school)\?$',      # just "subway?", "school?"
-        r'^closest\s+(subway|train|school)\?$', # "closest subway?", "closest school?"
+        r'nearest\s+(subway|train|school|transit)', # "nearest subway", "nearest school", "nearest train", "nearest transit"
+        r'closest\s+(subway|train|school|transit)', # "closest subway", "closest school", "closest train", "closest transit"
+        r'what\'?s\s+the\s+(nearest|closest)\s+(subway|train|school|transit)', # "what's the nearest/closest subway"
+        r'where\s+is\s+the\s+(nearest|closest)\s+(subway|train|school|transit)', # "where is the nearest/closest subway"
+        r'how\s+far\s+is\s+the\s+(subway|train|school|transit)', # "how far is the subway"
+        r'(subway|train|school|transit)\s+(distance|proximity)', # "subway distance", "school proximity"
+        r'^(subway|train|school|transit)\?$',      # just "subway?", "school?", "transit?"
+        r'^closest\s+(subway|train|school|transit)\?$', # "closest subway?", "closest school?", "closest transit?"
+        # Add broader patterns for context questions with "can i see", "show me" etc.
+        r'can\s+i\s+see\s+.*?(nearest|closest|subway|train|school)', # "can i see the nearest subway"
+        r'show\s+me\s+.*?(nearest|closest|subway|train|school)', # "show me the nearest subway"
+        r'tell\s+me\s+.*?(nearest|closest|subway|train|school)', # "tell me the nearest subway"
+        r'what.*?(nearest|closest)\s+(subway|train|school)', # "what's the nearest subway"
+        r'where.*?(nearest|closest)\s+(subway|train|school)', # "where is the nearest subway"
     ]
     
-    # Check if message matches context-dependent patterns
+    # Check if message matches context-dependent patterns using search instead of match
     import re
     for pattern in context_patterns:
-        if re.match(pattern, message_lower):
+        if re.search(pattern, message_lower):
             return True
     
     # Also check for very short questions (likely context-dependent)
@@ -444,13 +420,13 @@ def detect_language_from_message(message: str) -> str:
     """Detect language from user message using simple keyword matching."""
     message_lower = message.lower()
     
-    # Spanish keywords
+    # Spanish keywords - removed English terms and borough names
     spanish_keywords = [
         'hola', 'apartamento', 'vivienda', 'casa', 'alquiler', 'renta', 'busco', 
         'necesito', 'ayuda', 'donde', 'como', 'que', 'soy', 'tengo', 'quiero',
         'habitacion', 'habitaciones', 'dormitorio', 'precio', 'costo', 'dinero',
-        'section', 'cityFHEPS', 'voucher', 'bronx', 'brooklyn', 'manhattan',
-        'queens', 'gracias', 'por favor', 'dime', 'dame', 'encuentro'
+        'gracias', 'por favor', 'dime', 'dame', 'encuentro', 'cuanto',
+        'cuantas', 'puedo', 'puedes', 'buscar', 'encontrar'
     ]
     
     # Chinese keywords (simplified)
@@ -475,7 +451,7 @@ def detect_language_from_message(message: str) -> str:
     bengali_count = sum(1 for keyword in bengali_keywords if keyword in message)
     
     # Return language with highest count (minimum 2 matches required)
-    if spanish_count >= 2:
+    if spanish_count >= 3:  # Increased threshold for Spanish
         return "es"
     elif chinese_count >= 2:
         return "zh"
@@ -796,18 +772,215 @@ with gr.Blocks(theme=theme, css="""
         font-size: 1rem;
         background: #fff;
         transition: all 0.2s;
+        color: #222;
     }
     input:focus, textarea:focus, .gr-textbox input:focus, .gr-textbox textarea:focus {
         border-color: #00695c;
         box-shadow: 0 0 0 3px rgba(0,105,92,0.1);
         outline: none;
     }
+    /* Fix input font color in dark mode */
+    .dark input, .dark textarea, .dark .gr-textbox input, .dark .gr-textbox textarea {
+        color: #f3f4f6 !important;
+        background: #222 !important;
+        border-color: #444 !important;
+    }
     
     /* DataFrame styling */
     .gr-dataframe {
         border-radius: 8px;
-        overflow: hidden;
         box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: auto !important;
+        position: relative !important;
+    }
+    
+    /* Prevent layout shift on header click */
+    .gr-dataframe table {
+        width: 100% !important;
+        min-width: 100% !important;
+        table-layout: fixed !important;
+    }
+    
+    /* Header button styling */
+    .gr-dataframe .header-button {
+        width: 100% !important;
+        text-align: left !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
+    
+    /* Ensure container maintains scroll */
+    .results-dataframe {
+        overflow-x: auto !important;
+        max-width: 100% !important;
+        position: relative !important;
+    }
+
+    /* Make DataFrame cells non-editable */
+    .gr-dataframe td {
+        pointer-events: auto !important;
+        user-select: none !important;
+        -webkit-user-select: none !important;
+    }
+
+    /* Style link cells specifically */
+    .gr-dataframe td:nth-child(7) {  /* 7th column is Link */
+        cursor: pointer !important;
+    }
+
+    /* Style and prevent editing of input elements in DataFrame */
+    .gr-dataframe input.svelte-1y3tas2 {
+        pointer-events: none !important;
+        user-select: none !important;
+        -webkit-user-select: none !important;
+        -webkit-user-modify: read-only !important;
+        -moz-user-modify: read-only !important;
+        user-modify: read-only !important;
+        background: transparent !important;
+        border: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        font-family: inherit !important;
+        font-size: inherit !important;
+        color: inherit !important;
+        cursor: pointer !important;
+    }
+
+    /* Style links in DataFrame */
+    .gr-dataframe a {
+        color: #2196F3 !important;
+        text-decoration: underline !important;
+        cursor: pointer !important;
+        pointer-events: auto !important;
+    }
+
+    .gr-dataframe a:hover {
+        color: #1976D2 !important;
+        text-decoration: underline !important;
+    }
+
+    /* Allow interaction only with shortlist column inputs */
+    .gr-dataframe td:last-child input.svelte-1y3tas2 {
+        pointer-events: none !important;
+        user-select: none !important;
+        -webkit-user-select: none !important;
+        text-align: center !important;
+        cursor: pointer !important;
+    }
+
+    /* Remove focus styles from inputs */
+    .gr-dataframe input.svelte-1y3tas2:focus {
+        outline: none !important;
+        box-shadow: none !important;
+        background: transparent !important;
+    }
+
+    /* Allow interaction only with shortlist column */
+    .gr-dataframe td:last-child {
+        pointer-events: auto !important;
+        cursor: pointer !important;
+        user-select: none !important;
+        -webkit-user-select: none !important;
+        -webkit-user-modify: read-only !important;
+        -moz-user-modify: read-only !important;
+        user-modify: read-only !important;
+        font-family: system-ui, -apple-system, sans-serif !important;
+        font-size: 16px !important;
+        line-height: 1 !important;
+        text-align: center !important;
+        color: #666 !important;
+        background: transparent !important;
+        transition: all 0.2s ease !important;
+    }
+
+    /* Style shortlist column hover state */
+    .gr-dataframe td:last-child:hover {
+        color: #00695c !important;
+        background: rgba(0,105,92,0.1) !important;
+        border-radius: 4px;
+    }
+
+    /* Dark mode adaptations */
+    .dark .gr-dataframe td:last-child {
+        color: #d1d5db !important;
+    }
+
+    .dark .gr-dataframe td:last-child:hover {
+        color: #9ca3af !important;
+        background: rgba(156,163,175,0.1) !important;
+    }
+
+    /* Prevent cell editing */
+    .gr-dataframe td[contenteditable="true"] {
+        -webkit-user-modify: read-only !important;
+        -moz-user-modify: read-only !important;
+        user-modify: read-only !important;
+    }
+
+    /* Fix for teal blocks around interactive elements */
+    .gr-dataframe button,
+    .gr-dataframe .gr-button,
+    .gr-dataframe .svelte-vzs2gq,
+    .cell-menu-button.svelte-vt38nd {
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    /* Hide cell menu buttons */
+    .cell-menu-button.svelte-vt38nd,
+    button[aria-label="Open cell menu"],
+    .cell-menu-button {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+        position: absolute !important;
+        width: 0 !important;
+        height: 0 !important;
+        overflow: hidden !important;
+    }
+
+    /* Hide selection buttons */
+    .selection-button.svelte-1mp8yw1,
+    button.selection-button,
+    .selection-button-row,
+    .selection-button-column {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+        position: absolute !important;
+        width: 0 !important;
+        height: 0 !important;
+        overflow: hidden !important;
+    }
+
+    /* Style the expand/collapse arrow */
+    button.svelte-vzs2gq.padded {
+        background: transparent !important;
+        border: none !important;
+        padding: 4px !important;
+        cursor: pointer !important;
+        width: 24px !important;
+        height: 24px !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    /* Remove any default button styling from DataFrame cells */
+    .gr-dataframe td:last-child {
+        background: transparent !important;
+        cursor: pointer;
+    }
+
+    .gr-dataframe td:last-child:hover {
+        background: rgba(0,105,92,0.1) !important;
+        border-radius: 4px;
     }
     
     /* Responsive design */
@@ -867,6 +1040,12 @@ with gr.Blocks(theme=theme, css="""
     }
     .dark .dark-mode-btn:hover {
         background: rgba(255,255,255,0.2) !important;
+    }
+    
+    /* Make chatbot response font one size bigger */
+    .gr-chatbot .prose, .gr-chatbot .prose * {
+        font-size: 1.25rem !important;
+        line-height: 1.7 !important;
     }
 """) as demo:
     # Header Section
@@ -943,14 +1122,15 @@ with gr.Blocks(theme=theme, css="""
             
             # DataFrame Section
             with gr.Column(elem_classes=["results-dataframe"]):
-                results_df = gr.DataFrame(
-                    value=pd.DataFrame(),
-                    label="📋 Found Listings",
-                    interactive=True,  # Make interactive for shortlist functionality
-                    row_count=(10, "dynamic"),
-                    wrap=True,
-                    visible=False,
-                    datatype=["number", "str", "str", "str", "number", "str", "str", "str", "str"]  # Added shortlist column
+                            results_df = gr.DataFrame(
+                value=pd.DataFrame(),
+                label="📋 Found Listings",
+                interactive=True,  # Make interactive for shortlist functionality
+                row_count=(10, "dynamic"),
+                wrap=True,
+                visible=False,
+                datatype=["number", "str", "str", "str", "number", "str", "html", "str", "str"],  # Changed Link column to html type
+                column_widths=["50px", "300px", "100px", "100px", "100px", "120px", "100px", "200px", "80px"]  # Set fixed column widths
                 )
             
             # Shortlist Panel
@@ -1016,9 +1196,20 @@ with gr.Blocks(theme=theme, css="""
         """
 
     def handle_shortlist_click(evt: gr.SelectData, state: Dict):
-        """Handle shortlist button clicks in the DataFrame."""
+        """Handle shortlist button clicks and link clicks in the DataFrame."""
         try:
-            # Only handle clicks on the Shortlist column (last column)
+            # Handle clicks on the Link column (index 6)
+            if evt.index[1] == 6:  # Link column
+                listings = state.get("listings", [])
+                if listings and evt.index[0] < len(listings):
+                    listing = listings[evt.index[0]]
+                    url = listing.get("url", "")
+                    if url and url != "No link available":
+                        # The URL will be opened by the browser since we're using an HTML anchor tag
+                        return gr.update(), gr.update(), gr.update(), state
+                return gr.update(), gr.update(), gr.update(), state
+            
+            # Handle clicks on the Shortlist column (index 8)
             if evt.index[1] != 8:  # Shortlist column is index 8 (0-based)
                 return gr.update(), gr.update(), gr.update(), state
             
@@ -1173,42 +1364,132 @@ with gr.Blocks(theme=theme, css="""
         
         # Parse which listing they're asking about
         listing_index = None
-        if "first" in message_lower or "1st" in message_lower or "#1" in message_lower:
-            listing_index = 0
-        elif "second" in message_lower or "2nd" in message_lower or "#2" in message_lower:
-            listing_index = 1
-        elif "third" in message_lower or "3rd" in message_lower or "#3" in message_lower:
-            listing_index = 2
-        elif "last" in message_lower:
-            listing_index = len(listings) - 1
-        else:
-            # Try to extract number
-            numbers = re.findall(r'\d+', message_lower)
-            if numbers:
-                try:
-                    listing_index = int(numbers[0]) - 1  # Convert to 0-based index
-                except:
-                    pass
         
-        # Default to first listing if no specific index found
+        # Number word mapping
+        number_words = {
+            'zero': 0, 'one': 1, 'two': 2, 'three': 3, 'four': 4, 'five': 5,
+            'six': 6, 'seven': 7, 'eight': 8, 'nine': 9, 'ten': 10,
+            'eleven': 11, 'twelve': 12, 'thirteen': 13, 'fourteen': 14, 'fifteen': 15,
+            'sixteen': 16, 'seventeen': 17, 'eighteen': 18, 'nineteen': 19, 'twenty': 20
+        }
+        
+        # Navigation patterns that depend on current state
+        if "current_listing_index" in state and state["current_listing_index"] is not None:
+            current_idx = state["current_listing_index"]
+            if any(word in message_lower for word in ["next", "forward"]):
+                listing_index = min(current_idx + 1, len(listings) - 1)
+            elif any(word in message_lower for word in ["previous", "prev", "back"]):
+                listing_index = max(current_idx - 1, 0)
+        
+        # If navigation wasn't used, try other patterns
         if listing_index is None:
-            listing_index = 0
+            # Check for relative position patterns first
+            relative_patterns = {
+                r"(?:the\s+)?last(?:\s+listing)?": lambda: len(listings) - 1,
+                r"(?:the\s+)?(?:second\s+to\s+last|next\s+to\s+last|penultimate|last\s+but\s+one)(?:\s+listing)?": lambda: len(listings) - 2 if len(listings) > 1 else 0,
+                r"(?:the\s+)?(first|1st)(?:\s+listing)?": lambda: 0,
+                r"(?:the\s+)?(second|2nd)(?:\s+listing)?": lambda: 1,
+                r"(?:the\s+)?(third|3rd)(?:\s+listing)?": lambda: 2,
+                r"(?:the\s+)?(fourth|4th)(?:\s+listing)?": lambda: 3,
+                r"(?:the\s+)?(fifth|5th)(?:\s+listing)?": lambda: 4
+            }
+            
+            for pattern, index_func in relative_patterns.items():
+                if re.search(pattern, message_lower):
+                    listing_index = index_func()
+                    break
+            
+            # If no relative position found, try numeric numbers
+            if listing_index is None:
+                numbers = re.findall(r'\b(-?\d+(?:\.\d+)?)\b', message_lower)
+                if numbers:
+                    try:
+                        # Convert to float first to handle decimals
+                        num = float(numbers[0])
+                        # Check if it's a whole number and non-negative
+                        if num.is_integer() and num > 0:
+                            listing_index = int(num) - 1
+                    except:
+                        pass
+                
+                # If no valid numeric number found, try word numbers
+                if listing_index is None:
+                    for word, number in number_words.items():
+                        word_patterns = [
+                            f"number {word}",
+                            f"no. {word}",
+                            f"#{word}",
+                            f"listing {word}",
+                            f" {word} ",  # Space-bounded word
+                            f"^{word} ",  # Start of string
+                            f" {word}$"   # End of string
+                        ]
+                        if any(pattern in f" {message_lower} " for pattern in word_patterns):
+                            if number > 0:  # Only accept positive numbers
+                                listing_index = number - 1
+                            break
+                    
+                    # If still no match, try patterns
+                    if listing_index is None:
+                        # Check for various patterns of asking about a listing
+                        listing_patterns = {
+                            # Basic patterns with flexible spacing
+                            r"(?:can\s+(?:i|you)\s+)?(?:see|show|tell\s+(?:me\s+)?about|what\s+about|view)\s+listing\s*#?\s*(-?\d+)": lambda x: int(x) - 1,
+                            r"(?:what\s+is|what's|whats|how\s+about|details\s+for)\s+listing\s*#?\s*(-?\d+)": lambda x: int(x) - 1,
+                            r"#\s*(-?\d+)": lambda x: int(x) - 1,
+                            r"listing\s*#?\s*(-?\d+)": lambda x: int(x) - 1,
+                            
+                            # Informal/casual patterns
+                            r"(?:hey|please|could you|i'd like to|let me)\s+(?:see|show)\s+listing\s*#?\s*(-?\d+)": lambda x: int(x) - 1,
+                            r"(?:apartment|property|unit)\s*#?\s*(-?\d+)": lambda x: int(x) - 1,
+                            r"number\s*(-?\d+)(?:\s+please)?": lambda x: int(x) - 1,
+                            
+                            # Alternative number formats
+                            r"listing\s+(?:no\.?|number)\s+(-?\d+)": lambda x: int(x) - 1,
+                            
+                            # Mixed format patterns
+                            r"(?:first|1st)\s+(?:show|see)\s+listing\s*#?\s*(-?\d+)": lambda x: int(x) - 1,
+                            r"(?:either\s+)?listing\s*#?\s*(-?\d+)(?:\s+or\s+(?:the\s+)?(?:second|2nd|third|3rd)\s+(?:one|listing))?": lambda x: int(x) - 1
+                        }
+                        
+                        # Try each pattern
+                        for pattern, index_func in listing_patterns.items():
+                            match = re.search(pattern, message_lower)
+                            if match:
+                                try:
+                                    num = int(match.group(1))
+                                    if num > 0:  # Only accept positive numbers
+                                        listing_index = index_func(match.group(1))
+                                    break
+                                except:
+                                    continue
         
-        # Validate index
-        if listing_index < 0 or listing_index >= len(listings):
-            invalid_msg = create_chat_message_with_metadata(
-                f"I only have {len(listings)} listings available. Please ask about a listing number between 1 and {len(listings)}.",
-                "❌ Invalid Listing Number"
-            )
-            history.append(invalid_msg)
-            # Preserve the current DataFrame
-            current_df = create_listings_dataframe(listings, state)
-            return (history, gr.update(value=current_df, visible=True), 
-                   gr.update(value=f"Showing {len(listings)} listings"), state)
+        # Validate index if one was found
+        if listing_index is not None:
+            # Handle special cases
+            if listing_index < 0 or listing_index >= len(listings):
+                invalid_msg = create_chat_message_with_metadata(
+                    f"I only have {len(listings)} listings available. Please ask about a listing number between 1 and {len(listings)}.",
+                    "❌ Invalid Listing Number"
+                )
+                history.append(invalid_msg)
+                # Preserve the current DataFrame
+                current_df = create_listings_dataframe(listings, state)
+                return (history, gr.update(value=current_df, visible=True), 
+                       gr.update(value=f"Showing {len(listings)} listings"), state)
+        else:
+            # Default to first listing if no specific index found
+            listing_index = 0
         
         # Get the requested listing
         listing = listings[listing_index]
         listing_num = listing_index + 1
+        
+        # Update state to track current listing
+        updated_state = update_app_state(state, {
+            "current_listing": listing,
+            "current_listing_index": listing_index
+        })
         
         # Create detailed response
         address = listing.get("address") or listing.get("title", "N/A")
@@ -1242,16 +1523,318 @@ Just let me know what information you'd like to see!
         )
         history.append(listing_response_msg)
         
-        # Update state to track current listing context
-        updated_state = update_app_state(state, {
-            "current_listing": listing,
-            "current_listing_index": listing_index
-        })
-        
-        # Preserve the current DataFrame
+        # Preserve existing DataFrame
         current_df = create_listings_dataframe(listings, updated_state)
         return (history, gr.update(value=current_df, visible=True), 
                gr.update(value=f"Showing {len(listings)} listings"), updated_state)
+
+    # Add this function before handle_chat_message
+    def handle_listing_context_question(message: str, history: list, state: Dict):
+        """Handle context-dependent questions about the current listing (subway, school proximity)."""
+        current_listing = state.get("current_listing")
+        current_listing_index = state.get("current_listing_index")
+        
+        # If no current listing but user is asking about transit/schools, give helpful response
+        if not current_listing:
+            message_lower = message.lower().strip()
+            
+            # Check if it's a transit/school question
+            transit_school_patterns = [
+                r'nearest\s+(subway|train|school|transit)',
+                r'closest\s+(subway|train|school|transit)',
+                r'what.*?(nearest|closest)\s+(subway|train|school|transit)',
+                r'where.*?(nearest|closest)\s+(subway|train|school|transit)',
+                r'how.*?far.*?(subway|train|school|transit)',
+                r'^(subway|train|school|transit)\?$'
+            ]
+            
+            import re
+            if any(re.search(pattern, message_lower) for pattern in transit_school_patterns):
+                response_text = """🚇 **Transit & School Information**
+
+To find the nearest subway stations and schools for a specific listing, I need to know which property you're interested in. 
+
+**Please:**
+1. First search for listings using a command like "find me apartments in Brooklyn" or "search for Section 8 housing"
+2. Then ask about transit/schools for a specific listing (e.g., "what's the nearest subway for listing #1")
+
+**Or if you have a specific address in mind:**
+Tell me the address and I can look up transit and school information for that location.
+
+Would you like me to help you search for listings first?"""
+                
+                context_msg = create_chat_message_with_metadata(
+                    response_text,
+                    "🚇 Transit & School Info"
+                )
+                history.append(context_msg)
+                return (history, gr.update(), gr.update(value="Please search for listings first"), state)
+            else:
+                return None  # Not a transit/school question, continue with normal flow
+        
+        # Continue with normal context question handling for when we have a current listing
+        
+        message_lower = message.lower().strip()
+        listing_num = (current_listing_index or 0) + 1
+        address = current_listing.get("address") or current_listing.get("title", "N/A")
+        
+        # Check for subway/transit request
+        subway_patterns = [
+            r'subway', r'transit', r'train', r'nearest.*subway', r'closest.*subway',
+            r'nearest.*transit', r'closest.*transit', r'what.*nearest.*subway', 
+            r'where.*nearest.*subway', r'how.*far.*subway', r'what.*nearest.*transit',
+            r'where.*nearest.*transit', r'how.*far.*transit'
+        ]
+        
+        # Check for school request  
+        school_patterns = [
+            r'school', r'nearest.*school', r'closest.*school', r'what.*nearest.*school',
+            r'where.*nearest.*school', r'how.*far.*school'
+        ]
+        
+        import re
+        
+        def get_coordinates_for_listing(listing):
+            """Get coordinates for a listing, using geocoding if necessary."""
+            # First try to get coordinates directly from listing
+            if listing.get("latitude") and listing.get("longitude"):
+                return (float(listing["latitude"]), float(listing["longitude"]))
+            
+            # If no direct coordinates, try to geocode the address
+            address = listing.get("address")
+            if not address or address == "N/A":
+                return None
+            
+            try:
+                # Use the geocoding tool
+                from geocoding_tool import GeocodingTool
+                geocoder = GeocodingTool()
+                geocode_result_json = geocoder.forward(address)
+                geocode_result = json.loads(geocode_result_json)
+                
+                if geocode_result.get("status") == "success":
+                    data = geocode_result.get("data", {})
+                    lat = data.get("latitude")
+                    lon = data.get("longitude")
+                    if lat and lon:
+                        return (float(lat), float(lon))
+                
+                return None
+            except Exception as e:
+                print(f"❌ Geocoding error: {e}")
+                return None
+        
+        # Handle subway questions
+        if any(re.search(pattern, message_lower) for pattern in subway_patterns):
+            # Try to get coordinates from the current listing
+            coordinates = get_coordinates_for_listing(current_listing)
+            
+            if coordinates:
+                try:
+                    # Use the nearest subway tool directly
+                    from nearest_subway_tool import nearest_subway_tool
+                    subway_result_json = nearest_subway_tool.forward(coordinates[0], coordinates[1])
+                    subway_result = json.loads(subway_result_json)
+                    
+                    if subway_result.get("status") == "success":
+                        data = subway_result.get("data", {})
+                        station_name = data.get("station_name", "Unknown")
+                        lines = data.get("lines", "N/A")
+                        distance = data.get("distance_miles", 0)
+                        is_accessible = data.get("is_accessible", False)
+                        entrance_type = data.get("entrance_type", "Unknown")
+                        
+                        accessibility_text = "♿ Wheelchair accessible" if is_accessible else f"⚠️ Not wheelchair accessible ({entrance_type} entrance)"
+                        walking_time = round(distance * 20) if distance else "N/A"  # 20 minutes per mile at 3 mph
+                        
+                        response_text = f"""
+🚇 **Nearest Subway Information for Listing #{listing_num}:**
+
+**Station:** {station_name}
+**Lines:** {lines}
+**Distance:** {distance:.2f} miles (about {walking_time} minute walk)
+**Accessibility:** {accessibility_text}
+
+Would you like to:
+1. 🏫 See nearby schools for this listing?
+2. 📧 Draft an email to inquire about this listing?
+3. 🏠 View another listing?
+                        """.strip()
+                    else:
+                        response_text = f"""
+🚇 **Subway Information for Listing #{listing_num}:**
+
+I couldn't find detailed subway information for this listing at the moment. 
+
+**Address:** {address}
+
+You can check the MTA website or app for nearby stations using this address.
+
+Would you like to:
+1. 🏫 See nearby schools for this listing?
+2. 📧 Draft an email to inquire about this listing?
+3. 🏠 View another listing?
+                        """.strip()
+                        
+                except Exception as e:
+                    response_text = f"""
+🚇 **Subway Information for Listing #{listing_num}:**
+
+I encountered an error while looking up subway information: {str(e)}
+
+**Address:** {address}
+
+You can check the MTA website or app for nearby stations using this address.
+
+Would you like to:
+1. 🏫 See nearby schools for this listing?
+2. 📧 Draft an email to inquire about this listing?
+3. 🏠 View another listing?
+                    """.strip()
+            else:
+                response_text = f"""
+🚇 **Subway Information for Listing #{listing_num}:**
+
+I don't have coordinate data for this listing to find nearby subway stations.
+
+**Address:** {address}
+
+You can check the MTA website or app for nearby stations using this address.
+
+Would you like to:
+1. 🏫 See nearby schools for this listing?
+2. 📧 Draft an email to inquire about this listing?
+3. 🏠 View another listing?
+            """.strip()
+            
+            subway_msg = create_chat_message_with_metadata(
+                response_text,
+                f"🚇 Subway Info - Listing #{listing_num}"
+            )
+            history.append(subway_msg)
+            
+            # Preserve existing DataFrame
+            listings = state.get("listings", [])
+            current_df = create_listings_dataframe(listings, state)
+            return (history, gr.update(value=current_df, visible=True), 
+                   gr.update(value=f"Showing {len(listings)} listings"), state)
+        
+        # Handle school questions
+        elif any(re.search(pattern, message_lower) for pattern in school_patterns):
+            # Try to get coordinates from the current listing
+            coordinates = get_coordinates_for_listing(current_listing)
+            
+            if coordinates:
+                try:
+                    # Use the near school tool directly
+                    from near_school_tool import near_school_tool
+                    school_result_json = near_school_tool.forward(coordinates[0], coordinates[1])
+                    school_result = json.loads(school_result_json)
+                    
+                    if school_result.get("status") == "success":
+                        schools = school_result.get("data", {}).get("schools", [])
+                        
+                        if schools:
+                            response_text = f"🏫 **Nearby Schools for Listing #{listing_num}:**\n\n"
+                            
+                            for i, school in enumerate(schools[:3], 1):  # Show top 3 schools
+                                name = school.get("school_name", "Unknown School")
+                                school_type = school.get("school_type", "Unknown")
+                                grades = school.get("grades", "N/A")
+                                distance = school.get("distance_miles", 0)
+                                walking_time = school.get("walking_time_minutes", "N/A")
+                                school_address = school.get("address", "N/A")
+                                
+                                response_text += f"""
+{i}. **{name}**
+   - Type: {school_type}
+   - Grades: {grades}
+   - Distance: {distance:.2f} miles ({walking_time} minute walk)
+   - Address: {school_address}
+"""
+                            
+                            response_text += f"""
+Would you like to:
+1. 🚇 See the nearest subway/transit options?
+2. 📧 Draft an email to inquire about this listing?
+3. 🏠 View another listing?
+                            """.strip()
+                        else:
+                            response_text = f"""
+🏫 **School Information for Listing #{listing_num}:**
+
+No schools found within a reasonable distance of this listing.
+
+**Address:** {address}
+
+You can check the NYC Department of Education website for school zone information.
+
+Would you like to:
+1. 🚇 See the nearest subway/transit options?
+2. 📧 Draft an email to inquire about this listing?
+3. 🏠 View another listing?
+                            """.strip()
+                    else:
+                        response_text = f"""
+🏫 **School Information for Listing #{listing_num}:**
+
+I couldn't find detailed school information for this listing at the moment.
+
+**Address:** {address}
+
+You can check the NYC Department of Education website for nearby schools using this address.
+
+Would you like to:
+1. 🚇 See the nearest subway/transit options?
+2. 📧 Draft an email to inquire about this listing?
+3. 🏠 View another listing?
+                        """.strip()
+                        
+                except Exception as e:
+                    response_text = f"""
+🏫 **School Information for Listing #{listing_num}:**
+
+I encountered an error while looking up school information: {str(e)}
+
+**Address:** {address}
+
+You can check the NYC Department of Education website for nearby schools using this address.
+
+Would you like to:
+1. 🚇 See the nearest subway/transit options?
+2. 📧 Draft an email to inquire about this listing?
+3. 🏠 View another listing?
+                    """.strip()
+            else:
+                response_text = f"""
+🏫 **School Information for Listing #{listing_num}:**
+
+I don't have coordinate data for this listing to find nearby schools.
+
+**Address:** {address}
+
+You can check the NYC Department of Education website for nearby schools using this address.
+
+Would you like to:
+1. 🚇 See the nearest subway/transit options?
+2. 📧 Draft an email to inquire about this listing?
+3. 🏠 View another listing?
+            """.strip()
+            
+            school_msg = create_chat_message_with_metadata(
+                response_text,
+                f"🏫 School Info - Listing #{listing_num}"
+            )
+            history.append(school_msg)
+            
+            # Preserve existing DataFrame
+            listings = state.get("listings", [])
+            current_df = create_listings_dataframe(listings, state)
+            return (history, gr.update(value=current_df, visible=True), 
+                   gr.update(value=f"Showing {len(listings)} listings"), state)
+        
+        # Not a recognized context question
+        return None
 
     def handle_chat_message(message: str, history: list, current_state: Dict, 
                            strict_mode: bool):
@@ -1291,10 +1874,18 @@ Just let me know what information you'd like to see!
         })
         
         try:
+            # Check for context-dependent questions about current listing first
+            if detect_context_dependent_question(message) and new_state.get("current_listing"):
+                print(f"🔍 CALLING handle_listing_context_question")
+                context_result = handle_listing_context_question(message, history, new_state)
+                if context_result:
+                    return context_result
+            
             # Use V0's enhanced classification
             message_type = enhanced_classify_message(message, new_state)
             
             if message_type == "email_request":
+                print(f"📧 CALLING enhanced_handle_email_request")
                 # Call V0's enhanced email handler
                 enhanced_result = enhanced_handle_email_request(message, history, new_state)
                 # Return with state preservation
@@ -1416,8 +2007,76 @@ Just let me know what information you'd like to see!
                 history.append(no_results_msg)
                 return (history, gr.update(), gr.update(value="No listings found"), state)
             
+            # Stage 2: Enrich listings with violation data
+            violation_msg = create_chat_message_with_metadata(
+                f"🏢 Checking building safety for {len(listings)} listings...",
+                "🏢 Safety Analysis",
+                parent_id=search_id
+            )
+            history.append(violation_msg)
+            
+            enriched_listings = []
+            for i, listing in enumerate(listings):
+                address = listing.get("address") or listing.get("title", "")
+                if not address:
+                    # Add default violation data if no address
+                    enriched_listing = {
+                        **listing,
+                        "building_violations": 0,
+                        "risk_level": RiskLevel.UNKNOWN.value,
+                        "last_inspection": "N/A",
+                        "violation_summary": "No address available"
+                    }
+                    enriched_listings.append(enriched_listing)
+                    continue
+                
+                try:
+                    violation_result = violation_agent.forward(address)
+                    violation_data = json.loads(violation_result)
+                    
+                    if violation_data.get("status") == "success":
+                        data = violation_data.get("data", {})
+                        enriched_listing = {
+                            **listing,
+                            "building_violations": data.get("violations", 0),
+                            "risk_level": data.get("risk_level", RiskLevel.UNKNOWN.value),
+                            "last_inspection": data.get("last_inspection", "N/A"),
+                            "violation_summary": data.get("summary", "No data available")
+                        }
+                    else:
+                        # Add default violation data if check failed
+                        enriched_listing = {
+                            **listing,
+                            "building_violations": 0,
+                            "risk_level": RiskLevel.UNKNOWN.value,
+                            "last_inspection": "N/A",
+                            "violation_summary": "Could not verify"
+                        }
+                    
+                    enriched_listings.append(enriched_listing)
+                    
+                except Exception as e:
+                    print(f"❌ Failed to check violations for {address}: {str(e)}")
+                    # Add default violation data on error
+                    enriched_listing = {
+                        **listing,
+                        "building_violations": 0,
+                        "risk_level": RiskLevel.UNKNOWN.value,
+                        "last_inspection": "N/A",
+                        "violation_summary": "Check failed"
+                    }
+                    enriched_listings.append(enriched_listing)
+            
+            # Update enrichment completion message
+            enrichment_complete_msg = create_chat_message_with_metadata(
+                f"✅ Safety analysis complete for {len(enriched_listings)} listings",
+                "🏢 Safety Analysis Complete",
+                parent_id=search_id
+            )
+            history.append(enrichment_complete_msg)
+            
             # Apply strict mode filtering if enabled
-            filtered_listings = filter_listings_strict_mode(listings, strict_mode)
+            filtered_listings = filter_listings_strict_mode(enriched_listings, strict_mode)
             
             # Update state with listings
             updated_state = update_app_state(state, {
@@ -1463,13 +2122,69 @@ Just let me know what information you'd like to see!
         try:
             current_language = state.get("preferences", {}).get("language", "en")
             
-            # Enhanced message context
+            # Enhanced message context with comprehensive question type detection
+            message_lower = message.lower()
+            
+            # Detect question type
+            is_documentation_request = any(pattern in message_lower for pattern in [
+                "where can i find", "how do i find", "where do i find",
+                "documentation", "guide", "tutorial", "instructions",
+                "forms", "paperwork", "application", "documents",
+                "where are the", "where is the", "where are", "where is"
+            ])
+            
+            is_voucher_how_to = any(pattern in message_lower for pattern in [
+                "how do i", "how can i", "what do i do", "what's the process",
+                "how to use", "how does", "what should i"
+            ])
+            
+            is_voucher_info = any(pattern in message_lower for pattern in [
+                "what's the difference", "what does", "can i", "does my voucher",
+                "am i eligible", "do i have to", "is it possible",
+                "difference between", "vs", "versus", "compared to"
+            ])
+            
+            is_timeline_question = any(pattern in message_lower for pattern in [
+                "when do i", "how long does", "why haven't i", "what's the status",
+                "when will", "deadline", "extension", "expire", "expiration"
+            ])
+            
+            is_rights_question = any(pattern in message_lower for pattern in [
+                "can a landlord", "is it legal", "discrimination", "rights",
+                "allowed to", "required to", "refuse", "deny", "reject"
+            ])
+            
+            # Determine question type for context
+            if is_documentation_request:
+                question_type = "documentation request"
+            elif is_voucher_how_to:
+                question_type = "voucher usage guidance"
+            elif is_timeline_question:
+                question_type = "timeline and process question"
+            elif is_rights_question:
+                question_type = "rights and legal information"
+            elif is_voucher_info:
+                question_type = "voucher information request"
+            else:
+                question_type = "general voucher question"
+            
             enhanced_message = f"""
 User message: {message}
 
-Context: This is a conversation with someone looking for voucher-friendly housing in NYC. 
-Be helpful, empathetic, and knowledgeable about housing, NYC neighborhoods, and voucher programs.
-If they ask about specific listings, let them know they need to search first.
+Context: This is a {question_type} from someone seeking information about voucher-friendly housing in NYC.
+
+Key Response Guidelines:
+1. If this is a voucher usage question, provide step-by-step guidance
+2. If this is about rights/discrimination, include relevant legal information
+3. If this is about timelines/deadlines, be specific about processes and requirements
+4. If they ask about specific listings without having searched, let them know they need to search first
+5. Always be helpful, empathetic, and knowledgeable about housing, NYC neighborhoods, and voucher programs
+
+For voucher questions, include:
+- Clear, actionable steps when applicable
+- References to relevant agencies or resources
+- Common pitfalls to avoid
+- Next steps or follow-up actions
             """.strip()
             
             # Add language context to the message
@@ -1486,10 +2201,27 @@ User message: {enhanced_message}
             agent_output = caseworker_agent.run(language_context, reset=False)
             response_text = str(agent_output)
             
-            general_msg = create_chat_message_with_metadata(
-                response_text,
-                "💬 General Response"
-            )
+            # Use appropriate title based on question type
+            title_map = {
+                "voucher usage guidance": "📋 Voucher Usage Guide",
+                "voucher information request": "ℹ️ Voucher Information",
+                "timeline and process question": "⏱️ Timeline & Process",
+                "rights and legal information": "⚖️ Rights & Legal Info",
+                "documentation request": "📚 Documentation Help",
+                "general voucher question": "💬 Voucher Assistance"
+            }
+            
+            title = title_map.get(question_type, "💬 General Response")
+            
+            general_msg = {
+                "role": "assistant",
+                "content": response_text,
+                "metadata": {
+                    "title": title,
+                    "timestamp": datetime.now().isoformat()
+                }
+            }
+            
             history.append(general_msg)
             
             # Preserve existing DataFrame if we have listings
@@ -1530,21 +2262,45 @@ User message: {enhanced_message}
             # Get the address from either 'address' or 'title' field
             address = listing.get("address") or listing.get("title", "N/A")
             
-            # Get the URL for the listing
+            # Get the URL for the listing and create a shorter display version
             url = listing.get("url", "No link available")
+            if url != "No link available":
+                # Create a shorter display version of the URL with styling
+                url_display = f"""
+                <div style="text-align: center;">
+                    <a href="{url}" 
+                       target="_blank" 
+                       style="color: #2196F3; 
+                              text-decoration: none; 
+                              padding: 4px 8px; 
+                              border-radius: 4px;
+                              transition: all 0.2s ease;
+                              display: inline-block;
+                              font-weight: 500;"
+                       onmouseover="this.style.backgroundColor='#e3f2fd'; this.style.textDecoration='underline';"
+                       onmouseout="this.style.backgroundColor='transparent'; this.style.textDecoration='none';">
+                        View Listing →
+                    </a>
+                </div>"""
+            else:
+                url_display = '<div style="text-align: center; color: #666;">No link</div>'
             
             # Check if listing is shortlisted
             listing_id = str(listing.get("id", address))
-            shortlist_status = "✅" if listing_id in shortlisted_ids else "➕"
+            shortlist_status = "★" if listing_id in shortlisted_ids else "+"
+            
+            # Format the address to be more readable
+            formatted_address = address.replace("section-8", "").replace("section 8", "").strip()
+            formatted_address = re.sub(r'\s+', ' ', formatted_address)  # Remove extra spaces
             
             df_data.append({
                 "#": i,  # Add the listing number
-                "Address": address,
+                "Address": formatted_address,
                 "Price": listing.get("price", "N/A"),
                 "Risk Level": listing.get("risk_level", "❓"),
                 "Violations": listing.get("building_violations", 0),
                 "Last Inspection": listing.get("last_inspection", "N/A"),
-                "Link": url,
+                "Link": url_display,  # Use the HTML anchor tag version
                 "Summary": listing.get("violation_summary", "")[:50] + "..." if len(listing.get("violation_summary", "")) > 50 else listing.get("violation_summary", ""),
                 "Shortlist": shortlist_status
             })

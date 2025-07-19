@@ -63,11 +63,12 @@ class EnhancedSemanticRouterV2:
                 r'\bw/\b',  # "with" abbreviation
                 r'@',       # "at" symbol
                 
-                # Question patterns
-                r'\?\s*$',  # Questions often indicate what-if scenarios
+                # More specific question patterns (avoid overly broad matching)
+                r'\b(?:what about|how about|what happens if)\b.*\?\s*$',
+                r'\b(?:would|could|should|might)\b.*\?\s*$',
                 
-                # Borough + context patterns
-                r'\b(?:manhattan|brooklyn|queens|bronx|staten island|bk|si|bx|mnh|qns)\b',
+                # Borough + context patterns (removed overly broad borough pattern)
+                # r'\b(?:manhattan|brooklyn|queens|bronx|staten island|bk|si|bx|mnh|qns)\b',  # Too aggressive - matches any borough mention
                 r'\b(?:the city|downtown|uptown)\b',
                 
                 # Bedroom patterns in what-if context
@@ -90,9 +91,22 @@ class EnhancedSemanticRouterV2:
             ], priority=3),
             
             Intent.SEARCH_LISTINGS: PatternGroup([
+                # English patterns
                 r'\b(?:show|get|find|display)\s+(?:me\s+)?(?:listings|apartments|places)',
                 r'\b(?:i want|i need|looking for)\s+(?:listings|apartments|places)',
                 r'\bsearch\s+(?:for\s+)?(?:listings|apartments|places)',
+                r'\b(?:browse|look at)\s+(?:available\s+)?(?:listings|apartments|places)',
+                r'\b(?:available|open)\s+(?:units?|apartments?|places?)\b',
+                r'\blooking\s+(?:for|to rent|to find)\s+(?:a\s+)?(?:room|apartment|place|spot)\b',
+                
+                # Spanish search patterns
+                r'\b(?:busco|estoy buscando|quiero|necesito)\s+(?:un\s+)?(?:apartamento|departamento|vivienda|casa|lugar|opción|opciones|listado|listados|alojamiento|habitación|habitaciones)\b',
+                r'\btengo un vale\b.*(?:sección\s*8|section\s*8|voucher)',
+                r'\bbuscar\s+(?:apartamento|vivienda|casa|lugar|listado|listados|alojamiento|habitación|habitaciones)\b',
+                r'\b(?:sección\s*8|section\s*8|voucher)\b.*(?:bronx|brooklyn|manhattan|queens|staten\s+island)',
+                r'\b(?:busco|estoy buscando)\s+(?:vivienda|apartamento|casa)\s+(?:en|en el|en la)\s+(?:bronx|brooklyn|manhattan|queens|staten\s+island)\b',
+                r'\b(?:tengo|tiene)\s+(?:un\s+)?(?:vale|voucher)\s+(?:de\s+)?(?:sección\s*8|section\s*8)\b',
+                r'\b(?:busco|estoy buscando)\s+(?:un\s+)?(?:apartamento|departamento|vivienda)\s+(?:que\s+)?(?:acepte|acepten|reciba|reciban)\s+(?:vales|vouchers|sección\s*8|section\s*8)\b',
             ], priority=1),
             
             Intent.CHECK_VIOLATIONS: PatternGroup([
@@ -102,22 +116,39 @@ class EnhancedSemanticRouterV2:
             ], priority=1),
             
             Intent.VOUCHER_INFO: PatternGroup([
-                r'\b(?:what is|tell me about|explain)\s+(?:section\s*8|hasa|cityfheps)',
+                r'\b(?:what is|tell me about|explain)\s+(?:section\s*8|hasa|cityfheps|housing\s+vouchers?|vouchers?)',
                 r'\b(?:voucher|section\s*8|hasa|cityfheps)\s+(?:info|information|details)',
-                r'\bhow\s+(?:does|do)\s+(?:vouchers?|section\s*8|hasa|cityfheps)\s+work',
-            ], priority=1),
+                r'\bhow\s+(?:does|do)\s+(?:vouchers?|section\s*8|hasa|cityfheps|housing\s+vouchers?)\s+work',
+                r'\b(?:what are|what\'s)\s+(?:the\s+)?(?:requirements|eligibility|criteria)\s+for\s+(?:section\s*8|hasa|cityfheps|vouchers?)',
+                r'\bhow\s+(?:do i|can i)\s+apply\s+for\s+(?:section\s*8|hasa|cityfheps|vouchers?)',
+                r'\b(?:difference|differences)\s+between\s+(?:section\s*8|hasa|cityfheps)',
+                r'\b(?:can you|could you)\s+explain\s+(?:voucher|section\s*8|hasa|cityfheps)',
+                r'\b(?:what|which)\s+voucher\s+(?:types|programs|options)\b',
+            ], priority=3),
             
             Intent.SHOW_HELP: PatternGroup([
+                # Informational patterns (higher priority to catch before SEARCH_LISTINGS)
+                r'\b(?:what|how|why|tell me|explain)\b.*\b(?:benefits|definition|mean|process|steps|work|involve)\b',
+                r'\b(?:what are|what is|what does)\b.*\b(?:housing|apartment|listing|search|finding|looking)\b',
+                r'\b(?:how do|how does)\b.*\b(?:housing|apartment|listing|search|finding|looking)\b.*\bwork\b',
+                r'\b(?:explain|tell me about)\b.*\b(?:housing|apartment|listing|search|finding|looking)\b',
+                r'\b(?:how do people|how do most people|how do tenants|how do renters)\b.*\b(?:find|search|look for)\b',
+                r'\b(?:what should i know|what do i need to know)\b.*\b(?:finding|searching|looking)\b',
+                # Original help patterns
                 r'\b(?:help|assistance|support)\b',
                 r'\b(?:what can you do|how do i|how can i)\b',
                 r'\b(?:commands|options|features)\b',
-            ], priority=1),
+            ], priority=2),
         }
     
     def _build_parameter_patterns(self) -> Dict[str, List[str]]:
         """Build comprehensive parameter extraction patterns"""
         return {
             'borough': [
+                # With prepositions - extract the borough after the preposition (more specific, checked first)
+                r'\b(?:in|around|near|at|from)\s+(manhattan|brooklyn|queens|bronx|staten\s+island|bk|si|bx|mnh|qns)\b',
+                r'\b(?:search|look|check|try|find)\s+(?:in|around|near)\s+(manhattan|brooklyn|queens|bronx|staten\s+island|bk|si|bx|mnh|qns)\b',
+                
                 # Full borough names
                 r'\b(manhattan)\b',
                 r'\b(brooklyn)\b', 
@@ -135,9 +166,10 @@ class EnhancedSemanticRouterV2:
                 # Informal references
                 r'\b(?:the\s+)?(city)\b',  # Manhattan
                 
-                # With prepositions - extract the borough after the preposition
-                r'\b(?:in|around|near|at|from)\s+(manhattan|brooklyn|queens|bronx|staten\s+island|bk|si|bx|mnh|qns)\b',
-                r'\b(?:search|look|check|try|find)\s+(?:in|around|near)\s+(manhattan|brooklyn|queens|bronx|staten\s+island|bk|si|bx|mnh|qns)\b',
+                # Spanish borough patterns
+                r'\b(?:en|en el|en la|del|de la)\s+(manhattan|brooklyn|queens|bronx|staten\s+island)\b',
+                r'\b(?:busco|estoy buscando|quiero|necesito)\s+(?:vivienda|apartamento|casa)\s+(?:en|en el|en la)\s+(manhattan|brooklyn|queens|bronx|staten\s+island)\b',
+                r'\b(?:vivienda|apartamento|casa)\s+(?:en|en el|en la)\s+(manhattan|brooklyn|queens|bronx|staten\s+island)\b',
             ],
             
             'bedrooms': [
@@ -158,6 +190,22 @@ class EnhancedSemanticRouterV2:
                 # With context words
                 r'\b(?:with|for|having)\s+(\d+)\s+(?:bed|bedroom|bedrooms?)\b',
                 r'\b(\d+)(?:br|bed|bedroom)\s+(?:apartment|unit|place)\b',
+                
+                # Spanish bedroom patterns
+                r'\b(\d+)\s+(?:habitación|habitaciones|dormitorio|dormitorios)\b',
+                r'\b(?:con|de|para)\s+(\d+)\s+(?:habitación|habitaciones|dormitorio|dormitorios)\b',
+                r'\b(?:apartamento|departamento|vivienda|casa)\s+(?:de|con)\s+(\d+)\s+(?:habitación|habitaciones|dormitorio|dormitorios)\b',
+                r'\b(?:busco|estoy buscando|quiero|necesito)\s+(?:un\s+)?(?:apartamento|departamento|vivienda|casa)\s+(?:de|con)\s+(\d+)\s+(?:habitación|habitaciones|dormitorio|dormitorios)\b',
+                
+                # Spanish spelled out numbers
+                r'\b(uno|una|1)\s+(?:habitación|dormitorio)\b',
+                r'\b(dos|2)\s+(?:habitaciones|dormitorios)\b',
+                r'\b(tres|3)\s+(?:habitaciones|dormitorios)\b',
+                r'\b(cuatro|4)\s+(?:habitaciones|dormitorios)\b',
+                r'\b(cinco|5)\s+(?:habitaciones|dormitorios)\b',
+                
+                # Spanish studio
+                r'\b(estudio)\b',  # Convert to 0
             ],
             
             'max_rent': [
@@ -202,6 +250,13 @@ class EnhancedSemanticRouterV2:
                 # Context patterns
                 r'\b(?:with|using|accepts?|welcome)\s+(section\s*8|hasa|cityfheps|housing\s+voucher)\b',
                 r'\b(section\s*8|hasa|cityfheps|housing\s+voucher)\s+(?:ok|accepted?|welcome)\b',
+                
+                # Spanish voucher patterns
+                r'\b(sección\s*8|section\s*8)\b',
+                r'\b(vale|voucher)s?\b',
+                r'\b(?:tengo|tiene)\s+(?:un\s+)?(vale|voucher)\s+(?:de\s+)?(?:sección\s*8|section\s*8)\b',
+                r'\b(?:vale|voucher)\s+(?:de\s+)?(?:sección\s*8|section\s*8)\b',
+                r'\b(?:apartamento|vivienda|casa)\s+(?:que\s+)?(?:acepte|acepten|reciba|reciban)\s+(?:vales|vouchers|sección\s*8|section\s*8)\b',
             ]
         }
     
@@ -266,17 +321,17 @@ class EnhancedSemanticRouterV2:
             
         elif param_name == 'bedrooms':
             # Convert bedroom values to integers
-            if value == 'studio':
+            if value in ['studio', 'estudio']:
                 return 0
-            elif value in ['one', '1']:
+            elif value in ['one', '1', 'uno', 'una']:
                 return 1
-            elif value in ['two', '2']:
+            elif value in ['two', '2', 'dos']:
                 return 2
-            elif value in ['three', '3']:
+            elif value in ['three', '3', 'tres']:
                 return 3
-            elif value in ['four', '4']:
+            elif value in ['four', '4', 'cuatro']:
                 return 4
-            elif value in ['five', '5']:
+            elif value in ['five', '5', 'cinco']:
                 return 5
             else:
                 try:
@@ -306,11 +361,14 @@ class EnhancedSemanticRouterV2:
                 'section 8': 'section_8',
                 'section-8': 'section_8',
                 'sec 8': 'section_8',
+                'sección 8': 'section_8',
+                'seccion 8': 'section_8',
                 'hasa': 'hasa',
                 'cityfheps': 'cityfheps',
                 'city fheps': 'cityfheps',
                 'housing voucher': 'housing_voucher',
                 'voucher': 'housing_voucher',  # Generic
+                'vale': 'housing_voucher',  # Spanish generic
                 'dss': 'dss',
                 'hra': 'hra',
             }

@@ -549,6 +549,16 @@ with gr.Blocks(theme=theme, css="""
         display: flex;
         gap: 0.5rem;
     }
+    /* NEW: Styles for the new header controls group */
+    .header-controls-group {
+        padding: 0.5rem 1rem; /* Add some padding around the controls */
+        justify-content: flex-end; /* Pushes content to the right */
+        align-items: center; /* Vertically centers items in this row */
+        margin-top: -1rem; /* Adjust this to pull it up slightly if it's too low */
+        margin-bottom: 0.5rem; /* Space below the controls */
+    }
+     
+               
     .header-controls button {
         background: rgba(255,255,255,0.2);
         border: 1px solid rgba(255,255,255,0.3);
@@ -628,13 +638,10 @@ with gr.Blocks(theme=theme, css="""
         box-shadow: 0 2px 8px rgba(98,0,234,0.2);
     }
     
-    /* Chat area styling */
     .gr-chatbot {
-        flex: 1;
-        margin-bottom: 1rem;
-        border-radius: 12px;
-        box-shadow: 0 4px 16px rgba(0,105,92,0.08);
-        position: relative;
+        flex: 1; /* This should already make it grow */
+        height: auto !important; /* Allow height to be determined by flex container */
+        min-height: 400px; /* Keep a minimum height */
     }
     
     /* Simple fix for green blocks - just target the specific elements causing issues */
@@ -913,6 +920,18 @@ with gr.Blocks(theme=theme, css="""
         background: rgba(156,163,175,0.1) !important;
     }
 
+    /* NEW: Ensure checkbox tick is visible in dark mode */
+    .dark input[type="checkbox"] {
+        accent-color: #f3f4f6 !important; /* A very light gray/nearly white */
+        /* You might also want to ensure the checkbox background is discernible */
+        background-color: #555 !important; /* A slightly lighter background for the checkbox square itself */
+        border-color: #888 !important; /* Make border visible */
+    }
+    .dark input[type="checkbox"]:checked {
+        background-color: #00695c !important; /* Use your primary hue for checked state */
+        border-color: #00695c !important;
+    }           
+               
     /* Prevent cell editing */
     .gr-dataframe td[contenteditable="true"] {
         -webkit-user-modify: read-only !important;
@@ -1058,12 +1077,13 @@ with gr.Blocks(theme=theme, css="""
                 </div>
             """)
     
-    # Header controls row
-    with gr.Row():
-        with gr.Column(scale=8):
-            pass  # Spacer
-        with gr.Column(scale=1):
-            dark_mode_toggle = gr.Button("🌙", size="sm", elem_classes=["dark-mode-btn"])
+    # Header controls row (for language selector and dark mode toggle)
+# This row sits above the main content layout and pushes controls to the right
+    with gr.Row(elem_classes=["header-controls-group"]):
+        with gr.Column(scale=1): # This column acts as a flexible spacer, pushing content to the right
+            pass
+    with gr.Column(scale=0): # This column will contain our controls, scale=0 keeps it compact
+            dark_mode_toggle = gr.Button("🌙", size="sm", elem_classes=["dark-mode-btn"], scale=0)
     
     # Initialize app state
     app_state = gr.State(create_initial_state())
@@ -1080,14 +1100,6 @@ with gr.Blocks(theme=theme, css="""
     with gr.Row(elem_classes=["main-layout"]):
         # LEFT COLUMN: Chat Panel
         with gr.Column(elem_classes=["chat-column"]):
-            # Language dropdown above chat
-            language_dropdown = gr.Dropdown(
-                label="Language / Idioma / 语言 / ভাষা",
-                choices=[("English", "en"), ("Español", "es"), ("中文", "zh"), ("বাংলা", "bn")],
-                value="en",
-                container=True
-            )
-            
             # Chat Section
             chatbot = gr.Chatbot(
                 label="💬 Conversation",
@@ -1099,21 +1111,41 @@ with gr.Blocks(theme=theme, css="""
                 render_markdown=True
             )
             
-            # Chat Input Area
+                    # Chat Input Area
             with gr.Column(elem_classes=["chat-input-area"]):
                 msg = gr.Textbox(
-                    label="Your Message",
-                    placeholder="Type your request, like '2 bedroom in Queens under $2500'...",
-                    lines=2,
-                    container=False
+                label="Your Message",
+                placeholder="Type your request, like '2 bedroom in Queens under $2500'...",
+                lines=2,
+                container=False
+            )
+            send_btn = gr.Button("Send Message", variant="primary")
+            
+            # NEW CODE HERE: Add the Strict Mode checkbox
+            with gr.Column(elem_classes=["toggles-section"]): # Reusing the style
+                gr.Markdown("#### 🎛️ Search Preferences")
+                visible_strict_mode_checkbox = gr.Checkbox(
+                    label=i18n_dict["en"]["strict_mode_label"], # Will be updated by i18n
+                    value=False, # Initial value
+                    interactive=True,
+                    container=True
                 )
-                send_btn = gr.Button("Send Message", variant="primary")
-                
-                # Placeholder state for strict mode (UI removed)
-                strict_mode_toggle = gr.State(False)
             
         # RIGHT COLUMN: Aggregated Information Panel
         with gr.Column(elem_classes=["info-column"]):
+
+            # Language dropdown (moved here)
+            language_dropdown = gr.Dropdown(
+                label=None,
+                choices=[("English", "en"), ("Español", "es"), ("中文", "zh"), ("বাংলা", "bn")],
+                value="en",
+                container=False,
+                show_label=False,
+                scale=0,
+                min_width=100,
+                info=i18n_dict["en"]["language_selector"]
+            )
+
             # Results Header/Status
             progress_info = gr.HTML(
                 value='<div class="results-header">🏠 Ready to search for listings...</div>',
@@ -2310,7 +2342,7 @@ User message: {enhanced_message}
     # Wire up the submit action with state management
     send_btn.click(
         handle_chat_message, 
-        [msg, chatbot, app_state, strict_mode_toggle], 
+        [msg, chatbot, app_state, visible_strict_mode_checkbox], 
         [chatbot, results_df, progress_info, app_state]
     )
     # Add a secondary submit to clear the input box for better UX
@@ -2319,7 +2351,7 @@ User message: {enhanced_message}
     # Wire up Enter key submission
     msg.submit(
         handle_chat_message, 
-        [msg, chatbot, app_state, strict_mode_toggle], 
+        [msg, chatbot, app_state, visible_strict_mode_checkbox], 
         [chatbot, results_df, progress_info, app_state]
     )
     msg.submit(lambda: "", [], [msg])
